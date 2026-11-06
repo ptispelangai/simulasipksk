@@ -576,38 +576,398 @@
    /* =========================================================================
        1. DATA BANK SOALAN TINGKATAN 1 (KSSR TAHUN 6) - 100 SOALAN UNIK
        ========================================================================= */
-    const QUESTION_DATA_T1 = [
-      // BAHAGIAN A: KECERDASAN INSANIAH (1 - 30) - DILEMA MURID SEKOLAH RENDAH
-      { id: 1, section: "A", domain: "Integriti & EQ", text: "Semasa waktu rehat di kantin sekolah, anda melihat rakan baik anda tertumpah kuah mi di atas lantai dan terus beredar tanpa membersihkannya kerana takut dimarahi guru pengawas. Apakah tindakan anda?", options: [{ text: "Menegur rakan dengan baik dan mengajaknya bersama-sama membersihkan tumpahan tersebut.", score: 4 }, { text: "Membersihkan tumpahan tersebut sendirian tanpa memberitahu sesiapa demi keselamatan murid lain.", score: 3 }, { text: "Melaporkan perbuatan rakan tersebut kepada guru bertugas dengan segera.", score: 2 }, { text: "Mengabaikan kejadian itu kerana bukan anda yang menumpahkan makanan berkenaan.", score: 1 }], expl: "Tindakan mendidik rakan secara beradab dan bertanggungjawab bersama mencerminkan integriti dan kecerdasan emosi tertinggi." },
-      { id: 2, section: "A", domain: "Kematangan Emosi (EQ)", text: "Anda telah berusaha bersungguh-sungguh menyiapkan sebuah projek sains, namun semasa pengumuman pemenang, projek anda langsung tidak mendapat sebarang tempat. Bagaimanakah anda bertindak balas?", options: [{ text: "Menerima keputusan dengan hati terbuka, mengucapkan tahniah kepada pemenang, dan menilai kelemahan projek sendiri.", score: 4 }, { text: "Berasa sedikit kecewa tetapi berazam untuk cuba lagi pada pertandingan akan datang.", score: 3 }, { text: "Mendiamkan diri dan mengelak daripada bercakap dengan sesiapa sepanjang hari itu.", score: 2 }, { text: "Menuduh hakim tidak adil dan berat sebelah dalam memilih pemenang.", score: 1 }], expl: "Daya tahan emosi (resilience) dan kematangan menerima kekalahan adalah ciri utama calon cemerlang." },
-      { id: 3, section: "A", domain: "Kerjasama Kumpulan (SSQ)", text: "Seorang ahli kumpulan anda dalam tugasan berkumpulan sering tidak hadir semasa perbincangan diadakan. Apakah tindakan yang wajar anda ambil?", options: [{ text: "Bertanya khabar tentang keadaannya secara peribadi untuk memahami punca masalah sebelum mencari jalan penyelesaian bersama.", score: 4 }, { text: "Memaklumkan situasi tersebut kepada guru agar guru dapat membantunya.", score: 3 }, { text: "Mengeluarkan namanya terus daripada senarai ahli kumpulan projek.", score: 1 }, { text: "Membiarkan sahaja dan menyiapkan semua bahagian tugasannya tanpa berbincang.", score: 2 }], expl: "Menyiasat dengan empati mendalam sebelum mengambil tindakan membina semangat kerja sepasukan yang kukuh." },
-      { id: 4, section: "A", domain: "Kecerdasan Rohani (SQ)", text: "Anda terjumpa sekeping wang kertas bernilai RM50 di bawah meja di dalam bilik darjah semasa waktu pulang persekolahan.", options: [{ text: "Menyerahkan wang tersebut kepada guru kelas atau pihak pentadbiran untuk dikesan pemiliknya.", score: 4 }, { text: "Menunggu sehingga keesokan hari dan bertanya di hadapan kelas siapa yang kehilangan wang.", score: 3 }, { text: "Mendermakan wang itu ke tabung kebajikan sekolah tanpa memberitahu guru.", score: 2 }, { text: "Menyimpan wang tersebut dan berfikir akan menggunakannya sekiranya tiada sesiapa yang menuntut.", score: 1 }], expl: "Amanah menyerahkan wang tercicir kepada pihak pengurusan sekolah memastikan ketelusan." },
-      { id: 5, section: "A", domain: "Tanggungjawab Sivik", text: "Semasa menaiki bas awam, anda melihat seorang warga emas berdiri kerana tempat duduk telah penuh. Anda pula berasa sangat letih setelah seharian di sekolah. Apakah tindakan anda?", options: [{ text: "Segera bangun dan mempelawa warga emas tersebut duduk dengan senyuman mesra.", score: 4 }, { text: "Bangun dan memberikan tempat duduk selepas melihat tiada penumpang lain yang peduli.", score: 3 }, { text: "Menunggu sehingga ada penumpang lain yang lebih muda untuk bangun memberi tempat duduk.", score: 2 }, { text: "Berpura-pura tidur atau memandang ke luar tingkap agar tidak berasa bersalah.", score: 1 }], expl: "Mengutamakan golongan yang uzur membuktikan penghayatan nilai empati sivik." },
-      { id: 6, section: "A", domain: "Pengurusan Tekanan (EQ)", text: "Anda mempunyai jadual ujian yang padat esok hari dan pada masa sama perlu menghadiri latihan sukan sekolah. Bagaimanakah anda menguruskan keadaan ini?", options: [{ text: "Menyusun jadual ulang kaji mengikut keutamaan dan berbincang dengan jurulatih untuk melaraskan masa latihan.", score: 4 }, { text: "Fokus kepada ulang kaji sahaja dan tidak hadir latihan sukan tanpa sebarang makluman.", score: 2 }, { text: "Meminta bantuan ibu bapa untuk membuat surat pengecualian bagi kedua-dua aktiviti.", score: 2 }, { text: "Menghadiri latihan sukan sehingga keletihan dan tidak sempat mengulang kaji pelajaran.", score: 1 }], expl: "Kemahiran menyusun keutamaan dan komunikasi efektif mengelakkan tekanan melampau." },
-      { id: 7, section: "A", domain: "Empati & Hubungan Sosial", text: "Rakan sekelas anda sering diejek kerana memakai cermin mata yang tebal dan bersikap pendiam. Apakah peranan anda?", options: [{ text: "Mendampingi rakan tersebut, mengajaknya berbual, dan menegur rakan lain agar berhenti mengejek.", score: 4 }, { text: "Menasihati rakan tersebut supaya tidak menghiraukan ejekan orang lain.", score: 3 }, { text: "Hanya mendiamkan diri kerana takut dipulaukan oleh rakan-rakan yang mengejek.", score: 1 }, { text: "Ketawa bersama rakan lain supaya kelihatan sehaluan dengan mereka.", score: 1 }], expl: "Membela rakan yang ditindas menunjukkan keberanian moral yang mulia." },
-      { id: 8, section: "A", domain: "Integriti Akademik", text: "Semasa peperiksaan penting, anda melihat rakan di hadapan anda menjatuhkan nota kecil dan cuba meniru. Apakah yang patut anda lakukan?", options: [{ text: "Memberi isyarat sopan atau memaklumkan kepada guru pengawas secara berhemah.", score: 4 }, { text: "Menasihati rakan tersebut selepas tamat kertas peperiksaan agar tidak mengulanginya lagi.", score: 3 }, { text: "Membiarkan sahaja kerana menganggap itu urusan peribadinya dengan guru.", score: 2 }, { text: "Turut mengambil kesempatan untuk melihat nota kecil tersebut jika ada soalan yang sukar.", score: 1 }], expl: "Mempertahankan kebersihan dan keadilan peperiksaan ialah tanggungjawab setiap pelajar." },
-      { id: 9, section: "A", domain: "Kecerdasan Rohani (SQ)", text: "Bagaimanakah anda menghargai kepelbagaian perayaan dan budaya rakan-rakan yang berlainan kaum di sekolah anda?", options: [{ text: "Mengucapkan ucapan selamat, menghormati pantang larang mereka, dan meraikan bersama dengan hati ikhlas.", score: 4 }, { text: "Turut serta dalam sambutan hanya apabila diminta oleh guru.", score: 2 }, { text: "Bersikap acuh tak acuh kerana beranggapan perayaan kaum lain tiada kaitan dengan diri anda.", score: 1 }, { text: "Hanya bergaul dengan rakan yang sama bangsa dan kepercayaan sahaja.", score: 1 }], expl: "Penghayatan semangat perpaduan dan toleransi mengukuhkan keharmonian negara." },
-      { id: 10, section: "A", domain: "Ketahanan Mental", text: "Apabila menerima teguran yang tegas daripada guru berkenaan kesalahan dalam tugasan anda, apakah reaksi pertama anda?", options: [{ text: "Mendengar dengan teliti, mengucapkan terima kasih, dan segera membetulkan kesilapan tersebut.", score: 4 }, { text: "Mendengar teguran tetapi berasa tersinggung di dalam hati untuk beberapa hari.", score: 2 }, { text: "Membuat pembetulan sekadar sambil lewa untuk melepaskan syarat.", score: 2 }, { text: "Menolak teguran tersebut dan berkeras bahawa jawapan anda adalah betul.", score: 1 }], expl: "Keterbukaan menerima bimbingan membolehkan pertumbuhan ilmu berterusan." },
-      { id: 11, section: "A", domain: "Kepimpinan Bilik Darjah", text: "Sebagai ketua darjah, murid-murid membuat bising ketika ketiadaan guru kerana guru sedang bermesyuarat. Apakah tindakan anda?", options: [{ text: "Menenangkan kelas dengan sopan dan memberi tugasan ringan atau latihan yang ditinggalkan guru.", score: 4 }, { text: "Menjerit dan mengugut untuk mendenda semua murid di hadapan kelas.", score: 2 }, { text: "Turut serta berbual dengan rakan rapat kerana guru tiada di dalam kelas.", score: 1 }, { text: "Terus keluar dari kelas mencari guru besar untuk mengadu.", score: 2 }], expl: "Kepimpinan berkesan menangani suasana tidak terkawal secara tenang dan berhemah." },
-      { id: 12, section: "A", domain: "Kawalan Emosi", text: "Semasa beratur membeli makanan di kantin, seorang murid tahun 4 memotong barisan tepat di hadapan anda. Respon anda?", options: [{ text: "Menegurnya dengan nada tenang dan meminta dia beratur di barisan belakang seperti murid lain.", score: 4 }, { text: "Menolak murid tersebut keluar daripada barisan secara kasar.", score: 1 }, { text: "Memaki hamun murid berkenaan di hadapan orang ramai.", score: 1 }, { text: "Membiarkan sahaja tetapi merungut dengan perasaan marah sepanjang hari.", score: 2 }], expl: "Ketegasan bersulam adab mendidik orang lain mematuhi peraturan tanpa kekasaran." },
-      { id: 13, section: "A", domain: "Kejujuran & Amanah", text: "Anda tertumpahkan cat air di atas buku teks kawan baik anda ketika membuat aktiviti Pendidikan Seni. Tindakan anda?", options: [{ text: "Meminta maaf secara ikhlas dan berusaha menggantikannya atau membersihkannya sebaik mungkin.", score: 4 }, { text: "Meletakkan buku itu kembali di mejanya secara senyap-senyap agar dia tidak tahu.", score: 1 }, { text: "Menuduh murid di sebelah anda yang menumpahkan cat berkenaan.", score: 1 }, { text: "Memberitahu kawan bahawa buku itu memang sudah sedia kotor sebelum ini.", score: 1 }], expl: "Keberanian mengaku kesilapan sendiri membuktikan keperibadian yang berintegriti tinggi." },
-      { id: 14, section: "A", domain: "Kesyukuran & Rendah Diri", text: "Anda dinobatkan sebagai Tokoh Murid Cemerlang peringkat sekolah rendah. Bagaimanakah anda menzahirkan rasa kejayaan tersebut?", options: [{ text: "Memanjatkan rasa syukur serta berterima kasih kepada guru, ibu bapa dan rakan yang sentiasa menyokong.", score: 4 }, { text: "Mencanangkan kepada semua murid bahawa kejayaan itu adalah semata-mata kepandaian sendiri.", score: 1 }, { text: "Memandang rendah murid lain yang tidak mendapat sebarang anugerah.", score: 1 }, { text: "Menolak anugerah kerana berasa diri tidak layak langsung.", score: 2 }], expl: "Sifat bersyukur dan rendah diri menzahirkan kematangan rohani insan cemerlang." },
-      { id: 15, section: "A", domain: "Etika Digital & Gajet", text: "Seorang rakan menghantar pautan mesej palsu dan berbaur fitnah tentang seorang guru ke dalam kumpulan WhatsApp kelas anda. Tindakan anda?", options: [{ text: "Menasihati rakan agar memadamkan mesej itu dan menegaskan bahaya menyebarkan berita tidak sahih.", score: 4 }, { text: "Menyebarkan pautan berkenaan ke kumpulan WhatsApp keluarga untuk meminta pendapat.", score: 1 }, { text: "Mentertawakan guru berkenaan bersama ahli kumpulan yang lain.", score: 1 }, { text: "Keluar daripada kumpulan WhatsApp tanpa berkata apa-apa.", score: 2 }], expl: "Menghentikan fitnah di peringkat awal membendung gejala buli dan fitnah siber." },
-      { id: 16, section: "A", domain: "Khidmat Masyarakat", text: "Sekolah mengadakan aktiviti gotong-royong membersihkan kawasan surau dan taman sains pada hari Sabtu. Apakah sikap anda?", options: [{ text: "Hadir tepat pada masanya dengan pakaian yang sesuai dan bekerja bersama rakan-rakan dengan ceria.", score: 4 }, { text: "Hadir sekadar untuk mencatat kehadiran dalam buku rekod kemudian bersembunyi.", score: 1 }, { text: "Memberikan pelbagai alasan sakit semata-mata untuk duduk di rumah bermain game.", score: 1 }, { text: "Hanya memilih tugas yang paling ringan dan menyuruh murid junior membuat kerja berat.", score: 2 }], expl: "Kerelaan menyumbang tenaga mencerminkan jati diri murid yang cintakan kebersihan komuniti." },
-      { id: 17, section: "A", domain: "Kasih Sayang Haiwan", text: "Anda melihat seekor anak kucing terperangkap di dalam longkang sekolah selepas hujan lebat. Tindakan anda?", options: [{ text: "Mendapatkan bantuan rakan atau pekerja sekolah untuk mengeluarkan anak kucing itu dengan selamat.", score: 4 }, { text: "Membaling batu ke arah kucing tersebut untuk melihat sama ada ia masih hidup.", score: 1 }, { text: "Membiarkan sahaja kerana menganggap haiwan jalanan tidak memerlukan pertolongan.", score: 1 }, { text: "Merakam video kucing yang kesejukan itu untuk dimuat naik ke media sosial.", score: 1 }], expl: "Belas kasihan terhadap makhluk bernyawa mencerminkan kehalusan budi pekerti." },
-      { id: 18, section: "A", domain: "Daya Usaha & Motivasi", text: "Keputusan ujian Matematik bulanan anda menunjukkan gred C walaupun anda telah mencuba menjawab. Apakah azam anda?", options: [{ text: "Menganalisis topik kelemahan, membuat latihan tambahan setiap hari dan bertanya guru secara berterusan.", score: 4 }, { text: "Berputus asa dan menganggap diri anda memang tidak berbakat dalam subjek Matematik.", score: 1 }, { text: "Menyalahkan soalan yang kononnya terlalu susah dan luar daripada silibus.", score: 1 }, { text: "Menyembunyikan kertas jawapan tersebut daripada pengetahuan ibu bapa.", score: 2 }], expl: "Sikap positif dan gigih berusaha menukar kegagalan kepada lonjakan kejayaan." },
-      { id: 19, section: "A", domain: "Disiplin & Masa", text: "Loceng tamat waktu rehat telah berbunyi, tetapi permainan bola sepak antara kelas anda masih berbaki beberapa minit lagi. Apakah tindakan anda?", options: [{ text: "Menghentikan permainan serta-merta, mengambil beg minuman dan beredar segera masuk ke kelas.", score: 4 }, { text: "Meneruskan permainan sehingga bola masuk ke jaring gol walaupun loceng sudah tamat.", score: 1 }, { text: "Masuk ke kelas selepas 15 minit bersama rakan-rakan lain.", score: 1 }, { text: "Pura-pura sakit perut di kantin sekolah.", score: 1 }], expl: "Kepatuhan kepada ketetapan masa mencerminkan tahap disiplin kendiri yang tinggi." },
-      { id: 20, section: "A", domain: "Adab Berkomunikasi", text: "Seorang murid tahun 1 menangis di tangga sekolah kerana kehilangan botol air dan tersesat arah. Tindakan anda?", options: [{ text: "Memujuknya dengan mesra, membantunya mencari botol air dan membawanya ke bilik darjahnya.", score: 4 }, { text: "Mentertawakannya dan memanggil murid lain untuk melihat dia menangis.", score: 1 }, { text: "Memarahinya kerana berjalan seorang diri tanpa teman.", score: 1 }, { text: "Mengabaikannya kerana anda sedang mengejar masa untuk bermain dengan rakan sebaya.", score: 2 }], expl: "Sikap melindungi dan menyayangi murid yang lebih muda membina persekitaran sekolah yang selamat." },
-      { id: 21, section: "A", domain: "Kekemasan & Sahsiah", text: "Pihak sekolah menetapkan peraturan pemakaian lencana, tanda nama dan tali leher seragam setiap hari Isnin. Sikap anda?", options: [{ text: "Memastikan semua kelengkapan pakaian seragam telah digosok rapi dan dipakai lengkap pada malam sebelumnya.", score: 4 }, { text: "Hanya memakai lencana jika ada pemeriksaan mengejut oleh guru disiplin di pintu pagar.", score: 2 }, { text: "Meminjam tanda nama rakan lain untuk mengelak daripada didenda.", score: 1 }, { text: "Mengabaikan peraturan kerana beranggapan pakaian tidak mempengaruhi kepandaian murid.", score: 1 }], expl: "Kekemasan diri memupuk rasa hormat kepada identiti sekolah dan disiplin kendiri." },
-      { id: 22, section: "A", domain: "Semangat Kesukanan", text: "Dalam kejohanan balapan sekolah, anda menduduki tempat kedua (pingat perak) manakala musuh tradisi anda memenangi pingat emas. Respon anda?", options: [{ text: "Menjabat tangan pemenang dengan tulus ikhlas, mengucapkan tahniah dan bertekad berlatih lebih gigih.", score: 4 }, { text: "Enggan naik ke pentas menerima pingat kerana berasa malu menjadi naib johan.", score: 1 }, { text: "Mendakwa hakim garisan penamat membuat keputusan berat sebelah.", score: 1 }, { text: "Menyindir pemenang bahawa dia hanya menang kerana nasib bertuah semata-mata.", score: 1 }], expl: "Semangat kesukanan sejati mengiktiraf kehebatan lawan dengan jiwa yang besar." },
-      { id: 23, section: "A", domain: "Kelestarian Alam Sekitar", text: "Anda melihat tong kitar semula di sekolah dipenuhi dengan sisa makanan berminyak yang dibuang oleh murid lain. Tindakan anda?", options: [{ text: "Mengasingkan sisa jika selamat dan mengusulkan kempen kesedaran fungsi tong kitar semula kepada kelab alam sekitar.", score: 4 }, { text: "Turut membuang sisa makanan anda ke situ kerana tong itu sudah sedia kotor.", score: 1 }, { text: "Menendang tong sampah berkenaan kerana berasa geram.", score: 1 }, { text: "Mengambil gambar dan mentertawakan pihak pengurusan sekolah.", score: 1 }], expl: "Tindakan membina kesedaran kelestarian membuktikan kepimpinan sivik yang matang." },
-      { id: 24, section: "A", domain: "Budi Pekerti Keluarga", text: "Ibu meminta anda menjaga adik kecil di rumah kerana ibu perlu keluar sebentar menziarahi jiran yang sakit. Pada masa sama rancangan televisyen kegemaran anda sedang bermula. Sikap anda?", options: [{ text: "Menjaga adik dengan penuh kasih sayang, melayan keperluannya dan mengutamakan pesanan ibu.", score: 4 }, { text: "Membiarkan adik bermain sendirian di dapur sementara anda menonton televisyen.", score: 1 }, { text: "Memarahi adik setiap kali dia mendekati anda menonton televisyen.", score: 1 }, { text: "Menolak permintaan ibu dan menyuruh ibu membatalkan ziarah berkenaan.", score: 1 }], expl: "Tanggungjawab kekeluargaan dan ketaatan kepada ibu bapa mengatasi hiburan peribadi." },
-      { id: 25, section: "A", domain: "Inklusif Rakan Sebaya", text: "Seorang murid berkeperluan khas (masalah pembelajaran ringan) dimasukkan ke kelas anda dan sering ketinggalan menyalin nota. Tindakan anda?", options: [{ text: "Menawarkan diri duduk bersebelahannya, meminjamkan nota dan memberi bimbingan dengan sabar.", score: 4 }, { text: "Meminta guru memindahkan murid tersebut ke meja paling belakang agar tidak mengganggu kelas.", score: 1 }, { text: "Mengejek cara dia menulis dan memegang pensel.", score: 1 }, { text: "Melarang rakan-rakan lain berkawan dengannya semasa waktu rehat.", score: 1 }], expl: "Sifat empati dan inklusif membina masyarakat penyayang tanpa diskriminasi." },
-      { id: 26, section: "A", domain: "Ketelusan Nilai Wang", text: "Peniaga kedai buku sekolah tersalah memulangkan baki lebih RM10 kepada anda semasa anda membeli buku rujukan. Tindakan anda?", options: [{ text: "Memulangkan baki lebihan RM10 tersebut serta-merta kepada peniaga sambil memaklumkan kesilapannya.", score: 4 }, { text: "Menyimpan wang tersebut dan menganggapnya sebagai rezeki terpijak.", score: 1 }, { text: "Menggunakan wang lebihan itu untuk belanja kawan-kawan di kantin.", score: 1 }, { text: "Mendiamkan diri dan beredar dengan pantas dari kedai buku.", score: 1 }], expl: "Kejujuran mutlak dalam urusan kewangan adalah tonggak utama integriti insan." },
-      { id: 27, section: "A", domain: "Patriotisme & Kenegaraan", text: "Lagu Negaraku berkumandang melalui pembesar suara ketika anda sedang berjalan di koridor sekolah. Apakah tindakan anda?", options: [{ text: "Berhenti melangkah serta-merta, berdiri tegak dengan penuh hormat sehingga lagu tamat.", score: 4 }, { text: "Terus berjalan perlahan-lahan ke kelas kerana koridor tidak dilihat oleh guru besar.", score: 2 }, { text: "Bercakap-cakap dengan rakan sambil ketawa ketika lagu sedang dimainkan.", score: 1 }, { text: "Berlari pantas masuk ke dalam tandas untuk bersembunyi.", score: 1 }], expl: "Menghormati lagu kebangsaan mencerminkan kesetiaan dan maruah warganegara Malaysia." },
-      { id: 28, section: "A", domain: "Penyelesaian Masalah", text: "Basikal anda mengalami kerosakan rantai terputus semasa dalam perjalanan ke sekolah pada waktu pagi. Tindakan paling bijak?", options: [{ text: "Menolak basikal ke tempat selamat, menghubungi ibu bapa atau menumpang rakan, dan memaklumkan guru dengan jujur.", score: 4 }, { text: "Menangis di tepi jalan dan terus berpatah balik ke rumah tanpa ke sekolah.", score: 2 }, { text: "Meninggalkan basikal di tengah jalan raya dan berjalan melenggang.", score: 1 }, { text: "Menyalahkan ibu bapa kerana tidak membelikan basikal baharu.", score: 1 }], expl: "Ketenangan menyelesaikan masalah kecemasan membuktikan kematangan berdikari." },
-      { id: 29, section: "A", domain: "Menghargai Harta Benda", text: "Anda melihat beberapa orang murid menconteng dinding dewan sekolah dengan pen penanda. Tindakan anda?", options: [{ text: "Menegur mereka secara sopan dan melaporkan perbuatan vandalisme itu kepada guru disiplin jika mereka ingkar.", score: 4 }, { text: "Turut serta menconteng nama sendiri di dinding tersebut.", score: 1 }, { text: "Menyokong perbuatan mereka dengan menjaga kawasan pintu masuk.", score: 1 }, { text: "Mengabaikannya kerana berpendapat dinding itu bukan milik peribadi anda.", score: 2 }], expl: "Mencegah vandalisme memelihara keselesaan dan keceriaan prasarana pendidikan bersama." },
-      { id: 30, section: "A", domain: "Visi & Cita-cita", text: "Apakah matlamat utama anda berhasrat melanjutkan pelajaran ke Sekolah Berasrama Penuh (SBP) atau MRSM?", options: [{ text: "Membina disiplin diri, mendalami ilmu akademik dan kepimpinan demi berbakti kepada agama, bangsa dan negara.", score: 4 }, { text: "Sekadar ingin menunjuk-nunjuk kepada sanak saudara bahawa saya lebih hebat berbanding sepupu lain.", score: 1 }, { text: "Hanya mengikut kehendak kawan-kawan rapat yang turut memohon ke sekolah khusus.", score: 2 }, { text: "Ingin lari daripada kawalan peraturan ibu bapa di rumah.", score: 1 }], expl: "Niat yang murni dan berwawasan membentuk iltizam pembelajaran berprestasi tinggi." },
+   const QUESTION_DATA_T1 = [
+      // BAHAGIAN A: KECERDASAN INSANIAH (1 - 30) - KEDUDUKAN SKOR BERWAJARAN DIACAK RAWAK
+      { 
+        id: 1, 
+        section: "A", 
+        domain: "Integriti & EQ", 
+        text: "Semasa waktu rehat di kantin sekolah, anda melihat rakan baik anda tertumpah kuah mi di atas lantai dan terus beredar tanpa membersihkannya kerana takut dimarahi guru pengawas. Apakah tindakan anda?", 
+        options: [
+          { text: "Membersihkan tumpahan tersebut sendirian tanpa memberitahu sesiapa demi keselamatan murid lain.", score: 3 },
+          { text: "Menegur rakan dengan baik dan mengajaknya bersama-sama membersihkan tumpahan tersebut.", score: 4 },
+          { text: "Melaporkan perbuatan rakan tersebut kepada guru bertugas dengan segera.", score: 2 },
+          { text: "Mengabaikan kejadian itu kerana bukan anda yang menumpahkan makanan berkenaan.", score: 1 }
+        ], 
+        expl: "Tindakan mendidik rakan secara beradab dan bertanggungjawab bersama mencerminkan integriti dan kecerdasan emosi tertinggi." 
+      },
+      { 
+        id: 2, 
+        section: "A", 
+        domain: "Kematangan Emosi (EQ)", 
+        text: "Anda telah berusaha bersungguh-sungguh menyiapkan sebuah projek sains, namun semasa pengumuman pemenang, projek anda langsung tidak mendapat sebarang tempat. Bagaimanakah anda bertindak balas?", 
+        options: [
+          { text: "Berasa sedikit kecewa tetapi berazam untuk cuba lagi pada pertandingan akan datang.", score: 3 },
+          { text: "Mendiamkan diri dan mengelak daripada bercakap dengan sesiapa sepanjang hari itu.", score: 2 },
+          { text: "Menerima keputusan dengan hati terbuka, mengucapkan tahniah kepada pemenang, dan menilai kelemahan projek sendiri.", score: 4 },
+          { text: "Menuduh hakim tidak adil dan berat sebelah dalam memilih pemenang.", score: 1 }
+        ], 
+        expl: "Daya tahan emosi (resilience) dan kematangan menerima kekalahan adalah ciri utama calon cemerlang." 
+      },
+      { 
+        id: 3, 
+        section: "A", 
+        domain: "Kerjasama Kumpulan (SSQ)", 
+        text: "Seorang ahli kumpulan anda dalam tugasan berkumpulan sering tidak hadir semasa perbincangan diadakan. Apakah tindakan yang wajar anda ambil?", 
+        options: [
+          { text: "Mengeluarkan namanya terus daripada senarai ahli kumpulan projek.", score: 1 },
+          { text: "Memaklumkan situasi tersebut kepada guru agar guru dapat membantunya.", score: 3 },
+          { text: "Membiarkan sahaja dan menyiapkan semua bahagian tugasannya tanpa berbincang.", score: 2 },
+          { text: "Bertanya khabar tentang keadaannya secara peribadi untuk memahami punca masalah sebelum mencari jalan penyelesaian bersama.", score: 4 }
+        ], 
+        expl: "Menyiasat dengan empati mendalam sebelum mengambil tindakan membina semangat kerja sepasukan yang kukuh." 
+      },
+      { 
+        id: 4, 
+        section: "A", 
+        domain: "Kecerdasan Rohani (SQ)", 
+        text: "Anda terjumpa sekeping wang kertas bernilai RM50 di bawah meja di dalam bilik darjah semasa waktu pulang persekolahan.", 
+        options: [
+          { text: "Menunggu sehingga keesokan hari dan bertanya di hadapan kelas siapa yang kehilangan wang.", score: 3 },
+          { text: "Menyerahkan wang tersebut kepada guru kelas atau pihak pentadbiran untuk dikesan pemiliknya.", score: 4 },
+          { text: "Mendermakan wang itu ke tabung kebajikan sekolah tanpa memberitahu guru.", score: 2 },
+          { text: "Menyimpan wang tersebut dan berfikir akan menggunakannya sekiranya tiada sesiapa yang menuntut.", score: 1 }
+        ], 
+        expl: "Amanah menyerahkan wang tercicir kepada pihak pengurusan sekolah memastikan ketelusan." 
+      },
+      { 
+        id: 5, 
+        section: "A", 
+        domain: "Tanggungjawab Sivik", 
+        text: "Semasa menaiki bas awam, anda melihat seorang warga emas berdiri kerana tempat duduk telah penuh. Anda pula berasa sangat letih setelah seharian di sekolah. Apakah tindakan anda?", 
+        options: [
+          { text: "Bangun dan memberikan tempat duduk selepas melihat tiada penumpang lain yang peduli.", score: 3 },
+          { text: "Menunggu sehingga ada penumpang lain yang lebih muda untuk bangun memberi tempat duduk.", score: 2 },
+          { text: "Segera bangun dan mempelawa warga emas tersebut duduk dengan senyuman mesra.", score: 4 },
+          { text: "Berpura-pura tidur atau memandang ke luar tingkap agar tidak berasa bersalah.", score: 1 }
+        ], 
+        expl: "Mengutamakan golongan yang uzur membuktikan penghayatan nilai empati sivik." 
+      },
+      { 
+        id: 6, 
+        section: "A", 
+        domain: "Pengurusan Tekanan (EQ)", 
+        text: "Anda mempunyai jadual ujian yang padat esok hari dan pada masa sama perlu menghadiri latihan sukan sekolah. Bagaimanakah anda menguruskan keadaan ini?", 
+        options: [
+          { text: "Fokus kepada ulang kaji sahaja dan tidak hadir latihan sukan tanpa sebarang makluman.", score: 2 },
+          { text: "Menyusun jadual ulang kaji mengikut keutamaan dan berbincang dengan jurulatih untuk melaraskan masa latihan.", score: 4 },
+          { text: "Meminta bantuan ibu bapa untuk membuat surat pengecualian bagi kedua-dua aktiviti.", score: 2 },
+          { text: "Menghadiri latihan sukan sehingga keletihan dan tidak sempat mengulang kaji pelajaran.", score: 1 }
+        ], 
+        expl: "Kemahiran menyusun keutamaan dan komunikasi efektif mengelakkan tekanan melampau." 
+      },
+      { 
+        id: 7, 
+        section: "A", 
+        domain: "Empati & Hubungan Sosial", 
+        text: "Rakan sekelas anda sering diejek kerana memakai cermin mata yang tebal dan bersikap pendiam. Apakah peranan anda?", 
+        options: [
+          { text: "Hanya mendiamkan diri kerana takut dipulaukan oleh rakan-rakan yang mengejek.", score: 1 },
+          { text: "Menasihati rakan tersebut supaya tidak menghiraukan ejekan orang lain.", score: 3 },
+          { text: "Mendampingi rakan tersebut, mengajaknya berbual, dan menegur rakan lain agar berhenti mengejek.", score: 4 },
+          { text: "Ketawa bersama rakan lain supaya kelihatan sehaluan dengan mereka.", score: 1 }
+        ], 
+        expl: "Membela rakan yang ditindas menunjukkan keberanian moral yang mulia." 
+      },
+      { 
+        id: 8, 
+        section: "A", 
+        domain: "Integriti Akademik", 
+        text: "Semasa peperiksaan penting, anda melihat rakan di hadapan anda menjatuhkan nota kecil dan cuba meniru. Apakah yang patut anda lakukan?", 
+        options: [
+          { text: "Menasihati rakan tersebut selepas tamat kertas peperiksaan agar tidak mengulanginya lagi.", score: 3 },
+          { text: "Membiarkan sahaja kerana menganggap itu urusan peribadinya dengan guru.", score: 2 },
+          { text: "Memberi isyarat sopan atau memaklumkan kepada guru pengawas secara berhemah.", score: 4 },
+          { text: "Turut mengambil kesempatan untuk melihat nota kecil tersebut jika ada soalan yang sukar.", score: 1 }
+        ], 
+        expl: "Mempertahankan kebersihan dan keadilan peperiksaan ialah tanggungjawab setiap pelajar." 
+      },
+      { 
+        id: 9, 
+        section: "A", 
+        domain: "Kecerdasan Rohani (SQ)", 
+        text: "Bagaimanakah anda menghargai kepelbagaian perayaan dan budaya rakan-rakan yang berlainan kaum di sekolah anda?", 
+        options: [
+          { text: "Turut serta dalam sambutan hanya apabila diminta oleh guru.", score: 2 },
+          { text: "Mengucapkan ucapan selamat, menghormati pantang larang mereka, dan meraikan bersama dengan hati ikhlas.", score: 4 },
+          { text: "Bersikap acuh tak acuh kerana beranggapan perayaan kaum lain tiada kaitan dengan diri anda.", score: 1 },
+          { text: "Hanya bergaul dengan rakan yang sama bangsa dan kepercayaan sahaja.", score: 1 }
+        ], 
+        expl: "Penghayatan semangat perpaduan dan toleransi mengukuhkan keharmonian negara." 
+      },
+      { 
+        id: 10, 
+        section: "A", 
+        domain: "Ketahanan Mental", 
+        text: "Apabila menerima teguran yang tegas daripada guru berkenaan kesalahan dalam tugasan anda, apakah reaksi pertama anda?", 
+        options: [
+          { text: "Mendengar teguran tetapi berasa tersinggung di dalam hati untuk beberapa hari.", score: 2 },
+          { text: "Membuat pembetulan sekadar sambil lewa untuk melepaskan syarat.", score: 2 },
+          { text: "Menolak teguran tersebut dan berkeras bahawa jawapan anda adalah betul.", score: 1 },
+          { text: "Mendengar dengan teliti, mengucapkan terima kasih, dan segera membetulkan kesilapan tersebut.", score: 4 }
+        ], 
+        expl: "Keterbukaan menerima bimbingan membolehkan pertumbuhan ilmu berterusan." 
+      },
+      { 
+        id: 11, 
+        section: "A", 
+        domain: "Kepimpinan Bilik Darjah", 
+        text: "Sebagai ketua darjah, murid-murid membuat bising ketika ketiadaan guru kerana guru sedang bermesyuarat. Apakah tindakan anda?", 
+        options: [
+          { text: "Menjerit dan mengugut untuk mendenda semua murid di hadapan kelas.", score: 2 },
+          { text: "Menenangkan kelas dengan sopan dan memberi tugasan ringan atau latihan yang ditinggalkan guru.", score: 4 },
+          { text: "Turut serta berbual dengan rakan rapat kerana guru tiada di dalam kelas.", score: 1 },
+          { text: "Terus keluar dari kelas mencari guru besar untuk mengadu.", score: 2 }
+        ], 
+        expl: "Kepimpinan berkesan menangani suasana tidak terkawal secara tenang dan berhemah." 
+      },
+      { 
+        id: 12, 
+        section: "A", 
+        domain: "Kawalan Emosi", 
+        text: "Semasa beratur membeli makanan di kantin, seorang murid tahun 4 memotong barisan tepat di hadapan anda. Respon anda?", 
+        options: [
+          { text: "Menolak murid tersebut keluar daripada barisan secara kasar.", score: 1 },
+          { text: "Membiarkan sahaja tetapi merungut dengan perasaan marah sepanjang hari.", score: 2 },
+          { text: "Menegurnya dengan nada tenang dan meminta dia beratur di barisan belakang seperti murid lain.", score: 4 },
+          { text: "Memaki hamun murid berkenaan di hadapan orang ramai.", score: 1 }
+        ], 
+        expl: "Ketegasan bersulam adab mendidik orang lain mematuhi peraturan tanpa kekasaran." 
+      },
+      { 
+        id: 13, 
+        section: "A", 
+        domain: "Kejujuran & Amanah", 
+        text: "Anda tertumpahkan cat air di atas buku teks kawan baik anda ketika membuat aktiviti Pendidikan Seni. Tindakan anda?", 
+        options: [
+          { text: "Meminta maaf secara ikhlas dan berusaha menggantikannya atau membersihkannya sebaik mungkin.", score: 4 },
+          { text: "Meletakkan buku itu kembali di mejanya secara senyap-senyap agar dia tidak tahu.", score: 1 },
+          { text: "Menuduh murid di sebelah anda yang menumpahkan cat berkenaan.", score: 1 },
+          { text: "Memberitahu kawan bahawa buku itu memang sudah sedia kotor sebelum ini.", score: 1 }
+        ], 
+        expl: "Keberanian mengaku kesilapan sendiri membuktikan keperibadian yang berintegriti tinggi." 
+      },
+      { 
+        id: 14, 
+        section: "A", 
+        domain: "Kesyukuran & Rendah Diri", 
+        text: "Anda dinobatkan sebagai Tokoh Murid Cemerlang peringkat sekolah rendah. Bagaimanakah anda menzahirkan rasa kejayaan tersebut?", 
+        options: [
+          { text: "Mencanangkan kepada semua murid bahawa kejayaan itu adalah semata-mata kepandaian sendiri.", score: 1 },
+          { text: "Memanjatkan rasa syukur serta berterima kasih kepada guru, ibu bapa dan rakan yang sentiasa menyokong.", score: 4 },
+          { text: "Memandang rendah murid lain yang tidak mendapat sebarang anugerah.", score: 1 },
+          { text: "Menolak anugerah kerana berasa diri tidak layak langsung.", score: 2 }
+        ], 
+        expl: "Sifat bersyukur dan rendah diri menzahirkan kematangan rohani insan cemerlang." 
+      },
+      { 
+        id: 15, 
+        section: "A", 
+        domain: "Etika Digital & Gajet", 
+        text: "Seorang rakan menghantar pautan mesej palsu dan berbaur fitnah tentang seorang guru ke dalam kumpulan WhatsApp kelas anda. Tindakan anda?", 
+        options: [
+          { text: "Menyebarkan pautan berkenaan ke kumpulan WhatsApp keluarga untuk meminta pendapat.", score: 1 },
+          { text: "Mentertawakan guru berkenaan bersama ahli kumpulan yang lain.", score: 1 },
+          { text: "Menasihati rakan agar memadamkan mesej itu dan menegaskan bahaya menyebarkan berita tidak sahih.", score: 4 },
+          { text: "Keluar daripada kumpulan WhatsApp tanpa berkata apa-apa.", score: 2 }
+        ], 
+        expl: "Menghentikan fitnah di peringkat awal membendung gejala buli dan fitnah siber." 
+      },
+      { 
+        id: 16, 
+        section: "A", 
+        domain: "Khidmat Masyarakat", 
+        text: "Sekolah mengadakan aktiviti gotong-royong membersihkan kawasan surau dan taman sains pada hari Sabtu. Apakah sikap anda?", 
+        options: [
+          { text: "Hadir sekadar untuk mencatat kehadiran dalam buku rekod kemudian bersembunyi.", score: 1 },
+          { text: "Hadir tepat pada masanya dengan pakaian yang sesuai dan bekerja bersama rakan-rakan dengan ceria.", score: 4 },
+          { text: "Memberikan pelbagai alasan sakit semata-mata untuk duduk di rumah bermain game.", score: 1 },
+          { text: "Hanya memilih tugas yang paling ringan dan menyuruh murid junior membuat kerja berat.", score: 2 }
+        ], 
+        expl: "Kerelaan menyumbang tenaga mencerminkan jati diri murid yang cintakan kebersihan komuniti." 
+      },
+      { 
+        id: 17, 
+        section: "A", 
+        domain: "Kasih Sayang Haiwan", 
+        text: "Anda melihat seekor anak kucing terperangkap di dalam longkang sekolah selepas hujan lebat. Tindakan anda?", 
+        options: [
+          { text: "Mendapatkan bantuan rakan atau pekerja sekolah untuk mengeluarkan anak kucing itu dengan selamat.", score: 4 },
+          { text: "Membaling batu ke arah kucing tersebut untuk melihat sama ada ia masih hidup.", score: 1 },
+          { text: "Membiarkan sahaja kerana menganggap haiwan jalanan tidak memerlukan pertolongan.", score: 1 },
+          { text: "Merakam video kucing yang kesejukan itu untuk dimuat naik ke media sosial.", score: 1 }
+        ], 
+        expl: "Belas kasihan terhadap makhluk bernyawa mencerminkan kehalusan budi pekerti." 
+      },
+      { 
+        id: 18, 
+        section: "A", 
+        domain: "Daya Usaha & Motivasi", 
+        text: "Keputusan ujian Matematik bulanan anda menunjukkan gred C walaupun anda telah mencuba menjawab. Apakah azam anda?", 
+        options: [
+          { text: "Berputus asa dan menganggap diri anda memang tidak berbakat dalam subjek Matematik.", score: 1 },
+          { text: "Menyalahkan soalan yang kononnya terlalu susah dan luar daripada silibus.", score: 1 },
+          { text: "Menganalisis topik kelemahan, membuat latihan tambahan setiap hari dan bertanya guru secara berterusan.", score: 4 },
+          { text: "Menyembunyikan kertas jawapan tersebut daripada pengetahuan ibu bapa.", score: 2 }
+        ], 
+        expl: "Sikap positif dan gigih berusaha menukar kegagalan kepada lonjakan kejayaan." 
+      },
+      { 
+        id: 19, 
+        section: "A", 
+        domain: "Disiplin & Masa", 
+        text: "Loceng tamat waktu rehat telah berbunyi, tetapi permainan bola sepak antara kelas anda masih berbaki beberapa minit lagi. Apakah tindakan anda?", 
+        options: [
+          { text: "Meneruskan permainan sehingga bola masuk ke jaring gol walaupun loceng sudah tamat.", score: 1 },
+          { text: "Masuk ke kelas selepas 15 minit bersama rakan-rakan lain.", score: 1 },
+          { text: "Menghentikan permainan serta-merta, mengambil beg minuman dan beredar segera masuk ke kelas.", score: 4 },
+          { text: "Pura-pura sakit perut di kantin sekolah.", score: 1 }
+        ], 
+        expl: "Kepatuhan kepada ketetapan masa mencerminkan tahap disiplin kendiri yang tinggi." 
+      },
+     { 
+        id: 20, 
+        section: "A", 
+        domain: "Adab Berkomunikasi", 
+        text: "Seorang murid tahun 1 menangis di tangga sekolah kerana kehilangan botol air dan tersesat arah. Tindakan anda?", 
+        options: [
+          { text: "Menyerahkan wang saku anda kepadanya supaya dia boleh membeli air minuman baharu di kantin.", score: 2 },
+          { text: "Memujuknya dengan mesra, membantunya mencari botol air dan menghantarnya ke bilik darjah dengan selamat.", score: 4 },
+          { text: "Menyuruhnya berhenti menangis dan duduk diam di situ sementara anda bergegas mencari guru bertugas.", score: 3 },
+          { text: "Menasihatinya secara tegas agar tidak cuai menjaga barang peribadi sebelum anda beredar ke kelas.", score: 1 }
+        ], 
+        expl: "Pilihan terbaik menggabungkan empati, ketenangan serta tindakan praktikal membimbing murid yang lebih muda." 
+      },
+      { 
+        id: 21, 
+        section: "A", 
+        domain: "Kekemasan & Sahsiah", 
+        text: "Pihak sekolah menetapkan peraturan pemakaian lencana, tanda nama dan tali leher seragam setiap hari Isnin. Sikap anda?", 
+        options: [
+          { text: "Menyimpan aksesori lengkap di dalam beg sekolah dan hanya memakainya jika ada pemeriksaan guru disiplin.", score: 2 },
+          { text: "Meminjam tali leher rakan lain yang tidak hadir agar anda tidak ditolak markah merit kelas.", score: 1 },
+          { text: "Memakai seragam lengkap hanya pada hari perhimpunan rasmi, manakala Isnin biasa sekadar memakai lencana.", score: 3 },
+          { text: "Memastikan semua kelengkapan pakaian seragam telah digosok rapi dan dipakai lengkap secara konsisten.", score: 4 }
+        ], 
+        expl: "Kepatuhan yang ikhlas dan konsisten tanpa perlu diawasi mencerminkan disiplin kendiri yang tinggi." 
+      },
+      { 
+        id: 22, 
+        section: "A", 
+        domain: "Semangat Kesukanan", 
+        text: "Dalam kejohanan balapan sekolah, anda menduduki tempat kedua (pingat perak) manakala musuh tradisi anda memenangi pingat emas. Respon anda?", 
+        options: [
+          { text: "Menerima pingat dengan senyuman tawar dan segera beredar meninggalkan stadium tanpa berbual dengan pemenang.", score: 2 },
+          { text: "Menjabat tangan pemenang dengan tulus ikhlas, mengucapkan tahniah dan bertekad memperbaiki mutu larian diri.", score: 4 },
+          { text: "Mengemukakan bantahan rasmi kepada guru pengiring kerana yakin masa catatan anda sebenarnya lebih pantas.", score: 1 },
+          { text: "Menyatakan kepada rakan bahawa kekalahan tersebut hanyalah disebabkan keadaan trek larian yang agak licin.", score: 3 }
+        ], 
+        expl: "Semangat kesukanan sejati mengiktiraf kelebihan lawan dengan dada terbuka tanpa mencipta pelbagai alasan luaran." 
+      },
+      { 
+        id: 23, 
+        section: "A", 
+        domain: "Kelestarian Alam Sekitar", 
+        text: "Anda melihat tong kitar semula di sekolah dipenuhi dengan sisa makanan berminyak yang dibuang oleh murid lain. Tindakan anda?", 
+        options: [
+          { text: "Mengabaikannya kerana menganggap kerja pembersihan tong sisa adalah tanggungjawab pekerja kontrak sekolah.", score: 2 },
+          { text: "Menampal nota peringatan amaran keras di tong sampah tersebut agar murid yang membuangnya berasa bersalah.", score: 3 },
+          { text: "Mengasingkan sisa jika selamat dan mengusulkan kempen kesedaran fungsi tong kitar semula kepada kelab alam sekitar.", score: 4 },
+          { text: "Memindahkan tong tersebut ke kawasan terlindung supaya tidak mencacatkan pemandangan koridor sekolah.", score: 1 }
+        ], 
+        expl: "Inisiatif menyelesaikan punca masalah melalui pendidikan sivik berkesan jauh lebih matang daripada tindakan reaktif." 
+      },
+      { 
+        id: 24, 
+        section: "A", 
+        domain: "Budi Pekerti Keluarga", 
+        text: "Ibu meminta anda menjaga adik kecil di rumah kerana ibu perlu keluar sebentar menziarahi jiran yang sakit. Pada masa sama rancangan televisyen kegemaran anda sedang bermula. Sikap anda?", 
+        options: [
+          { text: "Membiarkan adik menonton televisyen bersama anda sambil menyuruhnya duduk diam sepanjang masa.", score: 2 },
+          { text: "Menjaga adik dengan penuh perhatian, melayan keperluannya dan mengutamakan pesanan ibu terlebih dahulu.", score: 4 },
+          { text: "Memberikan telefon bimbit anda kepada adik untuk bermain permainan video supaya dia tidak mengganggu anda.", score: 3 },
+          { text: "Meminta ibu menangguhkan ziarah tersebut sehingga rancangan televisyen anda tamat.", score: 1 }
+        ], 
+        expl: "Mengutamakan amanah ibu bapa dan keselamatan adik mengatasi kehendak hiburan peribadi." 
+      },
+      { 
+        id: 25, 
+        section: "A", 
+        domain: "Inklusif Rakan Sebaya", 
+        text: "Seorang murid berkeperluan khas (masalah pembelajaran ringan) dimasukkan ke kelas anda dan sering ketinggalan menyalin nota. Tindakan anda?", 
+        options: [
+          { text: "Menyalin nota bagi pihaknya secara senyap-senyap setiap hari supaya dia tidak dimarahi guru.", score: 3 },
+          { text: "Mencadangkan kepada guru agar murid tersebut diberikan sukatan kerja yang berbeza di luar bilik darjah.", score: 2 },
+          { text: "Membiarkan sahaja kerana berpendapat guru pembantu lebih terlatih untuk membantunya.", score: 1 },
+          { text: "Menawarkan diri duduk bersebelahannya, membimbing cara menyalin isi penting dengan sabar tanpa mengambil alih tugasnya.", score: 4 }
+        ], 
+        expl: "Inklusiviti sebenar mendidik rakan berdikari secara berhemah, bukan sekadar memanjakan atau mengasingkannya." 
+      },
+      { 
+        id: 26, 
+        section: "A", 
+        domain: "Ketelusan Nilai Wang", 
+        text: "Peniaga kedai buku sekolah tersalah memulangkan baki lebih RM10 kepada anda semasa anda membeli buku rujukan. Tindakan anda?", 
+        options: [
+          { text: "Menyimpan wang tersebut dahulu dan bercadang memulangkannya hanya jika peniaga tersebut menyedari kehilangannya.", score: 2 },
+          { text: "Memulangkan baki lebihan RM10 tersebut serta-merta kepada peniaga sambil menerangkan kesilapannya.", score: 4 },
+          { text: "Mendermakan wang lebihan tersebut ke dalam tabung surau sekolah atas niat berbuat kebaikan.", score: 3 },
+          { text: "Menganggap wang itu sebagai diskaun tidak rasmi atas pembelian buku yang mahal.", score: 1 }
+        ], 
+        expl: "Integriti menuntut pemulangan hak kepada pemilik asalnya secara telus, bukan menggunakannya untuk niat lain." 
+      },
+      { 
+        id: 27, 
+        section: "A", 
+        domain: "Patriotisme & Kenegaraan", 
+        text: "Lagu Negaraku berkumandang melalui pembesar suara ketika anda sedang berjalan di koridor sekolah. Apakah tindakan anda?", 
+        options: [
+          { text: "Memperlahankan langkah dan terus berjalan ke kelas secara senyap tanpa mengeluarkan suara.", score: 2 },
+          { text: "Menyanyi bersama-sama secara perlahan sambil terus bergerak mencari tempat duduk berhampiran.", score: 3 },
+          { text: "Berhenti melangkah serta-merta, berdiri tegak dengan penuh hormat sehingga lagu tamat.", score: 4 },
+          { text: "Segera masuk ke dalam bilik darjah terdekat supaya tidak kelihatan berada di luar koridor.", score: 1 }
+        ], 
+        expl: "Protokol lagu kebangsaan mewajibkan seseorang berdiri tegak serta-merta sebagai tanda penghormatan tertinggi kepada kedaulatan negara." 
+      },
+      { 
+        id: 28, 
+        section: "A", 
+        domain: "Penyelesaian Masalah", 
+        text: "Basikal anda mengalami kerosakan rantai terputus semasa dalam perjalanan ke sekolah pada waktu pagi. Tindakan paling bijak?", 
+        options: [
+          { text: "Mengunci basikal di tiang lampu berdekatan dan terus berlari pantas ke sekolah seorang diri.", score: 3 },
+          { text: "Menolak basikal ke tempat selamat, menghubungi ibu bapa atau meminta bantuan orang dewasa yang dipercayai, dan memaklumkan guru.", score: 4 },
+          { text: "Berpatah balik ke rumah untuk menukar basikal adik walaupun sedar anda pasti akan terlewat ke sekolah.", score: 2 },
+          { text: "Menunggu di tepi jalan raya berharap ada rakan sekelas yang lalu untuk menumpangkan anda.", score: 1 }
+        ], 
+        expl: "Mengutamakan aspek keselamatan diri dan komunikasi teratur membuktikan keupayaan berdikari secara matang." 
+      },
+      { 
+        id: 29, 
+        section: "A", 
+        domain: "Menghargai Harta Benda", 
+        text: "Anda melihat beberapa orang murid menconteng dinding dewan sekolah dengan pen penanda. Tindakan anda?", 
+        options: [
+          { text: "Mengambil gambar dinding yang diconteng untuk dimuat naik ke kumpulan sembang kelas sebagai bahan peringatan.", score: 2 },
+          { text: "Menegur mereka secara sopan tentang kesalahan tersebut dan melaporkan kepada guru jika mereka enggan memadamkannya.", score: 4 },
+          { text: "Membawa kain basah dan terus memadam contengan itu sendiri selepas murid-murid tersebut beredar.", score: 3 },
+          { text: "Menjauhkan diri dari dewan agar anda tidak dituduh bersubahat dalam kejadian vandalisme berkenaan.", score: 1 }
+        ], 
+        expl: "Keberanian moral menegur kesalahan secara terus mendidik budaya bertanggungjawab terhadap harta benda awam." 
+      },
+      { 
+        id: 30, 
+        section: "A", 
+        domain: "Visi & Cita-cita", 
+        text: "Apakah matlamat utama anda berhasrat melanjutkan pelajaran ke Sekolah Berasrama Penuh (SBP) atau MRSM?", 
+        options: [
+          { text: "Ingin membuktikan kepada guru dan rakan sekolah rendah bahawa saya mampu mencapai keputusan terbaik.", score: 2 },
+          { text: "Mendapatkan kemudahan fasiliti sukan dan akademik yang serba canggih untuk kegunaan peribadi.", score: 3 },
+          { text: "Membina disiplin diri yang utuh, menggilap potensi kepimpinan dan bersiap sedia menyumbang bakti kepada masyarakat.", score: 4 },
+          { text: "Mengikuti tradisi keluarga di mana kebanyakan adik-beradik terdahulu bersekolah di sekolah khusus.", score: 1 }
+        ], 
+        expl: "Motivasi intrinsik berorientasikan kepimpinan dan khidmat bakti mencerminkan visi matang calon sekolah khusus." 
+      },
 
       // BAHAGIAN B: KECERDASAN INTELEK T1 (31 - 100) - SILIBUS KSSR TAHUN 4-6 LENGKAP
       { id: 31, section: "B", domain: "IQ / Logik Kod", text: "Diberi persamaan nilai perkataan:\n\nBAKA = 9\nBUKU = 11\n\nJika nilai A = 1, berapakah nilai bagi U + A?", options: [{ label: "A", text: "2" }, { label: "B", text: "4" }, { label: "C", text: "3" }, { label: "D", text: "7" }], answer: "C", expl: "B + K + 2A = 9 -> B + K + 2(1) = 9 -> B + K = 7.\nB + K + 2U = 11 -> 7 + 2U = 11 -> 2U = 4 -> U = 2.\nMaka nilai U + A = 2 + 1 = 3." },
@@ -685,110 +1045,1380 @@
     /* =========================================================================
        2. DATA BANK SOALAN TINGKATAN 4 (KSSM MENENGAH RENDAH) - 100 SOALAN UNIK
        ========================================================================= */
-    const QUESTION_DATA_T4 = [
-      // BAHAGIAN A: KECERDASAN INSANIAH T4 (1 - 30) - KEMATANGAN REMAJA & KEPIMPINAN MENENGAH
-      { id: 1, section: "A", domain: "Kepimpinan Remaja", text: "Sebagai ketua platun badan beruniform, seorang ahli platun kerap lewat ke latihan kawat kerana membantu ibunya menjaga gerai jualan. Ahli lain mendesak agar dia digugurkan. Apakah tindakan anda?", options: [{ text: "Menemui beliau secara empati untuk menyusun waktu giliran latihan yang anjal tanpa meminggirkannya.", score: 4 }, { text: "Terus menggugurkan namanya demi menjaga disiplin tegas platun.", score: 2 }, { text: "Membiarkan sahaja perkara itu tanpa berbincang dengan sesiapa.", score: 1 }, { text: "Mendenda ahli tersebut berlari keliling padang setiap kali lewat.", score: 1 }], expl: "Kepimpinan prihatin menyelesaikan punca masalah secara manusiawi dan adil." },
-      { id: 2, section: "A", domain: "Etika Siber & Sahsiah", text: "Rakan sekelas anda menyunting gambar seorang rakan lain menjadi bahan jenaka dan menyebarkannya dalam kumpulan Telegram sekolah. Anda melihat perbuatan itu. Apakah respon anda?", options: [{ text: "Menasihati rakan tersebut memadamkan gambar itu dan menegaskan perbuatan itu adalah buli siber.", score: 4 }, { text: "Turut mentertawakan gambar tersebut bersama rakan-rakan lain.", score: 1 }, { text: "Mendiamkan diri kerana takut dipulaukan oleh rakan-rakan.", score: 2 }, { text: "Menyunting gambar pembuat jenaka itu untuk membalas dendam bagi pihak mangsa.", score: 1 }], expl: "Menentang buli siber dengan berani dan berprinsip mencerminkan integriti tinggi." },
-      { id: 3, section: "A", domain: "Pengurusan Tekanan", text: "Menjelang peperiksaan penting tingkatan 3, anda berasa sangat tertekan dengan harapan tinggi keluarga sehingga sukar tidur malam. Bagaimanakah anda mengatasinya?", options: [{ text: "Menyusun jadual ulang kaji realistik, mengamalkan teknik pernafasan dan meluahkan kegusaran kepada kaunselor/ibu bapa.", score: 4 }, { text: "Mengambil minuman berkafein berlebihan untuk berjaga sepanjang malam.", score: 1 }, { text: "Mengabaikan pelajaran dan bermain permainan video sepanjang masa.", score: 1 }, { text: "Memencilkan diri daripada keluarga dan rakan-rakan.", score: 2 }], expl: "Pengurusan emosi secara rasional dan sokongan moral membina daya tahan mental yang kukuh." },
-      { id: 4, section: "A", domain: "Integriti Akademik", text: "Kumpulan projek sejarah anda kesuntukan masa dan seorang ahli mencadangkan agar meniru bulat-bulat laporan dari internet tanpa rujukan. Respon anda?", options: [{ text: "Menolak cadangan itu secara tegas dan membimbing kumpulan merumuskan isi dalam ayat sendiri mengikut format rujukan sebenar.", score: 4 }, { text: "Bersetuju sahaja asalkan tugasan dapat dihantar sebelum tarikh akhir.", score: 1 }, { text: "Menarik diri dari kumpulan dan menyiapkan tugasan secara bersendirian.", score: 2 }, { text: "Membiarkan ahli itu meniru tetapi anda tidak mengambil bahagian.", score: 2 }], expl: "Plagiarisme adalah pelanggaran integriti ilmu; menghasilkan karya asli memupuk jati diri berwibawa." },
-      { id: 5, section: "A", domain: "Kematangan Emosi (EQ)", text: "Semasa perbahasan kelas, pihak lawan mengemukakan hujah yang menyerang peribadi anda, bukannya topik perbahasan. Tindakan anda?", options: [{ text: "Kekal tenang, tidak terpengaruh secara emosi, dan membalas semula dengan fakta berasaskan topik yang diperdebatkan.", score: 4 }, { text: "Membalas dengan mengejek kelemahan fizikal pihak lawan.", score: 1 }, { text: "Meninggalkan bilik darjah dalam keadaan marah.", score: 1 }, { text: "Menjerit ke arah pihak lawan untuk menghentikan percakapannya.", score: 1 }], expl: "Kematangan berdebat dinilai melalui kawalan emosi dan ketegasan berhujah dengan fakta." },
-      { id: 6, section: "A", domain: "Kematangan Membuat Keputusan", text: "Rakan-rakan mengajak anda melepak di pusat beli-belah selepas waktu persekolahan sedangkan anda telah berjanji dengan ibu untuk pulang awal menjaga rumah. Tindakan anda?", options: [{ text: "Menolak pelawaan rakan secara berhemah dengan menyatakan janji yang telah dibuat kepada ibu.", score: 4 }, { text: "Mengikut rakan melepak dan memberi alasan kepada ibu kononnya ada kelas tambahan.", score: 1 }, { text: "Mematikan telefon bimbit supaya ibu tidak dapat menghubungi anda.", score: 1 }, { text: "Marah kepada ibu kerana menghalang pergaulan anda dengan rakan sebaya.", score: 1 }], expl: "Keupayaan berkata 'tidak' kepada pengaruh rakan sebaya mencerminkan keteguhan prinsip kendiri." },
-      { id: 7, section: "A", domain: "Amanah Organisasi", text: "Sebagai bendahari persatuan tingkatan, anda memegang baki wang kutipan jamuan kelas. Seorang rakan rapat meminta pinjam wang tersebut selama dua hari untuk hal kecemasan peribadi. Tindakan anda?", options: [{ text: "Menolak permohonan pinjaman daripada dana persatuan secara berhemah dan menawarkan pinjaman wang saku peribadi anda jika mampu.", score: 4 }, { text: "Memberikan pinjaman daripada tabung persatuan kerana yakin rakan akan memulangkannya.", score: 1 }, { text: "Memalsukan rekod kira-kira persatuan untuk menutup pinjaman rakan.", score: 1 }, { text: "Mengabaikan rakan tanpa memberi sebarang penjelasan.", score: 2 }], expl: "Wang amanah organisasi tidak boleh dicampur aduk dengan urusan peribadi walau atas alasan kecemasan." },
-      { id: 8, section: "A", domain: "Penyelesaian Konflik Remaja", text: "Dua orang rakan baik anda bertengkar hebat sehingga bermusuhan kerana salah faham mengenai perkongsian maklumat kerja kursus. Apakah peranan anda?", options: [{ text: "Mendengar luahan kedua-dua pihak secara berasingan tanpa memihak, kemudian mempertemukan mereka secara matang.", score: 4 }, { text: "Menyokong pihak yang lebih popular dan memulaukan pihak yang satu lagi.", score: 1 }, { text: "Menghangatkan pertengkaran dengan menceritakan keburukan kedua-duanya di media sosial.", score: 1 }, { text: "Menjauhkan diri daripada kedua-duanya agar nama anda tidak terjejas.", score: 2 }], expl: "Sikap berkecuali dan mendamaikan perselisihan faham memupuk persekitaran persahabatan yang harmoni." },
-      { id: 9, section: "A", domain: "Ketahanan Mental di Asrama", text: "Jika anda ditawarkan ke asrama penuh dan berdepan kesukaran menyesuaikan diri dengan jadual ketat serta perasaan rindu keluarga (*homesick*), apakah strategi anda?", options: [{ text: "Mendisiplinkan diri mengikut jadual, membina persahabatan baharu yang positif dan berbincang dengan warden/kaunselor.", score: 4 }, { text: "Menangis setiap malam dan merayu kepada ibu bapa untuk membawa anda keluar dari asrama.", score: 2 }, { text: "Sengaja melanggar peraturan asrama agar dikenakan tindakan buang sekolah.", score: 1 }, { text: "Memencilkan diri di dalam dormitori dan enggan menyertai sebarang aktiviti riadah.", score: 1 }], expl: "Daya adaptasi dan ketahanan fizikal-mental amat kritikal bagi kelangsungan hidup di sekolah berasrama." },
-      { id: 10, section: "A", domain: "Integriti Penilaian Kendiri", text: "Dalam ujian lisan Bahasa Inggeris secara berpasangan, rakan pasangan anda tiba-tiba gugup dan terdiam. Bagaimanakah anda bertindak?", options: [{ text: "Memberi galakan melalui pandangan mata yang tenang dan melontarkan soalan pancingan santai agar dia kembali yakin bercakap.", score: 4 }, { text: "Mengambil alih seluruh masa perbualan untuk menunjukkan anda lebih fasih berbahasa Inggeris.", score: 2 }, { text: "Mentertawakan kegugupan rakan di hadapan guru penilai.", score: 1 }, { text: "Turut berdiam diri kerana menganggap markah anda akan terjejas kerananya.", score: 2 }], expl: "Empati dan sokongan berpasukan dinilai tinggi dalam kecerdasan emosi dan kepimpinan." },
-      { id: 11, section: "A", domain: "Literasi Maklumat", text: "Anda terbaca satu hantaran di media sosial yang mendakwa berlaku kebocoran kertas soalan peperiksaan awam. Apakah tindakan rasmi anda?", options: [{ text: "Menyemak kesahihan maklumat melalui saluran rasmi Lembaga Peperiksaan/KPM dan menasihati rakan agar tidak menularkannya.", score: 4 }, { text: "Segera berkongsi hantaran tersebut ke semua kumpulan sembang untuk menjadi orang pertama menyampaikan berita.", score: 1 }, { text: "Membeli soalan yang kononnya bocor daripada akaun individu tidak dikenali.", score: 1 }, { text: "Memadamkan aplikasi media sosial kerana panik.", score: 2 }], expl: "Menapis maklumat sebelum menyebarkannya mempamerkan kematangan digital seorang pelajar alaf baharu." },
-      { id: 12, section: "A", domain: "Semangat Kesukarelawanan", text: "Banjir kilat melanda kawasan perumahan berhampiran sekolah dan pihak sekolah membuka pusat pemindahan sementara. Peranan anda?", options: [{ text: "Mendaftar sebagai sukarelawan muda untuk membantu mengagihkan makanan dan menjaga kebersihan pusat pemindahan.", score: 4 }, { text: "Hadir sekadar untuk merakam kandungan video TikTok bagi meraih tontonan ramai.", score: 1 }, { text: "Mengelak daripada membantu kerana menganggap tugas itu tanggungjawab agensi kerajaan sahaja.", score: 1 }, { text: "Meminta bayaran upah sebelum melakukan sebarang bantuan kecemasan.", score: 1 }], expl: "Kerelaan berkorban masa dan tenaga demi mangsa bencana mencerminkan nilai ihsan kemanusiaan." },
-      { id: 13, section: "A", domain: "Etika Saintifik & Makmal", text: "Semasa menjalankan eksperimen sains di makmal, anda secara tidak sengaja memecahkan sebuah silinder penyukat kaca. Tindakan anda?", options: [{ text: "Memaklumkan guru sains serta pembantu makmal serta-merta agar kawasan serpihan kaca dibersihkan dengan selamat.", score: 4 }, { text: "Menolak serpihan kaca ke bawah meja dan pura-pura tidak mengetahuinya.", score: 1 }, { text: "Menuduh rakan di sebelah yang melanggar meja eksperimen.", score: 1 }, { text: "Mengutip serpihan kaca tajam dengan tangan kosong tanpa sarung tangan keselamatan.", score: 2 }], expl: "Mengutamakan protokol keselamatan dan bersikap jujur mengelakkan kemalangan di makmal sains." },
-      { id: 14, section: "A", domain: "Menghormati Pandangan Minoriti", text: "Dalam perbincangan kelab, seorang ahli mencadangkan idea aktiviti yang berbeza daripada kehendak majoriti ahli jawatankuasa. Sikap anda sebagai pengerusi?", options: [{ text: "Mendengar rasional idea tersebut dengan adil dan mencari titik temu yang boleh digabungkan dalam perancangan tahunan.", score: 4 }, { text: "Menolak idea tersebut secara angkuh kerana majoriti tidak menyukainya.", score: 1 }, { text: "Menyindir ahli berkenaan kerana memberikan idea yang kononnya membuang masa.", score: 1 }, { text: "Mengabaikan terus perbincangan dan membuat keputusan sendiri.", score: 1 }], expl: "Kepimpinan inklusif sentiasa menghargai kepelbagaian perspektif bagi mencapai keputusan terbaik." },
-      { id: 15, section: "A", domain: "Komunikasi Bersopan", text: "Seorang guru menegur mutu kerja tulisan anda yang sukar dibaca dengan nada yang agak keras di hadapan kelas. Bagaimanakah anda bertindak?", options: [{ text: "Menerima teguran dengan tenang, berjumpa guru selepas kelas untuk memohon maaf dan berazam menulis lebih kemas.", score: 4 }, { text: "Menghempas buku ke atas meja dan menunjukkan muka masam sepanjang sesi pembelajaran.", score: 1 }, { text: "Membalas teguran guru dengan nada suara yang meninggi.", score: 1 }, { text: "Ponteng kelas subjek berkenaan pada minggu berikutnya sebagai protes.", score: 1 }], expl: "Adab terhadap guru memelihara keberkatan ilmu dan membina kematangan emosi yang kukuh." },
-      { id: 16, section: "A", domain: "Integriti Pengurusan Masa", text: "Anda dilantik memegang jawatan penting dalam tiga kelab berbeza di sekolah menengah sehingga menjejaskan tumpuan belajar. Tindakan wajar?", options: [{ text: "Menilai semula kapasiti diri, berbincang dengan guru penasihat untuk melepaskan salah satu jawatan secara terhormat demi keseimbangan akademik.", score: 4 }, { text: "Memegang semua jawatan tetapi tidak menjalankan sebarang tugasan kelab.", score: 1 }, { text: "Mengabaikan terus pelajaran dan memberi tumpuan 100% kepada aktiviti kelab semata-mata.", score: 1 }, { text: "Menghilangkan diri tanpa khabar berita setiap kali mesyuarat diadakan.", score: 1 }], expl: "Kematangan mengurus komitmen mengelakkan diri daripada memungkiri amanah yang dipikul." },
-      { id: 17, section: "A", domain: "Menolak Amalan Negatif", text: "Beberapa orang murid senior mengajak anda merokok di kawasan belakang tandas sekolah dengan ugutan akan dipulaukan jika menolak. Respon anda?", options: [{ text: "Menolak secara tegas dan tidak teragak-agak melaporkan aktiviti melanggar disiplin itu kepada guru kaunselor/disiplin demi kebaikan mereka.", score: 4 }, { text: "Mencuba merokok sekali sekadar untuk menjaga hati murid senior.", score: 1 }, { text: "Menawarkan diri membeli rokok untuk mereka asalkan anda tidak dipukul.", score: 1 }, { text: "Mendiamkan diri dan berasa takut sepanjang persekolahan.", score: 2 }], expl: "Ketegasan menolak perlakuan salah laku membendung kemudaratan dan gejala samseng di sekolah." },
-      { id: 18, section: "A", domain: "Pematuhan Peraturan Peperiksaan", text: "Semasa menjawab peperiksaan di dewan, jam dinding dewan rosak dan anda tidak memakai jam tangan. Anda ingin mengetahui baki masa. Tindakan anda?", options: [{ text: "Mengangkat tangan secara tertib dan bertanya kepada guru pengawas peperiksaan yang bertugas.", score: 4 }, { text: "Menoleh ke belakang bertanya calon lain yang sedang khusyuk menulis.", score: 1 }, { text: "Mengeluarkan telefon bimbit dari poket secara senyap untuk melihat jam.", score: 1 }, { text: "Berdiri dan berjalan sendiri ke meja ketua pengawas tanpa kebenaran.", score: 1 }], expl: "Mematuhi tatacara peperiksaan mengelakkan diri daripada disyaki melakukan penyelewengan." },
-      { id: 19, section: "A", domain: "Hormat Budaya & Agama", text: "Rakan sebilik anda yang berlainan agama sedang khusyuk menjalankan upacara kepercayaannya pada waktu petang di dalam bilik. Sikap anda?", options: [{ text: "Memperlahankan aktiviti, tidak membuat bising dan memberi ruang peribadi kepadanya dengan penuh hormat.", score: 4 }, { text: "Memasang muzik dengan bunyi kelantangan tinggi untuk mengganggunya.", score: 1 }, { text: "Mentertawakan gaya upacara kepercayaannya bersama rakan lain.", score: 1 }, { text: "Menuntut agar dia menghentikan upacara tersebut serta-merta.", score: 1 }], expl: "Toleransi dan rasa hormat terhadap kepercayaan kaum lain menjamin keharmonian hidup berbilang kaum." },
-      { id: 20, section: "A", domain: "Sikap Proaktif", text: "Anda mendapati papan kenyataan persatuan di bawah seliaan anda kosong dan usang sejak beberapa bulan lalu. Apakah inisiatif anda?", options: [{ text: "Mengumpulkan bahan ilmiah terkini, mereka poster kreatif bersama ahli dan mengemas kini papan kenyataan tersebut.", score: 4 }, { text: "Menunggu sehingga guru penasihat mengeluarkan arahan bertulis memarahi jawatankuasa.", score: 2 }, { text: "Membiarkan sahaja kerana berpendapat tiada murid yang berminat membaca papan kenyataan.", score: 1 }, { text: "Menanggalkan papan kenyataan itu dan membuangnya ke stor sekolah.", score: 1 }], expl: "Sikap proaktif memacu kecemerlangan organisasi tanpa perlu sentiasa diarahkan." },
-      { id: 21, section: "A", domain: "Kawalan Emosi di Media Sosial", text: "Seorang pengguna internet meninggalkan komen yang menyakitkan hati pada video pembentangan ilmiah kelas anda. Tindakan anda?", options: [{ text: "Tidak membalas dengan kata-kata kesat, menilai jika ada kritikan membina, atau menyekat pengguna tersebut secara matang.", score: 4 }, { text: "Membalas komen tersebut dengan memaki hamun dan mencabar pengguna itu bergaduh.", score: 1 }, { text: "Mengajak seluruh rakan kelas menyerang akaun media sosial individu berkenaan.", score: 1 }, { text: "Menghapuskan video pembentangan dan berputus asa untuk menghasilkan karya lagi.", score: 2 }], expl: "Literasi emosi digital mencegah keterlibatan dalam kitaran toksik perang siber (*flame war*)." },
-      { id: 22, section: "A", domain: "Tanggungjawab Terhadap Kemudahan Awam", text: "Alat pendingin hawa di makmal komputer sekolah dibiarkan terpasang selepas kelas tamat sedangkan tiada lagi murid di dalamnya. Tindakan anda?", options: [{ text: "Menutup suis pendingin hawa dan lampu serta memastikan pintu makmal ditutup dengan selamat.", score: 4 }, { text: "Membiarkan sahaja kerana menganggap bil elektrik dibayar oleh pihak kerajaan.", score: 1 }, { text: "Mengajak kawan-kawan masuk melepak di dalam makmal yang sejuk itu tanpa izin.", score: 1 }, { text: "Mengadu kepada pihak polis kononnya ada pencerobohan makmal.", score: 1 }], expl: "Amalan penjimatan tenaga dan kepedulian harta awam mencerminkan integriti warganegara terpuji." },
-      { id: 23, section: "A", domain: "Daya Saing Sihat", text: "Rakan sekelas anda yang sentiasa berada di kedudukan teratas jatuh sakit menjelang hari peperiksaan akhir. Sikap anda?", options: [{ text: "Menziarahinya, berkongsi nota pelajaran yang tertinggal dan mendoakan kesembuhannya agar dapat bersaing secara sihat.", score: 4 }, { text: "Bergembira kerana peluang anda untuk menjadi nombor satu kelas kini lebih cerah.", score: 1 }, { text: "Menyembunyikan nota penting daripadanya agar dia terus ketinggalan.", score: 1 }, { text: "Menyindirnya bahawa dia sakit kerana terlalu banyak belajar.", score: 1 }], expl: "Persaingan akademik yang sihat berlandaskan nilai kemanusiaan dan sokongan moral sesama sahabat." },
-      { id: 24, section: "A", domain: "Keberanian Moral", text: "Anda melihat sekumpulan murid menipu juruwang koperasi sekolah dengan mengambil makanan tanpa membayar. Tindakan wajar?", options: [{ text: "Menegur perbuatan mencuri itu secara berani atau melaporkannya segera kepada pihak pengurusan koperasi dengan bukti sahih.", score: 4 }, { text: "Turut mengambil makanan tanpa bayar kerana menganggap peluang itu terbuka.", score: 1 }, { text: "Mendiamkan diri kerana takut diugut oleh kumpulan murid berkenaan.", score: 2 }, { text: "Meminta bahagian makanan daripada mereka sebagai upah menutup rahsia.", score: 1 }], expl: "Keberanian menegakkan kebenaran membendung penularan jenayah di peringkat sekolah." },
-      { id: 25, section: "A", domain: "Etika Kepimpinan Kewangan", text: "Dalam penganjuran Hari Keusahawanan sekolah, gerai kelas anda memperoleh keuntungan lumayan. Ahli mencadangkan membahagikan terus wang tersebut tanpa audit guru. Tindakan anda?", options: [{ text: "Menyediakan penyata akaun lengkap (modal, jualan, baki) dan mengesahkannya bersama guru kelas sebelum sebarang pembahagian dibuat.", score: 4 }, { text: "Mengambil bahagian keuntungan terbesar untuk diri sendiri atas kapasiti ketua gerai.", score: 1 }, { text: "Membelanjakan wang keuntungan itu untuk berhibur di luar sekolah.", score: 1 }, { text: "Membuang resit pembelian bahan mentah agar kiraan untung tidak dikesan.", score: 1 }], expl: "Ketelusan pengauditan kewangan asas kepada pembentukan pemimpin bebas rasuah." },
-      { id: 26, section: "A", domain: "Adaptasi Budaya Sekolah Menengah", text: "Sebagai murid baharu tingkatan 1/tingkatan 4, anda berasa sukar menyesuaikan diri dengan sistem jadual anjal dan guru yang berbeza mengikut subjek. Tindakan anda?", options: [{ text: "Menyediakan buku catatan peribadi, menyalin jadual waktu dengan teliti dan bertanya rakan sekelas yang lebih arif.", score: 4 }, { text: "Sering masuk lewat ke kelas dengan memberi alasan keliru mencari bilik subjek.", score: 1 }, { text: "Tidak membawa buku teks yang betul dan menyalahkan pihak sekolah.", score: 1 }, { text: "Duduk termenung di dalam kelas tanpa mengambil nota.", score: 1 }], expl: "Inisiatif menyesuaikan diri secara sistematik mempercepat penguasaan rutin pembelajaran menengah." },
-      { id: 27, section: "A", domain: "Kesedaran Kesihatan Mental", text: "Seorang rakan karib anda mula menunjukkan tanda-tanda kemurungan yang membimbangkan dan kerap melukakan diri. Tindakan terbaik anda?", options: [{ text: "Mendengar luahannya dengan penuh empati dan segera membimbingnya berjumpa guru bimbingan & kaunseling untuk bantuan profesional.", score: 4 }, { text: "Menceritakan rahsia masalah mentalnya kepada seluruh kelas untuk dijadikan bahan bualan.", score: 1 }, { text: "Mengejek tindakannya sebagai perbuatan mencari perhatian semata-mata.", score: 1 }, { text: "Membiarkan sahaja kerana bimbang akan dipersalahkan jika keadaannya bertambah buruk.", score: 2 }], expl: "Tindakan pantas menghubungkan rakan dengan kaunselor profesional mampu menyelamatkan nyawa insan." },
-      { id: 28, section: "A", domain: "Kematangan Berkompromi", text: "Dua kumpulan dalam persatuan anda tidak bersetuju mengenai pemilihan tempat bagi aktiviti perkhemahan akhir tahun. Bagaimanakah anda bertindak?", options: [{ text: "Membentangkan analisis kelebihan, kos dan aspek keselamatan kedua-dua lokasi, lalu membuat undian secara demokratik.", score: 4 }, { text: "Membatalkan terus aktiviti perkhemahan kerana malas melayan perbezaan pendapat.", score: 1 }, { text: "Memilih lokasi yang dicadangkan oleh rakan karib anda semata-mata.", score: 1 }, { text: "Membiarkan kedua-dua pihak bertengkar mulut sehingga ada yang mengalah.", score: 1 }], expl: "Keputusan berasaskan fakta keselamatan dan proses demokratik melahirkan konsensus yang memuaskan." },
-      { id: 29, section: "A", domain: "Disiplin Menghadiri Aktiviti", text: "Latihan kawad kaki diadakan pada petang Sabtu yang panas terik. Anda berasa malas untuk hadir. Apakah pertimbangan anda?", options: [{ text: "Mengingatkan diri tentang komitmen terhadap pasukan dan hadir tepat pada masanya demi kejayaan platun bersama.", score: 4 }, { text: "Memberikan sijil sakit palsu kepada guru penasihat.", score: 1 }, { text: "Tidak hadir tanpa sebarang surat makluman dan tidur di rumah.", score: 1 }, { text: "Hadir tetapi duduk di bawah pokok sepanjang latihan berlangsung.", score: 2 }], expl: "Komitmen dan disiplin menepati janji adalah ciri terpenting dalam pembinaan modal insan berdaya tahan." },
-      { id: 30, section: "A", domain: "Wawasan Menengah Atas", text: "Mengapakah anda bercita-cita melanjutkan pengajian peringkat menengah atas di Kolej Melayu / Sekolah Khusus (SBP / MRSM)?", options: [{ text: "Mencabar potensi intelek, membina jati diri kepimpinan yang holistik dan bersiap sedia menyumbang bakti kepada negara pada peringkat global.", score: 4 }, { text: "Sekadar ingin memakai pakaian seragam khas sekolah berprestij untuk bermegah di media sosial.", score: 1 }, { text: "Kerana mahu bersaing dengan jiran tetangga.", score: 1 }, { text: "Menganggap sekolah harian biasa tidak mampu memberikan masa depan yang baik.", score: 2 }], expl: "Visi yang jelas berlandaskan matlamat menyumbang kepada kemajuan masyarakat memacu motivasi berterusan." },
+   const QUESTION_DATA_T4 = [
+      // BAHAGIAN A: KECERDASAN INSANIAH T4 (1 - 30) - SUSUNAN SKOR DIACAK RAWAK
+      { 
+        id: 1, 
+        section: "A", 
+        domain: "Kepimpinan Remaja", 
+        text: "Sebagai ketua platun badan beruniform, seorang ahli platun kerap lewat ke latihan kawat kerana membantu ibunya menjaga gerai jualan. Ahli lain mendesak agar dia digugurkan. Apakah tindakan anda?", 
+        options: [
+          { text: "Terus menggugurkan namanya demi menjaga disiplin tegas platun.", score: 2 },
+          { text: "Menemui beliau secara empati untuk menyusun waktu giliran latihan yang anjal tanpa meminggirkannya.", score: 4 },
+          { text: "Membiarkan sahaja perkara itu tanpa berbincang dengan sesiapa.", score: 1 },
+          { text: "Mendenda ahli tersebut berlari keliling padang setiap kali lewat.", score: 1 }
+        ], 
+        expl: "Kepimpinan prihatin menyelesaikan punca masalah secara manusiawi dan adil." 
+      },
+      { 
+        id: 2, 
+        section: "A", 
+        domain: "Etika Siber & Sahsiah", 
+        text: "Rakan sekelas anda menyunting gambar seorang rakan lain menjadi bahan jenaka dan menyebarkannya dalam kumpulan Telegram sekolah. Anda melihat perbuatan itu. Apakah respon anda?", 
+        options: [
+          { text: "Turut mentertawakan gambar tersebut bersama rakan-rakan lain.", score: 1 },
+          { text: "Mendiamkan diri kerana takut dipulaukan oleh rakan-rakan.", score: 2 },
+          { text: "Menasihati rakan tersebut memadamkan gambar itu dan menegaskan perbuatan itu adalah buli siber.", score: 4 },
+          { text: "Menyunting gambar pembuat jenaka itu untuk membalas dendam bagi pihak mangsa.", score: 1 }
+        ], 
+        expl: "Menentang buli siber dengan berani dan berprinsip mencerminkan integriti tinggi." 
+      },
+      { 
+        id: 3, 
+        section: "A", 
+        domain: "Pengurusan Tekanan", 
+        text: "Menjelang peperiksaan penting tingkatan 3, anda berasa sangat tertekan dengan harapan tinggi keluarga sehingga sukar tidur malam. Bagaimanakah anda mengatasinya?", 
+        options: [
+          { text: "Mengambil minuman berkafein berlebihan untuk berjaga sepanjang malam.", score: 1 },
+          { text: "Memencilkan diri daripada keluarga dan rakan-rakan.", score: 2 },
+          { text: "Mengabaikan pelajaran dan bermain permainan video sepanjang masa.", score: 1 },
+          { text: "Menyusun jadual ulang kaji realistik, mengamalkan teknik pernafasan dan meluahkan kegusaran kepada kaunselor/ibu bapa.", score: 4 }
+        ], 
+        expl: "Pengurusan emosi secara rasional dan sokongan moral membina daya tahan mental yang kukuh." 
+      },
+      { 
+        id: 4, 
+        section: "A", 
+        domain: "Integriti Akademik", 
+        text: "Kumpulan projek sejarah anda kesuntukan masa dan seorang ahli mencadangkan agar meniru bulat-bulat laporan dari internet tanpa rujukan. Respon anda?", 
+        options: [
+          { text: "Bersetuju sahaja asalkan tugasan dapat dihantar sebelum tarikh akhir.", score: 1 },
+          { text: "Menolak cadangan itu secara tegas dan membimbing kumpulan merumuskan isi dalam ayat sendiri mengikut format rujukan sebenar.", score: 4 },
+          { text: "Menarik diri dari kumpulan dan menyiapkan tugasan secara bersendirian.", score: 2 },
+          { text: "Membiarkan ahli itu meniru tetapi anda tidak mengambil bahagian.", score: 2 }
+        ], 
+        expl: "Plagiarisme adalah pelanggaran integriti ilmu; menghasilkan karya asli memupuk jati diri berwibawa." 
+      },
+      { 
+        id: 5, 
+        section: "A", 
+        domain: "Kematangan Emosi (EQ)", 
+        text: "Semasa perbahasan kelas, pihak lawan mengemukakan hujah yang menyerang peribadi anda, bukannya topik perbahasan. Tindakan anda?", 
+        options: [
+          { text: "Membalas dengan mengejek kelemahan fizikal pihak lawan.", score: 1 },
+          { text: "Kekal tenang, tidak terpengaruh secara emosi, dan membalas semula dengan fakta berasaskan topik yang diperdebatkan.", score: 4 },
+          { text: "Meninggalkan bilik darjah dalam keadaan marah.", score: 1 },
+          { text: "Menjerit ke arah pihak lawan untuk menghentikan percakapannya.", score: 1 }
+        ], 
+        expl: "Kematangan berdebat dinilai melalui kawalan emosi dan ketegasan berhujah dengan fakta." 
+      },
+      { 
+        id: 6, 
+        section: "A", 
+        domain: "Kematangan Membuat Keputusan", 
+        text: "Rakan-rakan mengajak anda melepak di pusat beli-belah selepas waktu persekolahan sedangkan anda telah berjanji dengan ibu untuk pulang awal menjaga rumah. Tindakan anda?", 
+        options: [
+          { text: "Mengikut rakan melepak dan memberi alasan kepada ibu kononnya ada kelas tambahan.", score: 1 },
+          { text: "Mematikan telefon bimbit supaya ibu tidak dapat menghubungi anda.", score: 1 },
+          { text: "Menolak pelawaan rakan secara berhemah dengan menyatakan janji yang telah dibuat kepada ibu.", score: 4 },
+          { text: "Marah kepada ibu kerana menghalang pergaulan anda dengan rakan sebaya.", score: 1 }
+        ], 
+        expl: "Keupayaan berkata 'tidak' kepada pengaruh rakan sebaya mencerminkan keteguhan prinsip kendiri." 
+      },
+      { 
+        id: 7, 
+        section: "A", 
+        domain: "Amanah Organisasi", 
+        text: "Sebagai bendahari persatuan tingkatan, anda memegang baki wang kutipan jamuan kelas. Seorang rakan rapat meminta pinjam wang tersebut selama dua hari untuk hal kecemasan peribadi. Tindakan anda?", 
+        options: [
+          { text: "Memberikan pinjaman daripada tabung persatuan kerana yakin rakan akan memulangkannya.", score: 1 },
+          { text: "Menolak permohonan pinjaman daripada dana persatuan secara berhemah dan menawarkan pinjaman wang saku peribadi anda jika mampu.", score: 4 },
+          { text: "Memalsukan rekod kira-kira persatuan untuk menutup pinjaman rakan.", score: 1 },
+          { text: "Mengabaikan rakan tanpa memberi sebarang penjelasan.", score: 2 }
+        ], 
+        expl: "Wang amanah organisasi tidak boleh dicampur aduk dengan urusan peribadi walau atas alasan kecemasan." 
+      },
+      { 
+        id: 8, 
+        section: "A", 
+        domain: "Penyelesaian Konflik Remaja", 
+        text: "Dua orang rakan baik anda bertengkar hebat sehingga bermusuhan kerana salah faham mengenai perkongsian maklumat kerja kursus. Apakah peranan anda?", 
+        options: [
+          { text: "Menyokong pihak yang lebih popular dan memulaukan pihak yang satu lagi.", score: 1 },
+          { text: "Menghangatkan pertengkaran dengan menceritakan keburukan kedua-duanya di media sosial.", score: 1 },
+          { text: "Mendengar luahan kedua-dua pihak secara berasingan tanpa memihak, kemudian mempertemukan mereka secara matang.", score: 4 },
+          { text: "Menjauhkan diri daripada kedua-duanya agar nama anda tidak terjejas.", score: 2 }
+        ], 
+        expl: "Sikap berkecuali dan mendamaikan perselisihan faham memupuk persekitaran persahabatan yang harmoni." 
+      },
+      { 
+        id: 9, 
+        section: "A", 
+        domain: "Ketahanan Mental di Asrama", 
+        text: "Jika anda ditawarkan ke asrama penuh dan berdepan kesukaran menyesuaikan diri dengan jadual ketat serta perasaan rindu keluarga (*homesick*), apakah strategi anda?", 
+        options: [
+          { text: "Menangis setiap malam dan merayu kepada ibu bapa untuk membawa anda keluar dari asrama.", score: 2 },
+          { text: "Mendisiplinkan diri mengikut jadual, membina persahabatan baharu yang positif dan berbincang dengan warden/kaunselor.", score: 4 },
+          { text: "Sengaja melanggar peraturan asrama agar dikenakan tindakan buang sekolah.", score: 1 },
+          { text: "Memencilkan diri di dalam dormitori dan enggan menyertai sebarang aktiviti riadah.", score: 1 }
+        ], 
+        expl: "Daya adaptasi dan ketahanan fizikal-mental amat kritikal bagi kelangsungan hidup di sekolah berasrama." 
+      },
+      { 
+        id: 10, 
+        section: "A", 
+        domain: "Integriti Penilaian Kendiri", 
+        text: "Dalam ujian lisan Bahasa Inggeris secara berpasangan, rakan pasangan anda tiba-tiba gugup dan terdiam. Bagaimanakah anda bertindak?", 
+        options: [
+          { text: "Mengambil alih seluruh masa perbualan untuk menunjukkan anda lebih fasih berbahasa Inggeris.", score: 2 },
+          { text: "Mentertawakan kegugupan rakan di hadapan guru penilai.", score: 1 },
+          { text: "Turut berdiam diri kerana menganggap markah anda akan terjejas kerananya.", score: 2 },
+          { text: "Memberi galakan melalui pandangan mata yang tenang dan melontarkan soalan pancingan santai agar dia kembali yakin bercakap.", score: 4 }
+        ], 
+        expl: "Empati dan sokongan berpasukan dinilai tinggi dalam kecerdasan emosi dan kepimpinan." 
+      },
+      { 
+        id: 11, 
+        section: "A", 
+        domain: "Literasi Maklumat", 
+        text: "Anda terbaca satu hantaran di media sosial yang mendakwa berlaku kebocoran kertas soalan peperiksaan awam. Apakah tindakan rasmi anda?", 
+        options: [
+          { text: "Segera berkongsi hantaran tersebut ke semua kumpulan sembang untuk menjadi orang pertama menyampaikan berita.", score: 1 },
+          { text: "Menyemak kesahihan maklumat melalui saluran rasmi Lembaga Peperiksaan/KPM dan menasihati rakan agar tidak menularkannya.", score: 4 },
+          { text: "Membeli soalan yang kononnya bocor daripada akaun individu tidak dikenali.", score: 1 },
+          { text: "Memadamkan aplikasi media sosial kerana panik.", score: 2 }
+        ], 
+        expl: "Menapis maklumat sebelum menyebarkannya mempamerkan kematangan digital seorang pelajar alaf baharu." 
+      },
+      { 
+        id: 12, 
+        section: "A", 
+        domain: "Semangat Kesukarelawanan", 
+        text: "Banjir kilat melanda kawasan perumahan berhampiran sekolah dan pihak sekolah membuka pusat pemindahan sementara. Peranan anda?", 
+        options: [
+          { text: "Hadir sekadar untuk merakam kandungan video TikTok bagi meraih tontonan ramai.", score: 1 },
+          { text: "Mengelak daripada membantu kerana menganggap tugas itu tanggungjawab agensi kerajaan sahaja.", score: 1 },
+          { text: "Mendaftar sebagai sukarelawan muda untuk membantu mengagihkan makanan dan menjaga kebersihan pusat pemindahan.", score: 4 },
+          { text: "Meminta bayaran upah sebelum melakukan sebarang bantuan kecemasan.", score: 1 }
+        ], 
+        expl: "Kerelaan berkorban masa dan tenaga demi mangsa bencana mencerminkan nilai ihsan kemanusiaan." 
+      },
+      { 
+        id: 13, 
+        section: "A", 
+        domain: "Etika Saintifik & Makmal", 
+        text: "Semasa menjalankan eksperimen sains di makmal, anda secara tidak sengaja memecahkan sebuah silinder penyukat kaca. Tindakan anda?", 
+        options: [
+          { text: "Memaklumkan guru sains serta pembantu makmal serta-merta agar kawasan serpihan kaca dibersihkan dengan selamat.", score: 4 },
+          { text: "Menolak serpihan kaca ke bawah meja dan pura-pura tidak mengetahuinya.", score: 1 },
+          { text: "Menuduh rakan di sebelah yang melanggar meja eksperimen.", score: 1 },
+          { text: "Mengutip serpihan kaca tajam dengan tangan kosong tanpa sarung tangan keselamatan.", score: 2 }
+        ], 
+        expl: "Mengutamakan protokol keselamatan dan bersikap jujur mengelakkan kemalangan di makmal sains." 
+      },
+      { 
+        id: 14, 
+        section: "A", 
+        domain: "Menghormati Pandangan Minoriti", 
+        text: "Dalam perbincangan kelab, seorang ahli mencadangkan idea aktiviti yang berbeza daripada kehendak majoriti ahli jawatankuasa. Sikap anda sebagai pengerusi?", 
+        options: [
+          { text: "Menolak idea tersebut secara angkuh kerana majoriti tidak menyukainya.", score: 1 },
+          { text: "Menyindir ahli berkenaan kerana memberikan idea yang kononnya membuang masa.", score: 1 },
+          { text: "Mendengar rasional idea tersebut dengan adil dan mencari titik temu yang boleh digabungkan dalam perancangan tahunan.", score: 4 },
+          { text: "Mengabaikan terus perbincangan dan membuat keputusan sendiri.", score: 1 }
+        ], 
+        expl: "Kepimpinan inklusif sentiasa menghargai kepelbagaian perspektif bagi mencapai keputusan terbaik." 
+      },
+      { 
+        id: 15, 
+        section: "A", 
+        domain: "Komunikasi Bersopan", 
+        text: "Seorang guru menegur mutu kerja tulisan anda yang sukar dibaca dengan nada yang agak keras di hadapan kelas. Bagaimanakah anda bertindak?", 
+        options: [
+          { text: "Menghempas buku ke atas meja dan menunjukkan muka masam sepanjang sesi pembelajaran.", score: 1 },
+          { text: "Membalas teguran guru dengan nada suara yang meninggi.", score: 1 },
+          { text: "Ponteng kelas subjek berkenaan pada minggu berikutnya sebagai protes.", score: 1 },
+          { text: "Menerima teguran dengan tenang, berjumpa guru selepas kelas untuk memohon maaf dan berazam menulis lebih kemas.", score: 4 }
+        ], 
+        expl: "Adab terhadap guru memelihara keberkatan ilmu dan membina kematangan emosi yang kukuh." 
+      },
+      { 
+        id: 16, 
+        section: "A", 
+        domain: "Integriti Pengurusan Masa", 
+        text: "Anda dilantik memegang jawatan penting dalam tiga kelab berbeza di sekolah menengah sehingga menjejaskan tumpuan belajar. Tindakan wajar?", 
+        options: [
+          { text: "Menilai semula kapasiti diri, berbincang dengan guru penasihat untuk melepaskan salah satu jawatan secara terhormat demi keseimbangan akademik.", score: 4 },
+          { text: "Memegang semua jawatan tetapi tidak menjalankan sebarang tugasan kelab.", score: 1 },
+          { text: "Mengabaikan terus pelajaran dan memberi tumpuan 100% kepada aktiviti kelab semata-mata.", score: 1 },
+          { text: "Menghilangkan diri tanpa khabar berita setiap kali mesyuarat diadakan.", score: 1 }
+        ], 
+        expl: "Kematangan mengurus komitmen mengelakkan diri daripada memungkiri amanah yang dipikul." 
+      },
+      { 
+        id: 17, 
+        section: "A", 
+        domain: "Menolak Amalan Negatif", 
+        text: "Beberapa orang murid senior mengajak anda merokok di kawasan belakang tandas sekolah dengan ugutan akan dipulaukan jika menolak. Respon anda?", 
+        options: [
+          { text: "Mencuba merokok sekali sekadar untuk menjaga hati murid senior.", score: 1 },
+          { text: "Menolak secara tegas dan tidak teragak-agak melaporkan aktiviti melanggar disiplin itu kepada guru kaunselor/disiplin demi kebaikan mereka.", score: 4 },
+          { text: "Menawarkan diri membeli rokok untuk mereka asalkan anda tidak dipukul.", score: 1 },
+          { text: "Mendiamkan diri dan berasa takut sepanjang persekolahan.", score: 2 }
+        ], 
+        expl: "Ketegasan menolak perlakuan salah laku membendung kemudaratan dan gejala samseng di sekolah." 
+      },
+      { 
+        id: 18, 
+        section: "A", 
+        domain: "Pematuhan Peraturan Peperiksaan", 
+        text: "Semasa menjawab peperiksaan di dewan, jam dinding dewan rosak dan anda tidak memakai jam tangan. Anda ingin mengetahui baki masa. Tindakan anda?", 
+        options: [
+          { text: "Menoleh ke belakang bertanya calon lain yang sedang khusyuk menulis.", score: 1 },
+          { text: "Mengeluarkan telefon bimbit dari poket secara senyap untuk melihat jam.", score: 1 },
+          { text: "Mengangkat tangan secara tertib dan bertanya kepada guru pengawas peperiksaan yang bertugas.", score: 4 },
+          { text: "Berdiri dan berjalan sendiri ke meja ketua pengawas tanpa kebenaran.", score: 1 }
+        ], 
+        expl: "Mematuhi tatacara peperiksaan mengelakkan diri daripada disyaki melakukan penyelewengan." 
+      },
+      { 
+        id: 19, 
+        section: "A", 
+        domain: "Hormat Budaya & Agama", 
+        text: "Rakan sebilik anda yang berlainan agama sedang khusyuk menjalankan upacara kepercayaannya pada waktu petang di dalam bilik. Sikap anda?", 
+        options: [
+          { text: "Memasang muzik dengan bunyi kelantangan tinggi untuk mengganggunya.", score: 1 },
+          { text: "Mentertawakan gaya upacara kepercayaannya bersama rakan lain.", score: 1 },
+          { text: "Memperlahankan aktiviti, tidak membuat bising dan memberi ruang peribadi kepadanya dengan penuh hormat.", score: 4 },
+          { text: "Menuntut agar dia menghentikan upacara tersebut serta-merta.", score: 1 }
+        ], 
+        expl: "Toleransi dan rasa hormat terhadap kepercayaan kaum lain menjamin keharmonian hidup berbilang kaum." 
+      },
+     { 
+        id: 20, 
+        section: "A", 
+        domain: "Sikap Proaktif", 
+        text: "Anda mendapati papan kenyataan persatuan di bawah seliaan anda kosong dan usang sejak beberapa bulan lalu. Apakah inisiatif anda?", 
+        options: [
+          { text: "Mencetak artikel ringkas dari internet secara bersendirian dan menampalnya tanpa perbincangan jawatankuasa.", score: 2 },
+          { text: "Membangkitkan isu tersebut dalam mesyuarat jawatankuasa dan menunggu guru penasihat menetapkan jadual bertugas.", score: 3 },
+          { text: "Mengumpulkan bahan ilmiah terkini, mereka poster kreatif bersama ahli dan mengemas kini papan kenyataan tersebut.", score: 4 },
+          { text: "Membiarkan sahaja kerana menganggap murid masa kini lebih berminat membaca hebahan di media sosial.", score: 1 }
+        ], 
+        expl: "Sikap proaktif memacu kerjasama sepasukan dan tindakan segera tanpa bersikap pasif atau bergerak solo." 
+      },
+      { 
+        id: 21, 
+        section: "A", 
+        domain: "Kawalan Emosi di Media Sosial", 
+        text: "Seorang pengguna internet meninggalkan komen yang menyakitkan hati pada video pembentangan ilmiah kelas anda. Tindakan anda?", 
+        options: [
+          { text: "Menutup terus ruangan komen pada video tersebut supaya tiada lagi pandangan negatif diterima.", score: 2 },
+          { text: "Tidak membalas dengan emosi, menilai jika ada kritikan membina, dan menyekat pengguna tersebut secara matang.", score: 4 },
+          { text: "Membalas komen dengan menegur adab pengguna tersebut secara terbuka di hadapan pengikut akaun.", score: 3 },
+          { text: "Memadamkan video pembentangan tersebut kerana berasa usaha kumpulan anda tidak dihargai.", score: 1 }
+        ], 
+        expl: "Kematangan literasi digital melibatkan kawalan emosi rasional tanpa reaksi defensif melampau." 
+      },
+      { 
+        id: 22, 
+        section: "A", 
+        domain: "Tanggungjawab Terhadap Kemudahan Awam", 
+        text: "Alat pendingin hawa di makmal komputer sekolah dibiarkan terpasang selepas kelas tamat sedangkan tiada lagi murid di dalamnya. Tindakan anda?", 
+        options: [
+          { text: "Menutup suis pendingin hawa dan lampu serta memastikan pintu makmal ditutup dengan selamat.", score: 4 },
+          { text: "Membiarkan pendingin hawa terpasang tetapi menutup semua suis lampu makmal bagi menjimatkan sedikit elektrik.", score: 2 },
+          { text: "Melaporkan kepada guru bilik media bahawa kelas terdahulu cuai tidak menutup suis elektrik.", score: 3 },
+          { text: "Membiarkannya kerana menganggap mungkin ada kelas lain yang akan menggunakan makmal tersebut sebentar lagi.", score: 1 }
+        ], 
+        expl: "Tanggungjawab sivik menuntut tindakan pencegahan pembaziran serta-merta tanpa bertangguh atau menuding jari." 
+      },
+      { 
+        id: 23, 
+        section: "A", 
+        domain: "Daya Saing Sihat", 
+        text: "Rakan sekelas anda yang sentiasa berada di kedudukan teratas jatuh sakit menjelang hari peperiksaan akhir. Sikap anda?", 
+        options: [
+          { text: "Fokus mengulang kaji pelajaran sendiri secara intensif agar dapat memanfaatkan peluang menduduki tempat teratas.", score: 2 },
+          { text: "Menghantar pesanan ringkas mendoakan kesihatannya tetapi mengelak daripada berkongsi nota kaji selidik terkini.", score: 3 },
+          { text: "Menziarahinya, berkongsi nota pelajaran yang tertinggal dan mendoakan kesembuhannya agar dapat bersaing secara sihat.", score: 4 },
+          { text: "Menganggap situasi tersebut sebagai kelemahan daya ketahanan dirinya dalam mengurus masa dan tekanan.", score: 1 }
+        ], 
+        expl: "Semangat persaingan sihat didasari integriti persahabatan dan sokongan moral, bukan mementingkan diri." 
+      },
+      { 
+        id: 24, 
+        section: "A", 
+        domain: "Keberanian Moral", 
+        text: "Anda melihat sekumpulan murid menipu juruwang koperasi sekolah dengan mengambil makanan tanpa membayar. Tindakan wajar?", 
+        options: [
+          { text: "Membayar harga makanan yang diambil oleh murid-murid tersebut menggunakan wang saku anda tanpa menegur mereka.", score: 2 },
+          { text: "Menasihati mereka secara peribadi selepas waktu rehat agar memulangkan wang itu ke koperasi sekolah.", score: 3 },
+          { text: "Menegur perbuatan mencuri itu secara berani atau melaporkannya segera kepada pihak pengurusan koperasi dengan bukti sahih.", score: 4 },
+          { text: "Mengelak daripada mencampuri urusan itu agar keselamatan diri anda di luar sekolah tidak terancam.", score: 1 }
+        ], 
+        expl: "Keberanian menegakkan integriti menuntut ketegasan prosedur, bukan sekadar kompromi yang menutup salah laku." 
+      },
+      { 
+        id: 25, 
+        section: "A", 
+        domain: "Etika Kepimpinan Kewangan", 
+        text: "Dalam penganjuran Hari Keusahawanan sekolah, gerai kelas anda memperoleh keuntungan lumayan. Ahli mencadangkan membahagikan terus wang tersebut tanpa audit guru. Tindakan anda?", 
+        options: [
+          { text: "Menyediakan penyata akaun lengkap (modal, jualan, baki) dan mengesahkannya bersama guru kelas sebelum sebarang pembahagian dibuat.", score: 4 },
+          { text: "Membahagikan sebahagian wang keuntungan kepada ahli dan menyimpan bakinya untuk diserahkan kepada guru kelas kemudian.", score: 2 },
+          { text: "Menyimpan seluruh wang tunai tersebut di rumah anda terlebih dahulu atas alasan keselamatan sebelum berjumpa guru.", score: 1 },
+          { text: "Mengadakan undian ringkas dalam kalangan ahli kelas untuk menentukan sama ada guru perlu dimaklumkan atau tidak.", score: 3 }
+        ], 
+        expl: "Ketelusan pengurusan amanah dana menuntut pematuhan proses audit rasmi tanpa sebarang pengecualian." 
+      },
+      { 
+        id: 26, 
+        section: "A", 
+        domain: "Adaptasi Budaya Sekolah Menengah", 
+        text: "Sebagai murid baharu tingkatan 1/tingkatan 4, anda berasa sukar menyesuaikan diri dengan sistem jadual anjal dan guru yang berbeza mengikut subjek. Tindakan anda?", 
+        options: [
+          { text: "Hanya membawa buku bagi subjek teras sahaja setiap hari bagi mengelakkan beban beg yang terlalu berat.", score: 2 },
+          { text: "Menyediakan buku catatan peribadi, menyalin jadual waktu dengan teliti dan bertanya rakan sekelas yang lebih arif.", score: 4 },
+          { text: "Meminta bantuan ibu bapa menghubungi pihak pentadbir sekolah untuk memudahkan jadual pembelajaran kelas.", score: 1 },
+          { text: "Bergantung sepenuhnya kepada rakan semeja untuk memaklumkan pertukaran bilik dan buku yang perlu dibawa.", score: 3 }
+        ], 
+        expl: "Berdikari dan sistematik dalam mengurus jadual mencerminkan keupayaan adaptasi pembelajaran peringkat menengah." 
+      },
+      { 
+        id: 27, 
+        section: "A", 
+        domain: "Kesedaran Kesihatan Mental", 
+        text: "Seorang rakan karib anda mula menunjukkan tanda-tanda kemurungan yang membimbangkan dan kerap melukakan diri. Tindakan terbaik anda?", 
+        options: [
+          { text: "Mendengar luahannya dengan penuh empati dan segera membimbingnya berjumpa guru bimbingan & kaunseling untuk bantuan profesional.", score: 4 },
+          { text: "Mencuba memberi nasihat motivasi sendiri dan berjanji merahsiakan perkara tersebut sepenuhnya daripada sesiapa.", score: 2 },
+          { text: "Mengajaknya keluar beriadah dan bermain permainan komputer agar dia dapat melupakan masalah emosinya.", score: 3 },
+          { text: "Menjarakkan diri buat sementara waktu kerana bimbang anda akan terpengaruh dengan emosi negatifnya.", score: 1 }
+        ], 
+        expl: "Isu keselamatan nyawa dan kecelaruan emosi kritikal memerlukan rujukan kepada bantuan kaunseling profesional." 
+      },
+      { 
+        id: 28, 
+        section: "A", 
+        domain: "Kematangan Berkompromi", 
+        text: "Dua kumpulan dalam persatuan anda tidak bersetuju mengenai pemilihan tempat bagi aktiviti perkhemahan akhir tahun. Bagaimanakah anda bertindak?", 
+        options: [
+          { text: "Memilih lokasi yang paling murah biarpun aspek kemudahan dan keselamatan kawasan tersebut agak meragukan.", score: 2 },
+          { text: "Membentangkan analisis kelebihan, kos dan aspek keselamatan kedua-dua lokasi, lalu membuat undian secara demokratik.", score: 4 },
+          { text: "Menyerahkan keputusan muktamad kepada guru penasihat tanpa perlu membentangkan cadangan kedua-dua pihak.", score: 3 },
+          { text: "Menyarankan agar aktiviti perkhemahan ditukar kepada aktiviti lawatan harian biasa bagi mengelakkan pertikaian.", score: 1 }
+        ], 
+        expl: "Kematangan kepimpinan terserlah melalui analisis objektif dan proses musyawarah yang telus." 
+      },
+      { 
+        id: 29, 
+        section: "A", 
+        domain: "Disiplin Menghadiri Aktiviti", 
+        text: "Latihan kawad kaki diadakan pada petang Sabtu yang panas terik. Anda berasa malas untuk hadir. Apakah pertimbangan anda?", 
+        options: [
+          { text: "Mengingatkan diri tentang komitmen terhadap pasukan dan hadir tepat pada masanya demi kejayaan platun bersama.", score: 4 },
+          { text: "Hadir latihan tetapi meminta izin jurulatih untuk berehat di kantin sepanjang sesi latihan kawat berat dijalankan.", score: 2 },
+          { text: "Menghubungi ketua platun memaklumkan ada urusan keluarga yang tidak dapat dielakkan.", score: 1 },
+          { text: "Hadir lewat selepas cuaca petang mulai redup sambil memohon maaf kepada rakan-rakan sepasukan.", score: 3 }
+        ], 
+        expl: "Integriti disiplin dinilai melalui ketabahan menepati komitmen berpasukan biarpun dalam keadaan tidak selesa." 
+      },
+      { 
+        id: 30, 
+        section: "A", 
+        domain: "Wawasan Menengah Atas", 
+        text: "Mengapakah anda bercita-cita melanjutkan pengajian peringkat menengah atas di Kolej Melayu / Sekolah Khusus (SBP / MRSM)?", 
+        options: [
+          { text: "Ingin memastikan laluan yang lebih terjamin untuk memperoleh tawaran biasiswa dan pengajian ke luar negara.", score: 3 },
+          { text: "Mencabar potensi intelek, membina jati diri kepimpinan yang holistik dan bersiap sedia menyumbang bakti kepada negara pada peringkat global.", score: 4 },
+          { text: "Mahu merasai kehidupan berdikari jauh daripada pengawasan harian keluarga di rumah.", score: 2 },
+          { text: "Menganggap status alumni sekolah khusus memberi kelebihan prestij dalam pergaulan sosial.", score: 1 }
+        ], 
+        expl: "Visi kecemerlangan holistik melangkaui matlamat peribadi atau material semata-mata." 
+      },
 
-      // BAHAGIAN B: KECERDASAN INTELEK T4 (31 - 100) - SILIBUS KSSM TINGKATAN 1-3 LENGKAP
-      { id: 31, section: "B", domain: "Matematik - Persamaan Serentak", text: "Diberi sistem persamaan linear serentak:\n\n2x + 3y = 19\nx - y = 2\n\nHitung nilai bagi (x + y).", options: [{ label: "A", text: "8" }, { label: "B", text: "7" }, { label: "C", text: "9" }, { label: "D", text: "6" }], answer: "A", expl: "Daripada persamaan kedua: x = y + 2. Gantikan ke dalam persamaan pertama: 2(y + 2) + 3y = 19 -> 2y + 4 + 3y = 19 -> 5y = 15 -> y = 3. Maka x = 3 + 2 = 5. Nilai x + y = 5 + 3 = 8." },
-      { id: 32, section: "B", domain: "Matematik - Teorem Pythagoras", text: "Sebuah segi tiga bersudut tegak mempunyai hipotenus berukuran 15 cm dan salah satu sisinya berukuran 9 cm.\nHitung panjang sisi yang satu lagi:", options: [{ label: "A", text: "12 cm" }, { label: "B", text: "10 cm" }, { label: "C", text: "13 cm" }, { label: "D", text: "11 cm" }], answer: "A", expl: "Berdasarkan Teorem Pythagoras: a = √(15² - 9²) = √(225 - 81) = √144 = 12 cm." },
-      { id: 33, section: "B", domain: "Sains - Respirasi Sel & Biologi", text: "Manakah antara berikut merupakan persamaan perkataan yang tepat bagi proses respirasi aerob dalam sel hidup?", options: [{ label: "A", text: "Glukosa + Oksigen -> Karbon Dioksida + Air + Tenaga" }, { label: "B", text: "Karbon Dioksida + Air -> Glukosa + Oksigen" }, { label: "C", text: "Glukosa -> Asid Laktik + Tenaga" }, { label: "D", text: "Glukosa + Karbon Dioksida -> Air + Oksigen" }], answer: "A", expl: "Respirasi aerob mengoksidakan glukosa dengan kehadiran oksigen untuk menghasilkan karbon dioksida, air dan membebaskan tenaga biokimia (ATP)." },
-      { id: 34, section: "B", domain: "Fizik - Tenaga Keupayaan & Kinetik", text: "Sebuah objek berjisim 2 kg dilepaskan dari ketinggian 20 meter dari aras tanah. Berapakah halaju objek itu sejurus sebelum menyentuh tanah? (Anggap g = 10 m s⁻² dan tiada rintangan udara)", options: [{ label: "A", text: "20 m/s" }, { label: "B", text: "10 m/s" }, { label: "C", text: "14.14 m/s" }, { label: "D", text: "40 m/s" }], answer: "A", expl: "Prinsip keabadian tenaga: Tenaga Keupayaan Graviti = Tenaga Kinetik -> mgh = 0.5 mv² -> v = √(2gh) = √(2 × 10 × 20) = √400 = 20 m/s." },
-      { id: 35, section: "B", domain: "Kimia - Jadual Berkala Unsur", text: "Unsur Natrium (Na) terletak dalam Kumpulan 1 dan Kala 3 dalam Jadual Berkala Unsur. Apakah ciri utama unsur ini apabila bertindak balas dengan air?", options: [{ label: "A", text: "Bertindak balas cergas menghasilkan gas hidrogen dan membentuk larutan beralkali" }, { label: "B", text: "Tidak bertindak balas kerana bersifat gas adi yang lengai" }, { label: "C", text: "Menghasilkan mendakan garam berasid pekat" }, { label: "D", text: "Menyerap gas nitrogen dari udara secara aktif" }], answer: "A", expl: "Logam alkali Kumpulan 1 bertindak balas cergas dengan air membentuk larutan hidroksida yang bersifat alkali dan membebaskan gas hidrogen." },
-      { id: 36, section: "B", domain: "Matematik - Kebarangkalian", text: "Sebuah beg mengandungi 6 biji guli merah, 8 biji guli biru dan 10 biji guli hijau. Sebiji guli dicabut secara rawak. Cari kebarangkalian mencabut guli yang BUKAN berwarna hijau:", options: [{ label: "A", text: "7/12" }, { label: "B", text: "5/12" }, { label: "C", text: "1/4" }, { label: "D", text: "3/8" }], answer: "A", expl: "Jumlah keseluruhan guli = 6 + 8 + 10 = 24. Bilangan guli bukan hijau (merah + biru) = 6 + 8 = 14. P(bukan hijau) = 14/24 = 7/12." },
-      { id: 37, section: "B", domain: "Bahasa Melayu - Morfologi Menengah", text: "Antara ayat berikut, yang manakah menggunakan kata majmuk mantap dengan ejaan yang BETUL?", options: [{ label: "A", text: "Kerjasama erat antara warga sekolah membuahkan kejayaan yang cemerlang." }, { label: "B", text: "Mereka menandatangani surat perjanjian itu di atas meja tulis." }, { label: "C", text: "Urus setia mesyuarat sedang menyediakan minit laporan tahunan." }, { label: "D", text: "Kakitangan syarikat itu telah diberi taklimat keselamatan kebakaran." }], answer: "A", expl: "'Kerjasama' dieja bercantum rapat sebagai satu perkataan kerana merupakan kata majmuk mantap yang telah mantap ejaannya." },
-      { id: 38, section: "B", domain: "Sejarah - Campur Tangan British", text: "Apakah peristiwa bersejarah pada tahun 1874 yang menandakan bermulanya campur tangan rasmi British di Negeri-negeri Melayu melalui pengenalan Sistem Residen?", options: [{ label: "A", text: "Pemeteraian Perjanjian Pangkor di Perak" }, { label: "B", text: "Perjanjian Bangkok" }, { label: "C", text: "Perisytiharan Persekutuan 1896" }, { label: "D", text: "Perjanjian Burney" }], answer: "A", expl: "Perjanjian Pangkor 1874 di Perak memulakan sistem Residen di mana Raja-raja Melayu perlu menerima nasihat Residen dalam semua hal ehwal kecuali agama Islam dan adat Melayu." },
-      { id: 39, section: "B", domain: "Fizik - Tekanan Cecair", text: "Mengapakah dinding bahagian dasar sesebuah empangan konkrit dibina jauh lebih tebal berbanding bahagian atasnya?", options: [{ label: "A", text: "Tekanan hidrostatik cecair meningkat secara berkadar terus dengan kedalaman air (P = hρg)." }, { label: "B", text: "Dinding dasar empangan perlu menampung suhu air yang lebih panas." }, { label: "C", text: "Mengurangkan daya geseran arus air pada bahagian bawah empangan." }, { label: "D", text: "Memudahkan laluan paip udara di bahagian bawah empangan." }], answer: "A", expl: "Tekanan cecair bergantung kepada kedalaman (P = hρg). Semakin dalam cecair, semakin tinggi tekanan; oleh itu dinding bawah perlu lebih tebal untuk menampung daya tekanan yang besar." },
-      { id: 40, section: "B", domain: "Matematik - Indeks & Algebra", text: "Permudahkan ungkapan algebra berikut:  (2x³y²)³ ÷ (4x⁴y):", options: [{ label: "A", text: "2x⁵y⁵" }, { label: "B", text: "2x²y⁵" }, { label: "C", text: "4x⁵y⁶" }, { label: "D", text: "8x⁵y⁵" }], answer: "A", expl: "(2x³y²)³ = 8x⁹y⁶. Bahagikan dengan 4x⁴y: 8/4 = 2; x^(9-4) = x⁵; y^(6-1) = y⁵. Jawapan = 2x⁵y⁵." },
-      { id: 41, section: "B", domain: "Sains - Prinsip Archimedes & Daya Apungan", text: "Sebuah kapal kargo yang sarat dengan muatan kontena keluli dapat terapung di permukaan air laut. Fenomena ini dijelaskan oleh Prinsip Archimedes kerana:", options: [{ label: "A", text: "Daya apungan ke atas adalah sama dengan berat cecair yang disesarkan oleh ruang udara badan kapal yang luas." }, { label: "B", text: "Ketumpatan keluli adalah lebih rendah daripada ketumpatan air laut." }, { label: "C", text: "Daya graviti tidak bertindak ke atas objek di lautan." }, { label: "D", text: "Kandungan garam air laut menolak keluli ke atas." }], answer: "A", expl: "Bentuk badan kapal mempunyai ruang udara besar yang meningkatkan isi padu sesaran cecair, menghasilkan daya apungan yang menyamai berat kapal." },
-      { id: 42, section: "B", domain: "Matematik - Poligon & Sudut Pedalaman", text: "Hitung hasil tambah semua sudut pedalaman bagi sebuah poligon sekata berbentuk oktagon (8 sisi):", options: [{ label: "A", text: "1,080°" }, { label: "B", text: "900°" }, { label: "C", text: "720°" }, { label: "D", text: "1,440°" }], answer: "A", expl: "Formula hasil tambah sudut pedalaman = (n - 2) × 180°. Bagi oktagon (n = 8): (8 - 2) × 180° = 6 × 180° = 1,080°." },
-      { id: 43, section: "B", domain: "Kimia - Ikatan Kimia", text: "Apakah jenis ikatan kimia yang terbentuk antara atom Natrium (logam) dan Klorin (bukan logam) dalam menghasilkan sebatian natrium klorida (garam makan)?", options: [{ label: "A", text: "Ikatan Ionik (Pemindahan elektron)" }, { label: "B", text: "Ikatan Kovalen (Perkongsian elektron)" }, { label: "C", text: "Ikatan Logam" }, { label: "D", text: "Ikatan Hidrogen" }], answer: "A", expl: "Ikatan ion terbentuk apabila atom logam mendermakan elektron kepada atom bukan logam bagi mencapai susunan oktet yang stabil." },
-      { id: 44, section: "B", domain: "Bahasa Melayu - Sintaksis Ayat Aktif & Pasif", text: "Tukarkan ayat aktif berikut kepada ayat pasif yang betul:\n\"Kumpulan murid itu telah membersihkan makmal sains sebelum pulang.\"", options: [{ label: "A", text: "Makmal sains telah dibersihkan oleh kumpulan murid itu sebelum pulang." }, { label: "B", text: "Makmal sains mereka telah bersihkan sebelum pulang." }, { label: "C", text: "Sebelum pulang, makmal sains membersihkan kumpulan murid itu." }, { label: "D", text: "Kumpulan murid itu membersihkan makmal sains sebelum pulang." }], answer: "A", expl: "Bagi pelaku kata ganti nama diri ketiga (kumpulan murid itu), ayat pasif menggunakan kata kerja berawalan 'di-... oleh'." },
-      { id: 45, section: "B", domain: "Sains - Peredaran Darah Manusia", text: "Ruang jantung manakah yang mempunyai dinding berotot paling tebal kerana berfungsi mengepam darah beroksigen ke seluruh tubuh manusia?", options: [{ label: "A", text: "Ventrikel kiri" }, { label: "B", text: "Ventrikel kanan" }, { label: "C", text: "Atrium kiri" }, { label: "D", text: "Atrium kanan" }], answer: "A", expl: "Ventrikel kiri mempunyai miokardium paling tebal untuk menghasilkan tekanan tinggi mengepam darah melalui aorta ke seluruh tubuh badan." },
-      { id: 46, section: "B", domain: "Matematik - Persamaan Kuadratik", text: "Cari punca-punca bagi persamaan kuadratik berikut:  x² - 5x + 6 = 0:", options: [{ label: "A", text: "x = 2 dan x = 3" }, { label: "B", text: "x = -2 dan x = -3" }, { label: "C", text: "x = 1 dan x = 6" }, { label: "D", text: "x = -1 dan x = 6" }], answer: "A", expl: "Faktorkan persamaan: (x - 2)(x - 3) = 0. Maka x = 2 atau x = 3." },
-      { id: 47, section: "B", domain: "Sejarah - Pentadbiran Negeri-Negeri Selat", text: "Apakah tiga buah wilayah yang digabungkan oleh British pada tahun 1826 bagi membentuk unit pentadbiran Negeri-negeri Selat (NNS)?", options: [{ label: "A", text: "Pulau Pinang, Melaka dan Singapura" }, { label: "B", text: "Perak, Selangor dan Negeri Sembilan" }, { label: "C", text: "Kedah, Perlis dan Kelantan" }, { label: "D", text: "Sabah, Sarawak dan Labuan" }], answer: "A", expl: "Negeri-negeri Selat (NNS) dibentuk pada tahun 1826 menggabungkan Pulau Pinang, Melaka dan Singapura dengan ibu kota pertamanya di Pulau Pinang." },
-      { id: 48, section: "B", domain: "Fizik - Hukum Ohm & Elektrik", text: "Sebuah mentol berintangan 4 Ω disambungkan kepada sumber voltan 12 V. Berapakah nilai arus elektrik yang mengalir melalui litar tersebut? (V = IR)", options: [{ label: "A", text: "3 A" }, { label: "B", text: "48 A" }, { label: "C", text: "0.33 A" }, { label: "D", text: "8 A" }], answer: "A", expl: "Berdasarkan Hukum Ohm: V = IR -> I = V / R = 12 V / 4 Ω = 3 Ampere." },
-      { id: 49, section: "B", domain: "Bahasa Inggeris - Error Identification", text: "Identify the part of the sentence with an error: 'Each of the participants (A) were given (B) a certificate of participation (C) by the principal (D).'", options: [{ label: "A", text: "were given [sepatutnya 'was given']" }, { label: "B", text: "Each of the participants" }, { label: "C", text: "a certificate of participation" }, { label: "D", text: "by the principal" }], answer: "A", expl: "Subjek 'Each' adalah tunggal (singular), oleh itu kata kerja pasif yang betul ialah 'was given', bukan 'were given'." },
-      { id: 50, section: "B", domain: "Sains - Ekologi & Interaksi Organisma", text: "Interaksi antara kulat dan alga dalam organisma liken di mana kedua-dua pihak saling mendapat manfaat dinamakan:", options: [{ label: "A", text: "Mutualisme" }, { label: "B", text: "Komensalisme" }, { label: "C", text: "Parasitisme" }, { label: "D", text: "Mangsa-pemangsa" }], answer: "A", expl: "Mutualisme ialah interaksi simbiotik di mana kedua-dua organisma mendapat faedah (alga membekalkan makanan, kulat membekalkan kelembapan/perlindungan)." },
-      { id: 51, section: "B", domain: "Matematik - Geometri Bulatan", text: "Panjang jejari bagi sebuah bulatan ialah 7 cm. Hitung luas bulatan tersebut (Guna π = 22/7):", options: [{ label: "A", text: "154 cm²" }, { label: "B", text: "44 cm²" }, { label: "C", text: "308 cm²" }, { label: "D", text: "88 cm²" }], answer: "A", expl: "Luas bulatan = πj² = (22/7) × 7 × 7 = 22 × 7 = 154 cm²." },
-      { id: 52, section: "B", domain: "Geografi - Fenomena Cuaca & Iklim", text: "Tiupan Angin Monsun Timur Laut yang melanda Malaysia dari bulan November hingga Mac membawa hujan lebat terutamanya kepada:", options: [{ label: "A", text: "Kawasan pantai timur Semenanjung Malaysia, barat Sarawak dan timur Sabah" }, { label: "B", text: "Kawasan pantai barat Semenanjung Malaysia" }, { label: "C", text: "Selat Melaka sahaja" }, { label: "D", text: "Lembah Klang sahaja" }], answer: "A", expl: "Monsun Timur Laut bertiup dari Siberia/benua Asia merentasi Laut China Selatan dan membawa hujan lebat ke Pantai Timur Semenanjung." },
-      { id: 53, section: "B", domain: "Kimia - Peneutralan Asid & Alkali", text: "Apakah hasil yang terhasil daripada tindak balas peneutralan antara asid hidroklorik (HCl) dan natrium hidroksida (NaOH)?", options: [{ label: "A", text: "Natrium klorida (garam) dan air" }, { label: "B", text: "Gas hidrogen dan larutan asid" }, { label: "C", text: "Gas karbon dioksida dan mendakan kapur" }, { label: "D", text: "Gas klorin dan garam natrium" }], answer: "A", expl: "Tindak balas peneutralan: Asid + Alkali -> Garam + Air. HCl + NaOH -> NaCl + H₂O." },
-      { id: 54, section: "B", domain: "Matematik - Nisbah Trigonometri", text: "Dalam sebuah segi tiga bersudut tegak, sisi bertentangan ialah 3 cm, sisi bersebelahan ialah 4 cm dan hipotenus ialah 5 cm. Nilai bagi kosinus (cos θ) sudut tersebut ialah:", options: [{ label: "A", text: "4/5" }, { label: "B", text: "3/5" }, { label: "C", text: "3/4" }, { label: "D", text: "5/4" }], answer: "A", expl: "Kosinus θ = Sisi Bersebelahan / Hipotenus = 4 / 5." },
-      { id: 55, section: "B", domain: "Sejarah - Penentangan Tokoh Tempatan", text: "Tokoh pejuang tempatan di Naning yang menentang bayaran ufti satu persepuluh hasil pertanian yang dikenakan oleh pihak British ialah:", options: [{ label: "A", text: "Dato' Dol Said" }, { label: "B", text: "Rentap" }, { label: "C", text: "Mat Salleh" }, { label: "D", text: "Dato' Maharaja Lela" }], answer: "A", expl: "Dato' Dol Said memimpin Perang Naning (1831-1832) mempertahankan kedaulatan Naning daripada pengenaan cukai British." },
-      { id: 56, section: "B", domain: "Sains - Pembiasan Cahaya & Kanta", text: "Sinar cahaya merambat dari medium udara masuk ke dalam blok kaca yang lebih tumpat optik. Sinar cahaya tersebut akan:", options: [{ label: "A", text: "Membias mendekati garis normal kerana kelajuan cahaya berkurang" }, { label: "B", text: "Membias menjauhi garis normal kerana kelajuan cahaya bertambah" }, { label: "C", text: "Bergerak lurus tanpa sebarang perubahan arah" }, { label: "D", text: "Dipantulkan secara keseluruhan" }], answer: "A", expl: "Apabila merambat dari medium kurang tumpat ke lebih tumpat, laju cahaya berkurang dan sinar dibiaskan mendekati garis normal." },
-      { id: 57, section: "B", domain: "Matematik - Teori Set", text: "Diberi Set Semesta ξ = {x : x ialah integer, 1 ≤ x ≤ 10} dan Set A = {nombor ganjil}. Cari bilangan unsur bagi pelengkap Set A (n(A')):", options: [{ label: "A", text: "5" }, { label: "B", text: "4" }, { label: "C", text: "6" }, { label: "D", text: "3" }], answer: "A", expl: "ξ = {1,2,3,4,5,6,7,8,9,10}. A = {1,3,5,7,9}. Maka pelengkap A' = {2,4,6,8,10}. Bilangan unsur n(A') = 5." },
-      { id: 58, section: "B", domain: "Bahasa Melayu - Peribahasa Menengah", text: "\"Usaha gigih dan berterusan secara sedikit demi sedikit akhirnya akan menghasilkan kejayaan yang besar.\" Peribahasa yang paling sesuai ialah:", options: [{ label: "A", text: "Sedikit-sedikit, lama-lama menjadi bukit" }, { label: "B", text: "Alang-alang berminyak, biar licin" }, { label: "C", text: "Sudah terhantuk baru tengadah" }, { label: "D", text: "Bagai melepaskan batuk di tangga" }], answer: "A", expl: "'Sedikit-sedikit, lama-lama menjadi bukit' bermaksud ketabahan mengumpul usaha atau amalan sedikit demi sedikit membuahkan hasil besar." },
-      { id: 59, section: "B", domain: "Fizik - Kereaktifan Logam", text: "Antara logam berikut, yang manakah terletak pada kedudukan paling TINGGI dalam Siri Kereaktifan Logam terhadap oksigen?", options: [{ label: "A", text: "Kalium (Potassium)" }, { label: "B", text: "Zink" }, { label: "C", text: "Kuprum" }, { label: "D", text: "Besi" }], answer: "A", expl: "Urutan siri kereaktifan logam: Kalium, Natrium, Kalsium, Magnesium, Aluminium, Karbon, Zink, Besi, Timah, Plumbum, Kuprum, Emas." },
-      { id: 60, section: "B", domain: "Matematik - Kecerunan Garis Lurus", text: "Cari kecerunan garis lurus yang melalui titik A(2, 3) dan B(6, 11):", options: [{ label: "A", text: "m = 2" }, { label: "B", text: "m = 4" }, { label: "C", text: "m = 0.5" }, { label: "D", text: "m = 3" }], answer: "A", expl: "Formula kecerunan m = (y₂ - y₁) / (x₂ - x₁) = (11 - 3) / (6 - 2) = 8 / 4 = 2." },
-      { id: 61, section: "B", domain: "Sains - Pewarisan Genetik", text: "Kromosom seks bagi seorang individu lelaki normal dalam sel somatik tubuh ialah:", options: [{ label: "A", text: "44 + XY" }, { label: "B", text: "44 + XX" }, { label: "C", text: "22 + X" }, { label: "D", text: "22 + Y" }], answer: "A", expl: "Sel somatik manusia mempunyai 46 kromosom (23 pasang). Bagi lelaki normal: 44 autosom + sepasang kromosom seks XY (44 + XY)." },
-      { id: 62, section: "B", domain: "Sejarah - Pembentukan Negeri-Negeri Melayu Bersekutu", text: "Empat buah negeri yang disatukan di bawah pentadbiran Negeri-negeri Melayu Bersekutu (NNMB) pada tahun 1896 dengan ibu kota di Kuala Lumpur ialah:", options: [{ label: "A", text: "Perak, Selangor, Negeri Sembilan dan Pahang" }, { label: "B", text: "Kedah, Perlis, Kelantan dan Terengganu" }, { label: "C", text: "Pulau Pinang, Melaka, Singapura dan Johor" }, { label: "D", text: "Sabah, Sarawak, Brunei dan Labuan" }], answer: "A", expl: "NNMB (1896) menggabungkan Perak, Selangor, Negeri Sembilan dan Pahang di bawah Residen Jeneral pertama, Frank Swettenham." },
-      { id: 63, section: "B", domain: "Bahasa Inggeris - Conditional Sentences", text: "Complete the sentence: 'If I _______ enough money, I would travel around the world.'", options: [{ label: "A", text: "had" }, { label: "B", text: "have" }, { label: "C", text: "will have" }, { label: "D", text: "am having" }], answer: "A", expl: "Second conditional sentence (unreal present): 'If + past simple (had), ... would + verb bare infinitive'." },
-      { id: 64, section: "B", domain: "Matematik - Bentuk Piawai", text: "Tuliskan nombor 0.000458 dalam bentuk piawai (standard form A × 10ⁿ di mana 1 ≤ A < 10):", options: [{ label: "A", text: "4.58 × 10⁻⁴" }, { label: "B", text: "45.8 × 10⁻⁵" }, { label: "C", text: "4.58 × 10⁴" }, { label: "D", text: "0.458 × 10⁻³" }], answer: "A", expl: "Titik perpuluhan digerakkan 4 tempat ke kanan untuk menghasilkan 4.58, maka kuasanya negatif 4: 4.58 × 10⁻⁴." },
-      { id: 65, section: "B", domain: "Sains - Pemindahan Haba", text: "Pemindahan haba dari matahari ke permukaan bumi melalui ruang vakum angkasa berlaku secara:", options: [{ label: "A", text: "Sinaran (Radiation)" }, { label: "B", text: "Konduksi (Conduction)" }, { label: "C", text: "Perolakan (Convection)" }, { label: "D", text: "Penyejatan" }], answer: "A", expl: "Sinaran ialah pemindahan haba dalam bentuk gelombang elektromagnetik yang tidak memerlukan sebarang medium jirim." },
-      { id: 66, section: "B", domain: "Bahasa Melayu - Kata Pemeri", text: "Pilih ayat yang menggunakan kata pemeri 'ialah' dengan BETUL:", options: [{ label: "A", text: "Punca utama pencemaran sungai ialah pembuangan sisa toksik kilang." }, { label: "B", text: "Sumbangan ikhlas itu ialah untuk murid-murid miskin." }, { label: "C", text: "Rumah banglo itu ialah sangat besar dan mewah." }, { label: "D", text: "Langkah pertama ialah dengan mencuci tangan menggunakan sabun." }], answer: "A", expl: "'Ialah' hadir di hadapan frasa nama (pembuangan sisa toksik), manakala 'adalah' hadir di hadapan frasa sendi nama atau frasa adjektif." },
-      { id: 67, section: "B", domain: "Reka Bentuk & Teknologi (RBT) - Sistem Mekatronik", text: "Apakah gabungan empat elemen asas utama yang membentuk sesuatu produk mekatronik moden?", options: [{ label: "A", text: "Mekanikal, Elektrik, Elektronik dan Pengaturcaraan" }, { label: "B", text: "Kayu, Logam, Plastik dan Getah" }, { label: "C", text: "Sensor, Bateri, Roda dan Suis" }, { label: "D", text: "Input, Proses, Output dan Simpanan" }], answer: "A", expl: "Mekatronik menggabungkan sistem mekanikal, elektrik, elektronik dan kawalan pengaturcaraan komputer." },
-      { id: 68, section: "B", domain: "Matematik - Transformasi Isometri", text: "Apakah ciri penting bagi suatu objek yang mengalami transformasi pantulan pada paksi pantulan?", options: [{ label: "A", text: "Bentuk dan saiz objek kekal sama, tetapi orientasinya songsang sisi." }, { label: "B", text: "Saiz objek membesar dua kali ganda." }, { label: "C", text: "Bentuk objek berubah menjadi bulatan." }, { label: "D", text: "Orientasi dan kedudukan objek tidak berubah langsung." }], answer: "A", expl: "Pantulan menghasilkan imej yang kongruen (isometri) dengan bentuk dan saiz sama, namun mempunyai orientasi terbalik (songsang sisi)." },
-      { id: 69, section: "B", domain: "Sains - Pengekstrakan Logam", text: "Karbon digunakan dalam relau bagas untuk mengekstrak besi daripada bijihnya kerana karbon:", options: [{ label: "A", text: "Lebih reaktif daripada besi dan bertindak sebagai agen penurunan" }, { label: "B", text: "Kurang reaktif daripada besi" }, { label: "C", text: "Mempunyai takat lebur yang sangat rendah" }, { label: "D", text: "Mencegah besi daripada berkarat di dalam relau" }], answer: "A", expl: "Karbon terletak di atas besi dalam siri kereaktifan logam, membolehkannya menyingkirkan oksigen daripada oksida besi (agen penurunan)." },
-      { id: 70, section: "B", domain: "Sejarah - Pentadbiran Brooke di Sarawak", text: "James Brooke mula menguasai wilayah Sarawak pada tahun 1841 selepas berjaya membantu Pengiran Raja Muda Hashim menyelesaikan:", options: [{ label: "A", text: "Pemberontakan penduduk tempatan di Siniawan" }, { label: "B", text: "Serangan tentera Belanda dari Sambas" }, { label: "C", text: "Perang saudara di Brunei" }, { label: "D", text: "Serangan lanun Sulu" }], answer: "A", expl: "James Brooke membantu menamatkan pemberontakan Datu Patinggi Ali terhadap Kesultanan Brunei lalu dilantik menjadi Raja Putih Sarawak." },
-      { id: 71, section: "B", domain: "Bahasa Inggeris - Passive Voice", text: "Change into passive voice: 'Alexander Graham Bell invented the telephone in 1876.'", options: [{ label: "A", text: "The telephone was invented by Alexander Graham Bell in 1876." }, { label: "B", text: "The telephone is invented by Alexander Graham Bell in 1876." }, { label: "C", text: "The telephone had been invented by Alexander Graham Bell in 1876." }, { label: "D", text: "The telephone has been invented in 1876." }], answer: "A", expl: "Simple past active ('invented') changes to simple past passive ('was invented')." },
-      { id: 72, section: "B", domain: "Matematik - Sukatan Serakan Data", text: "Diberi set data markah: 4, 7, 8, 9, 12, 14, 18. Cari julat antara kuartil (Interquartile Range) bagi set data ini:", options: [{ label: "A", text: "7 (Q₃ = 14, Q₁ = 7 -> 14 - 7 = 7)" }, { label: "B", text: "14" }, { label: "C", text: "9" }, { label: "D", text: "11" }], answer: "A", expl: "Median = 9. Kuartil pertama (Q₁) = 7. Kuartil ketiga (Q₃) = 14. Julat antara kuartil = Q₃ - Q₁ = 14 - 7 = 7." },
-      { id: 73, section: "B", domain: "Sains - Radioaktiviti & Sinaran Nuklear", text: "Antara sinaran radioaktif berikut, yang manakah mempunyai kuasa penembusan paling TINGGI dan hanya dapat dihalang oleh kepingan plumbum tebal?", options: [{ label: "A", text: "Sinar Gama (Gamma ray)" }, { label: "B", text: "Zarah Alfa (Alpha particle)" }, { label: "C", text: "Zarah Beta (Beta particle)" }, { label: "D", text: "Sinar Inframerah" }], answer: "A", expl: "Sinar gama ialah gelombang elektromagnet bertenaga sangat tinggi tanpa cas dan jisim, mempunyai kuasa penembusan paling hebat." },
-      { id: 74, section: "B", domain: "Geografi - Dinamika Penduduk", text: "Apakah faktor utama yang mendorong tumpuan penduduk yang sangat padat di kawasan Dataran Kelantan dan Dataran Kedah-Perlis?", options: [{ label: "A", text: "Tanah dataran aluvium yang subur untuk kegiatan penanaman padi sawah" }, { label: "B", text: "Pusat perlombongan petroleum luar pantai" }, { label: "C", text: "Kawasan pelancongan tanah tinggi" }, { label: "D", text: "Kawasan industri berat automotif negara" }], answer: "A", expl: "Dataran aluvium rata yang subur membolehkan aktiviti pertanian intensif dijalankan sejak zaman-berzaman." },
-      { id: 75, section: "B", domain: "Bahasa Melayu - Peribahasa Menengah Rendah", text: "\"Seseorang yang membuat kesalahan atau jenayah akan sentiasa hidup dalam keadaan ketakutan dan tidak tenteram.\" Peribahasa yang paling tepat ialah:", options: [{ label: "A", text: "Siapa makan lada, dialah berasa pedas" }, { label: "B", text: "Menepuk air di dulang terpercik ke muka sendiri" }, { label: "C", text: "Lempar batu sembunyi tangan" }, { label: "D", text: "Haruan makan anak" }], answer: "A", expl: "'Siapa makan lada dialah berasa pedas' membawa maksud orang yang melakukan kesalahan akan berasa tersindir dan gelisah." },
-      { id: 76, section: "B", domain: "Matematik - Persamaan Garis Selari", text: "Diberi garis lurus 2y = 6x + 8. Garis lurus manakah yang SELARI dengan garis lurus tersebut?", options: [{ label: "A", text: "y = 3x - 5" }, { label: "B", text: "y = 6x + 2" }, { label: "C", text: "y = -3x + 1" }, { label: "D", text: "2y = 3x + 4" }], answer: "A", expl: "Tukar ke bentuk y = mx + c: y = 3x + 4, maka kecerunan m = 3. Garis selari mempunyai kecerunan sama (m = 3), iaitu y = 3x - 5." },
-      { id: 77, section: "B", domain: "Sains - Keasidan dan Nilai pH", text: "Larutan asid sulfurik pekat mempunyai anggaran nilai pH pada skala:", options: [{ label: "A", text: "pH 1 - 2 (Asid kuat)" }, { label: "B", text: "pH 7 (Neutral)" }, { label: "C", text: "pH 13 - 14 (Alkali kuat)" }, { label: "D", text: "pH 5 - 6 (Asid lemah)" }], answer: "A", expl: "Asid kuat mengion lengkap dalam air membebaskan kepekatan ion hidrogen tinggi dengan nilai pH antara 1 hingga 2." },
-      { id: 78, section: "B", domain: "Sejarah - Pendudukan Jepun di Tanah Melayu", text: "Apakah strategi ketenteraan yang digunakan oleh tentera Jepun di bawah pimpinan Jeneral Tomoyuki Yamashita untuk menawan seluruh Tanah Melayu dalam tempoh 70 hari sahaja?", options: [{ label: "A", text: "Penggunaan basikal dan kereta kebal ringan menyusuri jalan persisiran pantai" }, { label: "B", text: "Serangan peluru berpandu jarak jauh dari Tokyo" }, { label: "C", text: "Pengeboman bom atom di Singapura" }, { label: "D", text: "Serangan kapal selam secara berterusan di Selat Melaka" }], answer: "A", expl: "Tentera Jepun menggunakan basikal pantas bergerak melalui jalan ladang dan merentasi jambatan yang diletupkan British." },
-      { id: 79, section: "B", domain: "Bahasa Inggeris - Vocabulary Synonyms", text: "Select the word that is CLOSEST in meaning to 'RESILIENT':", options: [{ label: "A", text: "Tough / Adaptable" }, { label: "B", text: "Fragile" }, { label: "C", text: "Hesitant" }, { label: "D", text: "Arrogant" }], answer: "A", expl: "'Resilient' means able to withstand or recover quickly from difficult conditions (tough/persevering)." },
-      { id: 80, section: "B", domain: "Matematik - Nisbah & Kadar Laju", text: "Sebuah kereta bergerak sejauh 180 km dalam masa 2 jam 15 minit. Hitung laju purata kereta tersebut dalam unit km/j:", options: [{ label: "A", text: "80 km/j" }, { label: "B", text: "90 km/j" }, { label: "C", text: "75 km/j" }, { label: "D", text: "85 km/j" }], answer: "A", expl: "Masa = 2 jam 15 minit = 2.25 jam. Laju purata = Jarak / Masa = 180 km / 2.25 j = 80 km/j." },
-      { id: 81, section: "B", domain: "Sains - Daya Geseran & Hukum Gerakan", text: "Apabila sebuah bas berhenti secara tiba-tiba, penumpang di dalamnya akan terhumban ke hadapan. Fenomena ini berlaku disebabkan oleh:", options: [{ label: "A", text: "Inersia penumpang yang cenderung mengekalkan keadaan gerakan asalnya (Hukum Gerakan Newton Pertama)" }, { label: "B", text: "Daya tarikan graviti bumi bertambah" }, { label: "C", text: "Daya geseran tayar bas hilang secara mendadak" }, { label: "D", text: "Tekanan udara di dalam bas menurun" }], answer: "A", expl: "Inersia ialah kecenderungan sesuatu objek untuk mengekalkan keadaan pegun atau gerakan lurus seragamnya." },
-      { id: 82, section: "B", domain: "RBT - Aplikasi Mikropengawal", text: "Peranti perkakasan elektronik yang berfungsi mengesan perubahan suhu persekitaran dan menukarkannya kepada isyarat elektrik dipanggil:", options: [{ label: "A", text: "Penderia Suhu (Temperature sensor / Termistor)" }, { label: "B", text: "Geganti (Relay)" }, { label: "C", text: "Diod Pemancar Cahaya (LED)" }, { label: "D", text: "Transistor" }], answer: "A", expl: "Penderia suhu menukar kuantiti fizik (haba/suhu) kepada isyarat rintangan elektrik yang boleh dibaca mikropengawal." },
-      { id: 83, section: "B", domain: "Geografi - Sisa Domestik & Kitar Semula", text: "Konsep 5R dalam pengurusan sisa pepejal mampan merangkumi amalan:", options: [{ label: "A", text: "Refuse, Reduce, Reuse, Repurpose, Recycle" }, { label: "B", text: "Run, Read, Rest, Relax, Repair" }, { label: "C", text: "React, Resell, Reheat, Replant, Replace" }, { label: "D", text: "Remove, Rebuild, Reorder, Reopen, Return" }], answer: "A", expl: "Amalan 5R: Fikir semula/Tolak (Refuse), Kurangkan (Reduce), Guna semula (Reuse), Guna fungsi baharu (Repurpose), Kitar semula (Recycle)." },
-      { id: 84, section: "B", domain: "Bahasa Melayu - Kata Sendi Nama 'Antara' & 'Antara... dengan'", text: "Pilih ayat yang menggunakan kata sendi nama 'antara' dengan tatabahasa yang TEPAT:", options: [{ label: "A", text: "Perlawanan akhir bola sepak itu adalah antara pasukan Perak dengan Selangor." }, { label: "B", text: "Di antara murid-murid itu, Ali yang paling rajin." }, { label: "C", text: "Antara mereka-mereka telah berlaku perselisihan faham." }, { label: "D", text: "Perbezaan di antara kedua-dua bahan itu sangat ketara." }], answer: "A", expl: "Frasa 'antara ... dengan' digunakan untuk membandingkan dua pihak (kata sendi 'di' tidak boleh digandingkan di hadapan kata sendi 'antara')." },
-      { id: 85, section: "B", domain: "Sains - Pencernaan Makanan", text: "Di manakah proses penyerapan nutrien makanan yang telah dicerna secara lengkap berlaku ke dalam kapilari darah manusia?", options: [{ label: "A", text: "Vilus di usus kecil (Ileum)" }, { label: "B", text: "Perut (Gaster)" }, { label: "C", text: "Usus besar (Kolon)" }, { label: "D", text: "Esofagus" }], answer: "A", expl: "Vilus pada dinding usus kecil mempunyai luas permukaan besar dan jalinan kapilari darah yang kaya untuk penyerapan nutrien." },
-      { id: 86, section: "B", domain: "Matematik - Luas Permukaan Silinder", text: "Sebuah silinder tertutup mempunyai jejari 7 cm dan tinggi 10 cm. Hitung jumlah luas permukaannya (Guna π = 22/7, Formula: 2πj² + 2πjt):", options: [{ label: "A", text: "748 cm²" }, { label: "B", text: "440 cm²" }, { label: "C", text: "308 cm²" }, { label: "D", text: "1,540 cm²" }], answer: "A", expl: "2πj² = 2 × (22/7) × 7 × 7 = 308 cm². 2πjt = 2 × (22/7) × 7 × 10 = 440 cm². Jumlah luas = 308 + 440 = 748 cm²." },
-      { id: 87, section: "B", domain: "Sejarah - Penentangan Tokoh Tempatan", text: "Pemimpin pahlawan Iban yang terkenal dengan slogan 'Agi Idup, Agi Ngelaban' menentang kubu James Brooke di Bukit Sadok ialah:", options: [{ label: "A", text: "Rentap (Libau)" }, { label: "B", text: "Mat Salleh" }, { label: "C", text: "Antenom" }, { label: "D", text: "Sharif Masahor" }], answer: "A", expl: "Rentap memimpin pahlawan Iban menentang pencerobohan Brooke dengan kubu pertahanan teguh di puncak Bukit Sadok." },
-      { id: 88, section: "B", domain: "Fizik - Kanta Penumpu & Kanta Pencapah", text: "Seseorang individu yang mengalami rabun jauh (miopia) memerlukan bantuan cermin mata berkanta:", options: [{ label: "A", text: "Kanta cekung (Mencapahkan sinar cahaya agar imej jatuh tepat di retina)" }, { label: "B", text: "Kanta cembung" }, { label: "C", text: "Kanta silinder satah" }, { label: "D", text: "Kanta prisma" }], answer: "A", expl: "Rabun jauh berlaku apabila bebola mata terlalu panjang menyebabkan imej terfokus di hadapan retina; kanta cekung mencapahkan cahaya ke retina." },
-      { id: 89, section: "B", domain: "Bahasa Inggeris - Relative Pronouns", text: "Choose the correct relative pronoun: 'The scientist _______ research won the international award was invited to speak at Oxford.'", options: [{ label: "A", text: "whose" }, { label: "B", text: "which" }, { label: "C", text: "whom" }, { label: "D", text: "who" }], answer: "A", expl: "'Whose' is the possessive relative pronoun referring to the scientist's research." },
-      { id: 90, section: "B", domain: "Matematik - Ketaksamaan Linear", text: "Selesaikan ketaksamaan linear berikut:  3x - 4 ≥ 11:", options: [{ label: "A", text: "x ≥ 5" }, { label: "B", text: "x ≤ 5" }, { label: "C", text: "x ≥ 15" }, { label: "D", text: "x ≥ 7" }], answer: "A", expl: "3x ≥ 11 + 4 -> 3x ≥ 15 -> x ≥ 5." },
-      { id: 91, section: "B", domain: "Sains - Kitar Air Semula Jadi", text: "Apakah proses utama di mana air diserap oleh akar tumbuhan dan dibebaskan semula ke atmosfera dalam bentuk wap air melalui liang stoma daun?", options: [{ label: "A", text: "Transpirasi" }, { label: "B", text: "Kondensasi" }, { label: "C", text: "Resapan" }, { label: "D", text: "Penyejatan" }], answer: "A", expl: "Transpirasi ialah kehilangan air dalam bentuk wap dari tumbuhan ke atmosfera terutamanya melalui stoma daun." },
-      { id: 92, section: "B", domain: "Geografi - Tenaga Geoterma & Mineral", text: "Apakah sumber tenaga alternatif bersih yang dijana menggunakan haba dari dalam kerak bumi di kawasan gunung berapi aktif?", options: [{ label: "A", text: "Tenaga Geoterma" }, { label: "B", text: "Tenaga Nuklear" }, { label: "C", text: "Tenaga Hidroelektrik" }, { label: "D", text: "Tenaga Biojisim" }], answer: "A", expl: "Tenaga geoterma memanfaatkan haba daripada wap panas bawah tanah di kawasan rekahan bumi." },
-      { id: 93, section: "B", domain: "Bahasa Melayu - Kata Penegas", text: "Pilih ayat yang mengandungi penggunaan kata penegas yang tepat:", options: [{ label: "A", text: "Hanya dialah sahaja sahabat yang memahami kesusahan saya." }, { label: "B", text: "Dialah orang yang bertanggungjawab memimpin projek tersebut." }, { label: "C", text: "Memanglah dia itu sangat sombong sekali." }, { label: "D", text: "Juga saya mahu turut serta ke perpustakaan." }], answer: "B", expl: "Partikel penegas '-lah' menegaskan subjek 'Dia' secara gramatis tanpa lewah." },
-      { id: 94, section: "B", domain: "Sains - Pengoksidaan & Pengaratan Logam", text: "Dua faktor persekitaran yang WAJIB hadir secara serentak untuk menyebabkan paku besi berkarat ialah:", options: [{ label: "A", text: "Air dan Oksigen" }, { label: "B", text: "Air dan Minyak" }, { label: "C", text: "Oksigen dan Minyak" }, { label: "D", text: "Karbon dioksida dan Nitrogen" }], answer: "A", expl: "Pengaratan besi memerlukan kehadiran kedua-dua agen pengoksidaan iaitu air dan gas oksigen." },
-      { id: 95, section: "B", domain: "Matematik - Faedah Mudah & Simpanan", text: "Encik Razak menyimpan wang sebanyak RM5,000 di dalam bank dengan kadar faedah mudah 3% setahun. Berapakah jumlah faedah yang diterimanya selepas 2 tahun? (I = Prt)", options: [{ label: "A", text: "RM300" }, { label: "B", text: "RM150" }, { label: "C", text: "RM600" }, { label: "D", text: "RM5,300" }], answer: "A", expl: "Faedah I = Prt = RM5,000 × (3/100) × 2 = RM300." },
-      { id: 96, section: "B", domain: "Sejarah - Gagasan Malayan Union 1946", text: "Mengapakah orang Melayu di bawah pimpinan Dato' Onn Jaafar menentang keras pelaksanaan Malayan Union yang diperkenalkan British pada tahun 1946?", options: [{ label: "A", text: "Kedaulatan Raja-raja Melayu terhakis dan syarat kerakyatan jus soli yang terlalu longgar." }, { label: "B", text: "British mahu mengembalikan kuasa kepada tentera Jepun." }, { label: "C", text: "Ibu kota dipindahkan ke London." }, { label: "D", text: "Cukai perniagaan dinaikkan mendadak." }], answer: "A", expl: "Malayan Union menghapuskan kedaulatan Sultan dan memberikan hak kerakyatan terbuka yang mengancam kedudukan peribumi Melayu." },
-      { id: 97, section: "B", domain: "Bahasa Inggeris - Conjunctions", text: "Combine the sentences: 'He was exhausted. He continued helping his father finish the painting.'", options: [{ label: "A", text: "Although he was exhausted, he continued helping his father finish the painting." }, { label: "B", text: "Because he was exhausted, he continued helping his father." }, { label: "C", text: "Since he was exhausted, he stopped painting." }, { label: "D", text: "Unless he was exhausted, he continued painting." }], answer: "A", expl: "'Although' shows a contrast between being exhausted and continuing to work." },
-      { id: 98, section: "B", domain: "Fizik - Ketumpatan Objek", text: "Sebuah bongkah logam mempunyai jisim 540 g dan isi padu 200 cm³. Hitung ketumpatan logam tersebut:", options: [{ label: "A", text: "2.7 g/cm³" }, { label: "B", text: "0.37 g/cm³" }, { label: "C", text: "1.08 g/cm³" }, { label: "D", text: "3.5 g/cm³" }], answer: "A", expl: "Ketumpatan = Jisim / Isi padu = 540 g / 200 cm³ = 2.7 g/cm³ (ketumpatan aluminium)." },
-      { id: 99, section: "B", domain: "RBT - Sistem Fertigasi", text: "Tujuan utama penggunaan larutan nutrien baja hidroponik secara titisan terus ke zon akar tanaman dalam sistem fertigasi ialah:", options: [{ label: "A", text: "Meningkatkan kecekapan penyerapan nutrien dan mengelakkan pembaziran baja serta air." }, { label: "B", text: "Menyejukkan daun tanaman pada waktu malam." }, { label: "C", text: "Menghapuskan serangga perosak pada batang pokok." }, { label: "D", text: "Mempercepatkan pertumbuhan rumput di sekitar batas." }], answer: "A", expl: "Sistem fertigasi membekalkan air dan nutrien secara seragam dan tepat kepada akar tanpa pembaziran." },
-      { id: 100, section: "B", domain: "Etika Saintifik & Kelestarian Menengah", text: "Prinsip utama pembangunan lestari (Sustainable Development) yang perlu dipegang oleh generasi muda hari ini ialah:", options: [{ label: "A", text: "Memenuhi keperluan pembangunan semasa tanpa menjejaskan keupayaan generasi masa depan memenuhi keperluan mereka." }, { label: "B", text: "Mengeksploitasi semua sumber hutan dan galian secepat mungkin demi kekayaan semasa." }, { label: "C", text: "Menghentikan semua aktiviti ekonomi kilang di seluruh dunia." }, { label: "D", text: "Mengutamakan keuntungan wang syarikat swasta semata-mata." }], answer: "A", expl: "Pembangunan lestari mengimbangi kemajuan sosioekonomi dengan pemeliharaan ekosistem alam sekitar untuk generasi akan datang." }
+    // BAHAGIAN B: KECERDASAN INTELEK T4 (31 - 100) - KUNCI JAWAPAN SEIMBANG (A, B, C, D)
+      { 
+        id: 31, 
+        section: "B", 
+        domain: "Matematik - Persamaan Serentak", 
+        text: "Diberi sistem persamaan linear serentak:\n\n2x + 3y = 19\nx - y = 2\n\nHitung nilai bagi (x + y).", 
+        options: [
+          { label: "A", text: "7" }, 
+          { label: "B", text: "8" }, 
+          { label: "C", text: "9" }, 
+          { label: "D", text: "6" }
+        ], 
+        answer: "B", 
+        expl: "Daripada persamaan kedua: x = y + 2. Gantikan ke dalam persamaan pertama: 2(y + 2) + 3y = 19 -> 2y + 4 + 3y = 19 -> 5y = 15 -> y = 3. Maka x = 3 + 2 = 5. Nilai x + y = 5 + 3 = 8." 
+      },
+      { 
+        id: 32, 
+        section: "B", 
+        domain: "Matematik - Teorem Pythagoras", 
+        text: "Sebuah segi tiga bersudut tegak mempunyai hipotenus berukuran 15 cm dan salah satu sisinya berukuran 9 cm.\nHitung panjang sisi yang satu lagi:", 
+        options: [
+          { label: "A", text: "10 cm" }, 
+          { label: "B", text: "13 cm" }, 
+          { label: "C", text: "12 cm" }, 
+          { label: "D", text: "11 cm" }
+        ], 
+        answer: "C", 
+        expl: "Berdasarkan Teorem Pythagoras: a = √(15² - 9²) = √(225 - 81) = √144 = 12 cm." 
+      },
+      { 
+        id: 33, 
+        section: "B", 
+        domain: "Sains - Respirasi Sel & Biologi", 
+        text: "Manakah antara berikut merupakan persamaan perkataan yang tepat bagi proses respirasi aerob dalam sel hidup?", 
+        options: [
+          { label: "A", text: "Karbon Dioksida + Air -> Glukosa + Oksigen" }, 
+          { label: "B", text: "Glukosa -> Asid Laktik + Tenaga" }, 
+          { label: "C", text: "Glukosa + Karbon Dioksida -> Air + Oksigen" }, 
+          { label: "D", text: "Glukosa + Oksigen -> Karbon Dioksida + Air + Tenaga" }
+        ], 
+        answer: "D", 
+        expl: "Respirasi aerob mengoksidakan glukosa dengan kehadiran oksigen untuk menghasilkan karbon dioksida, air dan membebaskan tenaga biokimia (ATP)." 
+      },
+      { 
+        id: 34, 
+        section: "B", 
+        domain: "Fizik - Tenaga Keupayaan & Kinetik", 
+        text: "Sebuah objek berjisim 2 kg dilepaskan dari ketinggian 20 meter dari aras tanah. Berapakah halaju objek itu sejurus sebelum menyentuh tanah? (Anggap g = 10 m s⁻² dan tiada rintangan udara)", 
+        options: [
+          { label: "A", text: "20 m/s" }, 
+          { label: "B", text: "10 m/s" }, 
+          { label: "C", text: "14.14 m/s" }, 
+          { label: "D", text: "40 m/s" }
+        ], 
+        answer: "A", 
+        expl: "Prinsip keabadian tenaga: Tenaga Keupayaan Graviti = Tenaga Kinetik -> mgh = 0.5 mv² -> v = √(2gh) = √(2 × 10 × 20) = √400 = 20 m/s." 
+      },
+      { 
+        id: 35, 
+        section: "B", 
+        domain: "Kimia - Jadual Berkala Unsur", 
+        text: "Unsur Natrium (Na) terletak dalam Kumpulan 1 dan Kala 3 dalam Jadual Berkala Unsur. Apakah ciri utama unsur ini apabila bertindak balas dengan air?", 
+        options: [
+          { label: "A", text: "Tidak bertindak balas kerana bersifat gas adi yang lengai" }, 
+          { label: "B", text: "Bertindak balas cergas menghasilkan gas hidrogen dan membentuk larutan beralkali" }, 
+          { label: "C", text: "Menghasilkan mendakan garam berasid pekat" }, 
+          { label: "D", text: "Menyerap gas nitrogen dari udara secara aktif" }
+        ], 
+        answer: "B", 
+        expl: "Logam alkali Kumpulan 1 bertindak balas cergas dengan air membentuk larutan hidroksida yang bersifat alkali dan membebaskan gas hidrogen." 
+      },
+      { 
+        id: 36, 
+        section: "B", 
+        domain: "Matematik - Kebarangkalian", 
+        text: "Sebuah beg mengandungi 6 biji guli merah, 8 biji guli biru dan 10 biji guli hijau. Sebiji guli dicabut secara rawak. Cari kebarangkalian mencabut guli yang BUKAN berwarna hijau:", 
+        options: [
+          { label: "A", text: "5/12" }, 
+          { label: "B", text: "1/4" }, 
+          { label: "C", text: "7/12" }, 
+          { label: "D", text: "3/8" }
+        ], 
+        answer: "C", 
+        expl: "Jumlah keseluruhan guli = 6 + 8 + 10 = 24. Bilangan guli bukan hijau (merah + biru) = 6 + 8 = 14. P(bukan hijau) = 14/24 = 7/12." 
+      },
+      { 
+        id: 37, 
+        section: "B", 
+        domain: "Bahasa Melayu - Morfologi Menengah", 
+        text: "Antara ayat berikut, yang manakah menggunakan kata majmuk mantap dengan ejaan yang BETUL?", 
+        options: [
+          { label: "A", text: "Mereka menandatangani surat perjanjian itu di atas meja tulis." }, 
+          { label: "B", text: "Urus setia mesyuarat sedang menyediakan minit laporan tahunan." }, 
+          { label: "C", text: "Kakitangan syarikat itu telah diberi taklimat keselamatan kebakaran." }, 
+          { label: "D", text: "Kerjasama erat antara warga sekolah membuahkan kejayaan yang cemerlang." }
+        ], 
+        answer: "D", 
+        expl: "'Kerjasama' dieja bercantum rapat sebagai satu perkataan kerana merupakan kata majmuk mantap yang telah mantap ejaannya." 
+      },
+      { 
+        id: 38, 
+        section: "B", 
+        domain: "Sejarah - Campur Tangan British", 
+        text: "Apakah peristiwa bersejarah pada tahun 1874 yang menandakan bermulanya campur tangan rasmi British di Negeri-negeri Melayu melalui pengenalan Sistem Residen?", 
+        options: [
+          { label: "A", text: "Pemeteraian Perjanjian Pangkor di Perak" }, 
+          { label: "B", text: "Perjanjian Bangkok" }, 
+          { label: "C", text: "Perisytiharan Persekutuan 1896" }, 
+          { label: "D", text: "Perjanjian Burney" }
+        ], 
+        answer: "A", 
+        expl: "Perjanjian Pangkor 1874 di Perak memulakan sistem Residen di mana Raja-raja Melayu perlu menerima nasihat Residen dalam semua hal ehwal kecuali agama Islam dan adat Melayu." 
+      },
+      { 
+        id: 39, 
+        section: "B", 
+        domain: "Fizik - Tekanan Cecair", 
+        text: "Mengapakah dinding bahagian dasar sesebuah empangan konkrit dibina jauh lebih tebal berbanding bahagian atasnya?", 
+        options: [
+          { label: "A", text: "Dinding dasar empangan perlu menampung suhu air yang lebih panas." }, 
+          { label: "B", text: "Tekanan hidrostatik cecair meningkat secara berkadar terus dengan kedalaman air (P = hρg)." }, 
+          { label: "C", text: "Mengurangkan daya geseran arus air pada bahagian bawah empangan." }, 
+          { label: "D", text: "Memudahkan laluan paip udara di bahagian bawah empangan." }
+        ], 
+        answer: "B", 
+        expl: "Tekanan cecair bergantung kepada kedalaman (P = hρg). Semakin dalam cecair, semakin tinggi tekanan; oleh itu dinding bawah perlu lebih tebal untuk menampung daya tekanan yang besar." 
+      },
+      { 
+        id: 40, 
+        section: "B", 
+        domain: "Matematik - Indeks & Algebra", 
+        text: "Permudahkan ungkapan algebra berikut:  (2x³y²)³ ÷ (4x⁴y):", 
+        options: [
+          { label: "A", text: "2x²y⁵" }, 
+          { label: "B", text: "4x⁵y⁶" }, 
+          { label: "C", text: "2x⁵y⁵" }, 
+          { label: "D", text: "8x⁵y⁵" }
+        ], 
+        answer: "C", 
+        expl: "(2x³y²)³ = 8x⁹y⁶. Bahagikan dengan 4x⁴y: 8/4 = 2; x^(9-4) = x⁵; y^(6-1) = y⁵. Jawapan = 2x⁵y⁵." 
+      },
+      { 
+        id: 41, 
+        section: "B", 
+        domain: "Sains - Prinsip Archimedes & Daya Apungan", 
+        text: "Sebuah kapal kargo yang sarat dengan muatan kontena keluli dapat terapung di permukaan air laut. Fenomena ini dijelaskan oleh Prinsip Archimedes kerana:", 
+        options: [
+          { label: "A", text: "Ketumpatan keluli adalah lebih rendah daripada ketumpatan air laut." }, 
+          { label: "B", text: "Daya graviti tidak bertindak ke atas objek di lautan." }, 
+          { label: "C", text: "Kandungan garam air laut menolak keluli ke atas." }, 
+          { label: "D", text: "Daya apungan ke atas adalah sama dengan berat cecair yang disesarkan oleh ruang udara badan kapal yang luas." }
+        ], 
+        answer: "D", 
+        expl: "Bentuk badan kapal mempunyai ruang udara besar yang meningkatkan isi padu sesaran cecair, menghasilkan daya apungan yang menyamai berat kapal." 
+      },
+      { 
+        id: 42, 
+        section: "B", 
+        domain: "Matematik - Poligon & Sudut Pedalaman", 
+        text: "Hitung hasil tambah semua sudut pedalaman bagi sebuah poligon sekata berbentuk oktagon (8 sisi):", 
+        options: [
+          { label: "A", text: "1,080°" }, 
+          { label: "B", text: "900°" }, 
+          { label: "C", text: "720°" }, 
+          { label: "D", text: "1,440°" }
+        ], 
+        answer: "A", 
+        expl: "Formula hasil tambah sudut pedalaman = (n - 2) × 180°. Bagi oktagon (n = 8): (8 - 2) × 180° = 6 × 180° = 1,080°." 
+      },
+      { 
+        id: 43, 
+        section: "B", 
+        domain: "Kimia - Ikatan Kimia", 
+        text: "Apakah jenis ikatan kimia yang terbentuk antara atom Natrium (logam) dan Klorin (bukan logam) dalam menghasilkan sebatian natrium klorida (garam makan)?", 
+        options: [
+          { label: "A", text: "Ikatan Kovalen (Perkongsian elektron)" }, 
+          { label: "B", text: "Ikatan Ionik (Pemindahan elektron)" }, 
+          { label: "C", text: "Ikatan Logam" }, 
+          { label: "D", text: "Ikatan Hidrogen" }
+        ], 
+        answer: "B", 
+        expl: "Ikatan ion terbentuk apabila atom logam mendermakan elektron kepada atom bukan logam bagi mencapai susunan oktet yang stabil." 
+      },
+      { 
+        id: 44, 
+        section: "B", 
+        domain: "Bahasa Melayu - Sintaksis Ayat Aktif & Pasif", 
+        text: "Tukarkan ayat aktif berikut kepada ayat pasif yang betul:\n\"Kumpulan murid itu telah membersihkan makmal sains sebelum pulang.\"", 
+        options: [
+          { label: "A", text: "Makmal sains mereka telah bersihkan sebelum pulang." }, 
+          { label: "B", text: "Sebelum pulang, makmal sains membersihkan kumpulan murid itu." }, 
+          { label: "C", text: "Makmal sains telah dibersihkan oleh kumpulan murid itu sebelum pulang." }, 
+          { label: "D", text: "Kumpulan murid itu membersihkan makmal sains sebelum pulang." }
+        ], 
+        answer: "C", 
+        expl: "Bagi pelaku kata ganti nama diri ketiga (kumpulan murid itu), ayat pasif menggunakan kata kerja berawalan 'di-... oleh'." 
+      },
+      { 
+        id: 45, 
+        section: "B", 
+        domain: "Sains - Peredaran Darah Manusia", 
+        text: "Ruang jantung manakah yang mempunyai dinding berotot paling tebal kerana berfungsi mengepam darah beroksigen ke seluruh tubuh manusia?", 
+        options: [
+          { label: "A", text: "Ventrikel kanan" }, 
+          { label: "B", text: "Atrium kiri" }, 
+          { label: "C", text: "Atrium kanan" }, 
+          { label: "D", text: "Ventrikel kiri" }
+        ], 
+        answer: "D", 
+        expl: "Ventrikel kiri mempunyai miokardium paling tebal untuk menghasilkan tekanan tinggi mengepam darah melalui aorta ke seluruh tubuh badan." 
+      },
+      { 
+        id: 46, 
+        section: "B", 
+        domain: "Matematik - Persamaan Kuadratik", 
+        text: "Cari punca-punca bagi persamaan kuadratik berikut:  x² - 5x + 6 = 0:", 
+        options: [
+          { label: "A", text: "x = 2 dan x = 3" }, 
+          { label: "B", text: "x = -2 dan x = -3" }, 
+          { label: "C", text: "x = 1 dan x = 6" }, 
+          { label: "D", text: "x = -1 dan x = 6" }
+        ], 
+        answer: "A", 
+        expl: "Faktorkan persamaan: (x - 2)(x - 3) = 0. Maka x = 2 atau x = 3." 
+      },
+      { 
+        id: 47, 
+        section: "B", 
+        domain: "Sejarah - Pentadbiran Negeri-Negeri Selat", 
+        text: "Apakah tiga buah wilayah yang digabungkan oleh British pada tahun 1826 bagi membentuk unit pentadbiran Negeri-negeri Selat (NNS)?", 
+        options: [
+          { label: "A", text: "Perak, Selangor dan Negeri Sembilan" }, 
+          { label: "B", text: "Pulau Pinang, Melaka dan Singapura" }, 
+          { label: "C", text: "Kedah, Perlis dan Kelantan" }, 
+          { label: "D", text: "Sabah, Sarawak dan Labuan" }
+        ], 
+        answer: "B", 
+        expl: "Negeri-negeri Selat (NNS) dibentuk pada tahun 1826 menggabungkan Pulau Pinang, Melaka dan Singapura dengan ibu kota pertamanya di Pulau Pinang." 
+      },
+      { 
+        id: 48, 
+        section: "B", 
+        domain: "Fizik - Hukum Ohm & Elektrik", 
+        text: "Sebuah mentol berintangan 4 Ω disambungkan kepada sumber voltan 12 V. Berapakah nilai arus elektrik yang mengalir melalui litar tersebut? (V = IR)", 
+        options: [
+          { label: "A", text: "48 A" }, 
+          { label: "B", text: "0.33 A" }, 
+          { label: "C", text: "3 A" }, 
+          { label: "D", text: "8 A" }
+        ], 
+        answer: "C", 
+        expl: "Berdasarkan Hukum Ohm: V = IR -> I = V / R = 12 V / 4 Ω = 3 Ampere." 
+      },
+      { 
+        id: 49, 
+        section: "B", 
+        domain: "Bahasa Inggeris - Error Identification", 
+        text: "Identify the part of the sentence with an error: 'Each of the participants were given a certificate of participation by the principal.'", 
+        options: [
+          { label: "A", text: "Each of the participants" }, 
+          { label: "B", text: "a certificate of participation" }, 
+          { label: "C", text: "by the principal" }, 
+          { label: "D", text: "were given [sepatutnya 'was given']" }
+        ], 
+        answer: "D", 
+        expl: "Subjek 'Each' adalah tunggal (singular), oleh itu kata kerja pasif yang betul ialah 'was given', bukan 'were given'." 
+      },
+      { 
+        id: 50, 
+        section: "B", 
+        domain: "Sains - Ekologi & Interaksi Organisma", 
+        text: "Interaksi antara kulat dan alga dalam organisma liken di mana kedua-dua pihak saling mendapat manfaat dinamakan:", 
+        options: [
+          { label: "A", text: "Mutualisme" }, 
+          { label: "B", text: "Komensalisme" }, 
+          { label: "C", text: "Parasitisme" }, 
+          { label: "D", text: "Mangsa-pemangsa" }
+        ], 
+        answer: "A", 
+        expl: "Mutualisme ialah interaksi simbiotik di mana kedua-dua organisma mendapat faedah (alga membekalkan makanan, kulat membekalkan kelembapan/perlindungan)." 
+      },
+      { 
+        id: 51, 
+        section: "B", 
+        domain: "Matematik - Geometri Bulatan", 
+        text: "Panjang jejari bagi sebuah bulatan ialah 7 cm. Hitung luas bulatan tersebut (Guna π = 22/7):", 
+        options: [
+          { label: "A", text: "44 cm²" }, 
+          { label: "B", text: "154 cm²" }, 
+          { label: "C", text: "308 cm²" }, 
+          { label: "D", text: "88 cm²" }
+        ], 
+        answer: "B", 
+        expl: "Luas bulatan = πj² = (22/7) × 7 × 7 = 22 × 7 = 154 cm²." 
+      },
+      { 
+        id: 52, 
+        section: "B", 
+        domain: "Geografi - Fenomena Cuaca & Iklim", 
+        text: "Tiupan Angin Monsun Timur Laut yang melanda Malaysia dari bulan November hingga Mac membawa hujan lebat terutamanya kepada:", 
+        options: [
+          { label: "A", text: "Kawasan pantai barat Semenanjung Malaysia" }, 
+          { label: "B", text: "Selat Melaka sahaja" }, 
+          { label: "C", text: "Kawasan pantai timur Semenanjung Malaysia, barat Sarawak dan timur Sabah" }, 
+          { label: "D", text: "Lembah Klang sahaja" }
+        ], 
+        answer: "C", 
+        expl: "Monsun Timur Laut bertiup dari Siberia/benua Asia merentasi Laut China Selatan dan membawa hujan lebat ke Pantai Timur Semenanjung." 
+      },
+      { 
+        id: 53, 
+        section: "B", 
+        domain: "Kimia - Peneutralan Asid & Alkali", 
+        text: "Apakah hasil yang terhasil daripada tindak balas peneutralan antara asid hidroklorik (HCl) dan natrium hidroksida (NaOH)?", 
+        options: [
+          { label: "A", text: "Gas hidrogen dan larutan asid" }, 
+          { label: "B", text: "Gas karbon dioksida dan mendakan kapur" }, 
+          { label: "C", text: "Gas klorin dan garam natrium" }, 
+          { label: "D", text: "Natrium klorida (garam) dan air" }
+        ], 
+        answer: "D", 
+        expl: "Tindak balas peneutralan: Asid + Alkali -> Garam + Air. HCl + NaOH -> NaCl + H₂O." 
+      },
+      { 
+        id: 54, 
+        section: "B", 
+        domain: "Matematik - Nisbah Trigonometri", 
+        text: "Dalam sebuah segi tiga bersudut tegak, sisi bertentangan ialah 3 cm, sisi bersebelahan ialah 4 cm dan hipotenus ialah 5 cm. Nilai bagi kosinus (cos θ) sudut tersebut ialah:", 
+        options: [
+          { label: "A", text: "4/5" }, 
+          { label: "B", text: "3/5" }, 
+          { label: "C", text: "3/4" }, 
+          { label: "D", text: "5/4" }
+        ], 
+        answer: "A", 
+        expl: "Kosinus θ = Sisi Bersebelahan / Hipotenus = 4 / 5." 
+      },
+      { 
+        id: 55, 
+        section: "B", 
+        domain: "Sejarah - Penentangan Tokoh Tempatan", 
+        text: "Tokoh pejuang tempatan di Naning yang menentang bayaran ufti satu persepuluh hasil pertanian yang dikenakan oleh pihak British ialah:", 
+        options: [
+          { label: "A", text: "Rentap" }, 
+          { label: "B", text: "Dato' Dol Said" }, 
+          { label: "C", text: "Mat Salleh" }, 
+          { label: "D", text: "Dato' Maharaja Lela" }
+        ], 
+        answer: "B", 
+        expl: "Dato' Dol Said memimpin Perang Naning (1831-1832) mempertahankan kedaulatan Naning daripada pengenaan cukai British." 
+      },
+      { 
+        id: 56, 
+        section: "B", 
+        domain: "Sains - Pembiasan Cahaya & Kanta", 
+        text: "Sinar cahaya merambat dari medium udara masuk ke dalam blok kaca yang lebih tumpat optik. Sinar cahaya tersebut akan:", 
+        options: [
+          { label: "A", text: "Membias menjauhi garis normal kerana kelajuan cahaya bertambah" }, 
+          { label: "B", text: "Bergerak lurus tanpa sebarang perubahan arah" }, 
+          { label: "C", text: "Membias mendekati garis normal kerana kelajuan cahaya berkurang" }, 
+          { label: "D", text: "Dipantulkan secara keseluruhan" }
+        ], 
+        answer: "C", 
+        expl: "Apabila merambat dari medium kurang tumpat ke lebih tumpat, laju cahaya berkurang dan sinar dibiaskan mendekati garis normal." 
+      },
+      { 
+        id: 57, 
+        section: "B", 
+        domain: "Matematik - Teori Set", 
+        text: "Diberi Set Semesta ξ = {x : x ialah integer, 1 ≤ x ≤ 10} dan Set A = {nombor ganjil}. Cari bilangan unsur bagi pelengkap Set A (n(A')):", 
+        options: [
+          { label: "A", text: "4" }, 
+          { label: "B", text: "6" }, 
+          { label: "C", text: "3" }, 
+          { label: "D", text: "5" }
+        ], 
+        answer: "D", 
+        expl: "ξ = {1,2,3,4,5,6,7,8,9,10}. A = {1,3,5,7,9}. Maka pelengkap A' = {2,4,6,8,10}. Bilangan unsur n(A') = 5." 
+      },
+      { 
+        id: 58, 
+        section: "B", 
+        domain: "Bahasa Melayu - Peribahasa Menengah", 
+        text: "\"Usaha gigih dan berterusan secara sedikit demi sedikit akhirnya akan menghasilkan kejayaan yang besar.\" Peribahasa yang paling sesuai ialah:", 
+        options: [
+          { label: "A", text: "Sedikit-sedikit, lama-lama menjadi bukit" }, 
+          { label: "B", text: "Alang-alang berminyak, biar licin" }, 
+          { label: "C", text: "Sudah terhantuk baru tengadah" }, 
+          { label: "D", text: "Bagai melepaskan batuk di tangga" }
+        ], 
+        answer: "A", 
+        expl: "'Sedikit-sedikit, lama-lama menjadi bukit' bermaksud ketabahan mengumpul usaha atau amalan sedikit demi sedikit membuahkan hasil besar." 
+      },
+      { 
+        id: 59, 
+        section: "B", 
+        domain: "Fizik - Kereaktifan Logam", 
+        text: "Antara logam berikut, yang manakah terletak pada kedudukan paling TINGGI dalam Siri Kereaktifan Logam terhadap oksigen?", 
+        options: [
+          { label: "A", text: "Zink" }, 
+          { label: "B", text: "Kalium (Potassium)" }, 
+          { label: "C", text: "Kuprum" }, 
+          { label: "D", text: "Besi" }
+        ], 
+        answer: "B", 
+        expl: "Urutan siri kereaktifan logam: Kalium, Natrium, Kalsium, Magnesium, Aluminium, Karbon, Zink, Besi, Timah, Plumbum, Kuprum, Emas." 
+      },
+      { 
+        id: 60, 
+        section: "B", 
+        domain: "Matematik - Kecerunan Garis Lurus", 
+        text: "Cari kecerunan garis lurus yang melalui titik A(2, 3) dan B(6, 11):", 
+        options: [
+          { label: "A", text: "m = 4" }, 
+          { label: "B", text: "m = 0.5" }, 
+          { label: "C", text: "m = 2" }, 
+          { label: "D", text: "m = 3" }
+        ], 
+        answer: "C", 
+        expl: "Formula kecerunan m = (y₂ - y₁) / (x₂ - x₁) = (11 - 3) / (6 - 2) = 8 / 4 = 2." 
+      },
+      { 
+        id: 61, 
+        section: "B", 
+        domain: "Sains - Pewarisan Genetik", 
+        text: "Kromosom seks bagi seorang individu lelaki normal dalam sel somatik tubuh ialah:", 
+        options: [
+          { label: "A", text: "44 + XX" }, 
+          { label: "B", text: "22 + X" }, 
+          { label: "C", text: "22 + Y" }, 
+          { label: "D", text: "44 + XY" }
+        ], 
+        answer: "D", 
+        expl: "Sel somatik manusia mempunyai 46 kromosom (23 pasang). Bagi lelaki normal: 44 autosom + sepasang kromosom seks XY (44 + XY)." 
+      },
+      { 
+        id: 62, 
+        section: "B", 
+        domain: "Sejarah - Pembentukan Negeri-Negeri Melayu Bersekutu", 
+        text: "Empat buah negeri yang disatukan di bawah pentadbiran Negeri-negeri Melayu Bersekutu (NNMB) pada tahun 1896 dengan ibu kota di Kuala Lumpur ialah:", 
+        options: [
+          { label: "A", text: "Perak, Selangor, Negeri Sembilan dan Pahang" }, 
+          { label: "B", text: "Kedah, Perlis, Kelantan dan Terengganu" }, 
+          { label: "C", text: "Pulau Pinang, Melaka, Singapura dan Johor" }, 
+          { label: "D", text: "Sabah, Sarawak, Brunei dan Labuan" }
+        ], 
+        answer: "A", 
+        expl: "NNMB (1896) menggabungkan Perak, Selangor, Negeri Sembilan dan Pahang di bawah Residen Jeneral pertama, Frank Swettenham." 
+      },
+      { 
+        id: 63, 
+        section: "B", 
+        domain: "Bahasa Inggeris - Conditional Sentences", 
+        text: "Complete the sentence: 'If I _______ enough money, I would travel around the world.'", 
+        options: [
+          { label: "A", text: "have" }, 
+          { label: "B", text: "had" }, 
+          { label: "C", text: "will have" }, 
+          { label: "D", text: "am having" }
+        ], 
+        answer: "B", 
+        expl: "Second conditional sentence (unreal present): 'If + past simple (had), ... would + verb bare infinitive'." 
+      },
+      { 
+        id: 64, 
+        section: "B", 
+        domain: "Matematik - Bentuk Piawai", 
+        text: "Tuliskan nombor 0.000458 dalam bentuk piawai (standard form A × 10ⁿ di mana 1 ≤ A < 10):", 
+        options: [
+          { label: "A", text: "45.8 × 10⁻⁵" }, 
+          { label: "B", text: "4.58 × 10⁴" }, 
+          { label: "C", text: "4.58 × 10⁻⁴" }, 
+          { label: "D", text: "0.458 × 10⁻³" }
+        ], 
+        answer: "C", 
+        expl: "Titik perpuluhan digerakkan 4 tempat ke kanan untuk menghasilkan 4.58, maka kuasanya negatif 4: 4.58 × 10⁻⁴." 
+      },
+      { 
+        id: 65, 
+        section: "B", 
+        domain: "Sains - Pemindahan Haba", 
+        text: "Pemindahan haba dari matahari ke permukaan bumi melalui ruang vakum angkasa berlaku secara:", 
+        options: [
+          { label: "A", text: "Konduksi (Conduction)" }, 
+          { label: "B", text: "Perolakan (Convection)" }, 
+          { label: "C", text: "Penyejatan" }, 
+          { label: "D", text: "Sinaran (Radiation)" }
+        ], 
+        answer: "D", 
+        expl: "Sinaran ialah pemindahan haba dalam bentuk gelombang elektromagnetik yang tidak memerlukan sebarang medium jirim." 
+      },
+      { 
+        id: 66, 
+        section: "B", 
+        domain: "Bahasa Melayu - Kata Pemeri", 
+        text: "Pilih ayat yang menggunakan kata pemeri 'ialah' dengan BETUL:", 
+        options: [
+          { label: "A", text: "Punca utama pencemaran sungai ialah pembuangan sisa toksik kilang." }, 
+          { label: "B", text: "Sumbangan ikhlas itu ialah untuk murid-murid miskin." }, 
+          { label: "C", text: "Rumah banglo itu ialah sangat besar dan mewah." }, 
+          { label: "D", text: "Langkah pertama ialah dengan mencuci tangan menggunakan sabun." }
+        ], 
+        answer: "A", 
+        expl: "'Ialah' hadir di hadapan frasa nama (pembuangan sisa toksik), manakala 'adalah' hadir di hadapan frasa sendi nama atau frasa adjektif." 
+      },
+      { 
+        id: 67, 
+        section: "B", 
+        domain: "Reka Bentuk & Teknologi (RBT) - Sistem Mekatronik", 
+        text: "Apakah gabungan empat elemen asas utama yang membentuk sesuatu produk mekatronik moden?", 
+        options: [
+          { label: "A", text: "Kayu, Logam, Plastik dan Getah" }, 
+          { label: "B", text: "Mekanikal, Elektrik, Elektronik dan Pengaturcaraan" }, 
+          { label: "C", text: "Sensor, Bateri, Roda dan Suis" }, 
+          { label: "D", text: "Input, Proses, Output dan Simpanan" }
+        ], 
+        answer: "B", 
+        expl: "Mekatronik menggabungkan sistem mekanikal, elektrik, elektronik dan kawalan pengaturcaraan komputer." 
+      },
+      { 
+        id: 68, 
+        section: "B", 
+        domain: "Matematik - Transformasi Isometri", 
+        text: "Apakah ciri penting bagi suatu objek yang mengalami transformasi pantulan pada paksi pantulan?", 
+        options: [
+          { label: "A", text: "Saiz objek membesar dua kali ganda." }, 
+          { label: "B", text: "Bentuk objek berubah menjadi bulatan." }, 
+          { label: "C", text: "Bentuk dan saiz objek kekal sama, tetapi orientasinya songsang sisi." }, 
+          { label: "D", text: "Orientasi dan kedudukan objek tidak berubah langsung." }
+        ], 
+        answer: "C", 
+        expl: "Pantulan menghasilkan imej yang kongruen (isometri) dengan bentuk dan saiz sama, namun mempunyai orientasi terbalik (songsang sisi)." 
+      },
+      { 
+        id: 69, 
+        section: "B", 
+        domain: "Sains - Pengekstrakan Logam", 
+        text: "Karbon digunakan dalam relau bagas untuk mengekstrak besi daripada bijihnya kerana karbon:", 
+        options: [
+          { label: "A", text: "Kurang reaktif daripada besi" }, 
+          { label: "B", text: "Mempunyai takat lebur yang sangat rendah" }, 
+          { label: "C", text: "Mencegah besi daripada berkarat di dalam relau" }, 
+          { label: "D", text: "Lebih reaktif daripada besi dan bertindak sebagai agen penurunan" }
+        ], 
+        answer: "D", 
+        expl: "Karbon terletak di atas besi dalam siri kereaktifan logam, membolehkannya menyingkirkan oksigen daripada oksida besi (agen penurunan)." 
+      },
+      { 
+        id: 70, 
+        section: "B", 
+        domain: "Sejarah - Pentadbiran Brooke di Sarawak", 
+        text: "James Brooke mula menguasai wilayah Sarawak pada tahun 1841 selepas berjaya membantu Pengiran Raja Muda Hashim menyelesaikan:", 
+        options: [
+          { label: "A", text: "Pemberontakan penduduk tempatan di Siniawan" }, 
+          { label: "B", text: "Serangan tentera Belanda dari Sambas" }, 
+          { label: "C", text: "Perang saudara di Brunei" }, 
+          { label: "D", text: "Serangan lanun Sulu" }
+        ], 
+        answer: "A", 
+        expl: "James Brooke membantu menamatkan pemberontakan Datu Patinggi Ali terhadap Kesultanan Brunei lalu dilantik menjadi Raja Putih Sarawak." 
+      },
+      { 
+        id: 71, 
+        section: "B", 
+        domain: "Bahasa Inggeris - Passive Voice", 
+        text: "Change into passive voice: 'Alexander Graham Bell invented the telephone in 1876.'", 
+        options: [
+          { label: "A", text: "The telephone is invented by Alexander Graham Bell in 1876." }, 
+          { label: "B", text: "The telephone was invented by Alexander Graham Bell in 1876." }, 
+          { label: "C", text: "The telephone had been invented by Alexander Graham Bell in 1876." }, 
+          { label: "D", text: "The telephone has been invented in 1876." }
+        ], 
+        answer: "B", 
+        expl: "Simple past active ('invented') changes to simple past passive ('was invented')." 
+      },
+      { 
+        id: 72, 
+        section: "B", 
+        domain: "Matematik - Sukatan Serakan Data", 
+        text: "Diberi set data markah: 4, 7, 8, 9, 12, 14, 18. Cari julat antara kuartil (Interquartile Range) bagi set data ini:", 
+        options: [
+          { label: "A", text: "14" }, 
+          { label: "B", text: "9" }, 
+          { label: "C", text: "7 (Q₃ = 14, Q₁ = 7 -> 14 - 7 = 7)" }, 
+          { label: "D", text: "11" }
+        ], 
+        answer: "C", 
+        expl: "Median = 9. Kuartil pertama (Q₁) = 7. Kuartil ketiga (Q₃) = 14. Julat antara kuartil = Q₃ - Q₁ = 14 - 7 = 7." 
+      },
+      { 
+        id: 73, 
+        section: "B", 
+        domain: "Sains - Radioaktiviti & Sinaran Nuklear", 
+        text: "Antara sinaran radioaktif berikut, yang manakah mempunyai kuasa penembusan paling TINGGI dan hanya dapat dihalang oleh kepingan plumbum tebal?", 
+        options: [
+          { label: "A", text: "Zarah Alfa (Alpha particle)" }, 
+          { label: "B", text: "Zarah Beta (Beta particle)" }, 
+          { label: "C", text: "Sinar Inframerah" }, 
+          { label: "D", text: "Sinar Gama (Gamma ray)" }
+        ], 
+        answer: "D", 
+        expl: "Sinar gama ialah gelombang elektromagnet bertenaga sangat tinggi tanpa cas dan jisim, mempunyai kuasa penembusan paling hebat." 
+      },
+      { 
+        id: 74, 
+        section: "B", 
+        domain: "Geografi - Dinamika Penduduk", 
+        text: "Apakah faktor utama yang mendorong tumpuan penduduk yang sangat padat di kawasan Dataran Kelantan dan Dataran Kedah-Perlis?", 
+        options: [
+          { label: "A", text: "Tanah dataran aluvium yang subur untuk kegiatan penanaman padi sawah" }, 
+          { label: "B", text: "Pusat perlombongan petroleum luar pantai" }, 
+          { label: "C", text: "Kawasan pelancongan tanah tinggi" }, 
+          { label: "D", text: "Kawasan industri berat automotif negara" }
+        ], 
+        answer: "A", 
+        expl: "Dataran aluvium rata yang subur membolehkan aktiviti pertanian intensif dijalankan sejak zaman-berzaman." 
+      },
+      { 
+        id: 75, 
+        section: "B", 
+        domain: "Bahasa Melayu - Peribahasa Menengah Rendah", 
+        text: "\"Seseorang yang membuat kesalahan atau jenayah akan sentiasa hidup dalam keadaan ketakutan dan tidak tenteram.\" Peribahasa yang paling tepat ialah:", 
+        options: [
+          { label: "A", text: "Menepuk air di dulang terpercik ke muka sendiri" }, 
+          { label: "B", text: "Siapa makan lada, dialah berasa pedas" }, 
+          { label: "C", text: "Lempar batu sembunyi tangan" }, 
+          { label: "D", text: "Haruan makan anak" }
+        ], 
+        answer: "B", 
+        expl: "'Siapa makan lada dialah berasa pedas' membawa maksud orang yang melakukan kesalahan akan berasa tersindir dan gelisah." 
+      },
+      { 
+        id: 76, 
+        section: "B", 
+        domain: "Matematik - Persamaan Garis Selari", 
+        text: "Diberi garis lurus 2y = 6x + 8. Garis lurus manakah yang SELARI dengan garis lurus tersebut?", 
+        options: [
+          { label: "A", text: "y = 6x + 2" }, 
+          { label: "B", text: "y = -3x + 1" }, 
+          { label: "C", text: "y = 3x - 5" }, 
+          { label: "D", text: "2y = 3x + 4" }
+        ], 
+        answer: "C", 
+        expl: "Tukar ke bentuk y = mx + c: y = 3x + 4, maka kecerunan m = 3. Garis selari mempunyai kecerunan sama (m = 3), iaitu y = 3x - 5." 
+      },
+      { 
+        id: 77, 
+        section: "B", 
+        domain: "Sains - Keasidan dan Nilai pH", 
+        text: "Larutan asid sulfurik pekat mempunyai anggaran nilai pH pada skala:", 
+        options: [
+          { label: "A", text: "pH 7 (Neutral)" }, 
+          { label: "B", text: "pH 13 - 14 (Alkali kuat)" }, 
+          { label: "C", text: "pH 5 - 6 (Asid lemah)" }, 
+          { label: "D", text: "pH 1 - 2 (Asid kuat)" }
+        ], 
+        answer: "D", 
+        expl: "Asid kuat mengion lengkap dalam air membebaskan kepekatan ion hidrogen tinggi dengan nilai pH antara 1 hingga 2." 
+      },
+      { 
+        id: 78, 
+        section: "B", 
+        domain: "Sejarah - Pendudukan Jepun di Tanah Melayu", 
+        text: "Apakah strategi ketenteraan yang digunakan oleh tentera Jepun di bawah pimpinan Jeneral Tomoyuki Yamashita untuk menawan seluruh Tanah Melayu dalam tempoh 70 hari sahaja?", 
+        options: [
+          { label: "A", text: "Penggunaan basikal dan kereta kebal ringan menyusuri jalan persisiran pantai" }, 
+          { label: "B", text: "Serangan peluru berpandu jarak jauh dari Tokyo" }, 
+          { label: "C", text: "Pengeboman bom atom di Singapura" }, 
+          { label: "D", text: "Serangan kapal selam secara berterusan di Selat Melaka" }
+        ], 
+        answer: "A", 
+        expl: "Tentera Jepun menggunakan basikal pantas bergerak melalui jalan ladang dan merentasi jambatan yang diletupkan British." 
+      },
+      { 
+        id: 79, 
+        section: "B", 
+        domain: "Bahasa Inggeris - Vocabulary Synonyms", 
+        text: "Select the word that is CLOSEST in meaning to 'RESILIENT':", 
+        options: [
+          { label: "A", text: "Fragile" }, 
+          { label: "B", text: "Tough / Adaptable" }, 
+          { label: "C", text: "Hesitant" }, 
+          { label: "D", text: "Arrogant" }
+        ], 
+        answer: "B", 
+        expl: "'Resilient' means able to withstand or recover quickly from difficult conditions (tough/persevering)." 
+      },
+      { 
+        id: 80, 
+        section: "B", 
+        domain: "Matematik - Nisbah & Kadar Laju", 
+        text: "Sebuah kereta bergerak sejauh 180 km dalam masa 2 jam 15 minit. Hitung laju purata kereta tersebut dalam unit km/j:", 
+        options: [
+          { label: "A", text: "90 km/j" }, 
+          { label: "B", text: "75 km/j" }, 
+          { label: "C", text: "80 km/j" }, 
+          { label: "D", text: "85 km/j" }
+        ], 
+        answer: "C", 
+        expl: "Masa = 2 jam 15 minit = 2.25 jam. Laju purata = Jarak / Masa = 180 km / 2.25 j = 80 km/j." 
+      },
+      { 
+        id: 81, 
+        section: "B", 
+        domain: "Sains - Daya Geseran & Hukum Gerakan", 
+        text: "Apabila sebuah bas berhenti secara tiba-tiba, penumpang di dalamnya akan terhumban ke hadapan. Fenomena ini berlaku disebabkan oleh:", 
+        options: [
+          { label: "A", text: "Daya tarikan graviti bumi bertambah" }, 
+          { label: "B", text: "Daya geseran tayar bas hilang secara mendadak" }, 
+          { label: "C", text: "Tekanan udara di dalam bas menurun" }, 
+          { label: "D", text: "Inersia penumpang yang cenderung mengekalkan keadaan gerakan asalnya (Hukum Gerakan Newton Pertama)" }
+        ], 
+        answer: "D", 
+        expl: "Inersia ialah kecenderungan sesuatu objek untuk mengekalkan keadaan pegun atau gerakan lurus seragamnya." 
+      },
+      { 
+        id: 82, 
+        section: "B", 
+        domain: "RBT - Aplikasi Mikropengawal", 
+        text: "Peranti perkakasan elektronik yang berfungsi mengesan perubahan suhu persekitaran dan menukarkannya kepada isyarat elektrik dipanggil:", 
+        options: [
+          { label: "A", text: "Penderia Suhu (Temperature sensor / Termistor)" }, 
+          { label: "B", text: "Geganti (Relay)" }, 
+          { label: "C", text: "Diod Pemancar Cahaya (LED)" }, 
+          { label: "D", text: "Transistor" }
+        ], 
+        answer: "A", 
+        expl: "Penderia suhu menukar kuantiti fizik (haba/suhu) kepada isyarat rintangan elektrik yang boleh dibaca mikropengawal." 
+      },
+      { 
+        id: 83, 
+        section: "B", 
+        domain: "Geografi - Sisa Domestik & Kitar Semula", 
+        text: "Konsep 5R dalam pengurusan sisa pepejal mampan merangkumi amalan:", 
+        options: [
+          { label: "A", text: "Run, Read, Rest, Relax, Repair" }, 
+          { label: "B", text: "Refuse, Reduce, Reuse, Repurpose, Recycle" }, 
+          { label: "C", text: "React, Resell, Reheat, Replant, Replace" }, 
+          { label: "D", text: "Remove, Rebuild, Reorder, Reopen, Return" }
+        ], 
+        answer: "B", 
+        expl: "Amalan 5R: Fikir semula/Tolak (Refuse), Kurangkan (Reduce), Guna semula (Reuse), Guna fungsi baharu (Repurpose), Kitar semula (Recycle)." 
+      },
+      { 
+        id: 84, 
+        section: "B", 
+        domain: "Bahasa Melayu - Kata Sendi Nama 'Antara' & 'Antara... dengan'", 
+        text: "Pilih ayat yang menggunakan kata sendi nama 'antara' dengan tatabahasa yang TEPAT:", 
+        options: [
+          { label: "A", text: "Di antara murid-murid itu, Ali yang paling rajin." }, 
+          { label: "B", text: "Antara mereka-mereka telah berlaku perselisihan faham." }, 
+          { label: "C", text: "Perlawanan akhir bola sepak itu adalah antara pasukan Perak dengan Selangor." }, 
+          { label: "D", text: "Perbezaan di antara kedua-dua bahan itu sangat ketara." }
+        ], 
+        answer: "C", 
+        expl: "Frasa 'antara ... dengan' digunakan untuk membandingkan dua pihak (kata sendi 'di' tidak boleh digandingkan di hadapan kata sendi 'antara')." 
+      },
+      { 
+        id: 85, 
+        section: "B", 
+        domain: "Sains - Pencernaan Makanan", 
+        text: "Di manakah proses penyerapan nutrien makanan yang telah dicerna secara lengkap berlaku ke dalam kapilari darah manusia?", 
+        options: [
+          { label: "A", text: "Perut (Gaster)" }, 
+          { label: "B", text: "Usus besar (Kolon)" }, 
+          { label: "C", text: "Esofagus" }, 
+          { label: "D", text: "Vilus di usus kecil (Ileum)" }
+        ], 
+        answer: "D", 
+        expl: "Vilus pada dinding usus kecil mempunyai luas permukaan besar dan jalinan kapilari darah yang kaya untuk penyerapan nutrien." 
+      },
+      { 
+        id: 86, 
+        section: "B", 
+        domain: "Matematik - Luas Permukaan Silinder", 
+        text: "Sebuah silinder tertutup mempunyai jejari 7 cm dan tinggi 10 cm. Hitung jumlah luas permukaannya (Guna π = 22/7, Formula: 2πj² + 2πjt):", 
+        options: [
+          { label: "A", text: "748 cm²" }, 
+          { label: "B", text: "440 cm²" }, 
+          { label: "C", text: "308 cm²" }, 
+          { label: "D", text: "1,540 cm²" }
+        ], 
+        answer: "A", 
+        expl: "2πj² = 2 × (22/7) × 7 × 7 = 308 cm². 2πjt = 2 × (22/7) × 7 × 10 = 440 cm². Jumlah luas = 308 + 440 = 748 cm²." 
+      },
+      { 
+        id: 87, 
+        section: "B", 
+        domain: "Sejarah - Penentangan Tokoh Tempatan", 
+        text: "Pemimpin pahlawan Iban yang terkenal dengan slogan 'Agi Idup, Agi Ngelaban' menentang kubu James Brooke di Bukit Sadok ialah:", 
+        options: [
+          { label: "A", text: "Mat Salleh" }, 
+          { label: "B", text: "Rentap (Libau)" }, 
+          { label: "C", text: "Antenom" }, 
+          { label: "D", text: "Sharif Masahor" }
+        ], 
+        answer: "B", 
+        expl: "Rentap memimpin pahlawan Iban menentang pencerobohan Brooke dengan kubu pertahanan teguh di puncak Bukit Sadok." 
+      },
+      { 
+        id: 88, 
+        section: "B", 
+        domain: "Fizik - Kanta Penumpu & Kanta Pencapah", 
+        text: "Seseorang individu yang mengalami rabun jauh (miopia) memerlukan bantuan cermin mata berkanta:", 
+        options: [
+          { label: "A", text: "Kanta cembung" }, 
+          { label: "B", text: "Kanta silinder satah" }, 
+          { label: "C", text: "Kanta cekung (Mencapahkan sinar cahaya agar imej jatuh tepat di retina)" }, 
+          { label: "D", text: "Kanta prisma" }
+        ], 
+        answer: "C", 
+        expl: "Rabun jauh berlaku apabila bebola mata terlalu panjang menyebabkan imej terfokus di hadapan retina; kanta cekung mencapahkan cahaya ke retina." 
+      },
+      { 
+        id: 89, 
+        section: "B", 
+        domain: "Bahasa Inggeris - Relative Pronouns", 
+        text: "Choose the correct relative pronoun: 'The scientist _______ research won the international award was invited to speak at Oxford.'", 
+        options: [
+          { label: "A", text: "which" }, 
+          { label: "B", text: "whom" }, 
+          { label: "C", text: "who" }, 
+          { label: "D", text: "whose" }
+        ], 
+        answer: "D", 
+        expl: "'Whose' is the possessive relative pronoun referring to the scientist's research." 
+      },
+      { 
+        id: 90, 
+        section: "B", 
+        domain: "Matematik - Ketaksamaan Linear", 
+        text: "Selesaikan ketaksamaan linear berikut:  3x - 4 ≥ 11:", 
+        options: [
+          { label: "A", text: "x ≥ 5" }, 
+          { label: "B", text: "x ≤ 5" }, 
+          { label: "C", text: "x ≥ 15" }, 
+          { label: "D", text: "x ≥ 7" }
+        ], 
+        answer: "A", 
+        expl: "3x ≥ 11 + 4 -> 3x ≥ 15 -> x ≥ 5." 
+      },
+      { 
+        id: 91, 
+        section: "B", 
+        domain: "Sains - Kitar Air Semula Jadi", 
+        text: "Apakah proses utama di mana air diserap oleh akar tumbuhan dan dibebaskan semula ke atmosfera dalam bentuk wap air melalui liang stoma daun?", 
+        options: [
+          { label: "A", text: "Kondensasi" }, 
+          { label: "B", text: "Transpirasi" }, 
+          { label: "C", text: "Resapan" }, 
+          { label: "D", text: "Penyejatan" }
+        ], 
+        answer: "B", 
+        expl: "Transpirasi ialah kehilangan air dalam bentuk wap dari tumbuhan ke atmosfera terutamanya melalui stoma daun." 
+      },
+      { 
+        id: 92, 
+        section: "B", 
+        domain: "Geografi - Tenaga Geoterma & Mineral", 
+        text: "Apakah sumber tenaga alternatif bersih yang dijana menggunakan haba dari dalam kerak bumi di kawasan gunung berapi aktif?", 
+        options: [
+          { label: "A", text: "Tenaga Nuklear" }, 
+          { label: "B", text: "Tenaga Hidroelektrik" }, 
+          { label: "C", text: "Tenaga Geoterma" }, 
+          { label: "D", text: "Tenaga Biojisim" }
+        ], 
+        answer: "C", 
+        expl: "Tenaga geoterma memanfaatkan haba daripada wap panas bawah tanah di kawasan rekahan bumi." 
+      },
+      { 
+        id: 93, 
+        section: "B", 
+        domain: "Bahasa Melayu - Kata Penegas", 
+        text: "Pilih ayat yang mengandungi penggunaan kata penegas yang tepat:", 
+        options: [
+          { label: "A", text: "Hanya dialah sahaja sahabat yang memahami kesusahan saya." }, 
+          { label: "B", text: "Memanglah dia itu sangat sombong sekali." }, 
+          { label: "C", text: "Juga saya mahu turut serta ke perpustakaan." }, 
+          { label: "D", text: "Dialah orang yang bertanggungjawab memimpin projek tersebut." }
+        ], 
+        answer: "D", 
+        expl: "Partikel penegas '-lah' menegaskan subjek 'Dia' secara gramatis tanpa lewah." 
+      },
+      { 
+        id: 94, 
+        section: "B", 
+        domain: "Sains - Pengoksidaan & Pengaratan Logam", 
+        text: "Dua faktor persekitaran yang WAJIB hadir secara serentak untuk menyebabkan paku besi berkarat ialah:", 
+        options: [
+          { label: "A", text: "Air dan Oksigen" }, 
+          { label: "B", text: "Air dan Minyak" }, 
+          { label: "C", text: "Oksigen dan Minyak" }, 
+          { label: "D", text: "Karbon dioksida dan Nitrogen" }
+        ], 
+        answer: "A", 
+        expl: "Pengaratan besi memerlukan kehadiran kedua-dua agen pengoksidaan iaitu air dan gas oksigen." 
+      },
+      { 
+        id: 95, 
+        section: "B", 
+        domain: "Matematik - Faedah Mudah & Simpanan", 
+        text: "Encik Razak menyimpan wang sebanyak RM5,000 di dalam bank dengan kadar faedah mudah 3% setahun. Berapakah jumlah faedah yang diterimanya selepas 2 tahun? (I = Prt)", 
+        options: [
+          { label: "A", text: "RM150" }, 
+          { label: "B", text: "RM300" }, 
+          { label: "C", text: "RM600" }, 
+          { label: "D", text: "RM5,300" }
+        ], 
+        answer: "B", 
+        expl: "Faedah I = Prt = RM5,000 × (3/100) × 2 = RM300." 
+      },
+      { 
+        id: 96, 
+        section: "B", 
+        domain: "Sejarah - Gagasan Malayan Union 1946", 
+        text: "Mengapakah orang Melayu di bawah pimpinan Dato' Onn Jaafar menentang keras pelaksanaan Malayan Union yang diperkenalkan British pada tahun 1946?", 
+        options: [
+          { label: "A", text: "British mahu mengembalikan kuasa kepada tentera Jepun." }, 
+          { label: "B", text: "Ibu kota dipindahkan ke London." }, 
+          { label: "C", text: "Kedaulatan Raja-raja Melayu terhakis dan syarat kerakyatan jus soli yang terlalu longgar." }, 
+          { label: "D", text: "Cukai perniagaan dinaikkan mendadak." }
+        ], 
+        answer: "C", 
+        expl: "Malayan Union menghapuskan kedaulatan Sultan dan memberikan hak kerakyatan terbuka yang mengancam kedudukan peribumi Melayu." 
+      },
+      { 
+        id: 97, 
+        section: "B", 
+        domain: "Bahasa Inggeris - Conjunctions", 
+        text: "Combine the sentences: 'He was exhausted. He continued helping his father finish the painting.'", 
+        options: [
+          { label: "A", text: "Because he was exhausted, he continued helping his father." }, 
+          { label: "B", text: "Since he was exhausted, he stopped painting." }, 
+          { label: "C", text: "Unless he was exhausted, he continued painting." }, 
+          { label: "D", text: "Although he was exhausted, he continued helping his father finish the painting." }
+        ], 
+        answer: "D", 
+        expl: "'Although' shows a contrast between being exhausted and continuing to work." 
+      },
+      { 
+        id: 98, 
+        section: "B", 
+        domain: "Fizik - Ketumpatan Objek", 
+        text: "Sebuah bongkah logam mempunyai jisim 540 g dan isi padu 200 cm³. Hitung ketumpatan logam tersebut:", 
+        options: [
+          { label: "A", text: "2.7 g/cm³" }, 
+          { label: "B", text: "0.37 g/cm³" }, 
+          { label: "C", text: "1.08 g/cm³" }, 
+          { label: "D", text: "3.5 g/cm³" }
+        ], 
+        answer: "A", 
+        expl: "Ketumpatan = Jisim / Isi padu = 540 g / 200 cm³ = 2.7 g/cm³ (ketumpatan aluminium)." 
+      },
+      { 
+        id: 99, 
+        section: "B", 
+        domain: "RBT - Sistem Fertigasi", 
+        text: "Tujuan utama penggunaan larutan nutrien baja hidroponik secara titisan terus ke zon akar tanaman dalam sistem fertigasi ialah:", 
+        options: [
+          { label: "A", text: "Menyejukkan daun tanaman pada waktu malam." }, 
+          { label: "B", text: "Meningkatkan kecekapan penyerapan nutrien dan mengelakkan pembaziran baja serta air." }, 
+          { label: "C", text: "Menghapuskan serangga perosak pada batang pokok." }, 
+          { label: "D", text: "Mempercepatkan pertumbuhan rumput di sekitar batas." }
+        ], 
+        answer: "B", 
+        expl: "Sistem fertigasi membekalkan air dan nutrien secara seragam dan tepat kepada akar tanpa pembaziran." 
+      },
+      { 
+        id: 100, 
+        section: "B", 
+        domain: "Etika Saintifik & Kelestarian Menengah", 
+        text: "Prinsip utama pembangunan lestari (Sustainable Development) yang perlu dipegang oleh generasi muda hari ini ialah:", 
+        options: [
+          { label: "A", text: "Mengeksploitasi semua sumber hutan dan galian secepat mungkin demi kekayaan semasa." }, 
+          { label: "B", text: "Menghentikan semua aktiviti ekonomi kilang di seluruh dunia." }, 
+          { label: "C", text: "Memenuhi keperluan pembangunan semasa tanpa menjejaskan keupayaan generasi masa depan memenuhi keperluan mereka." }, 
+          { label: "D", text: "Mengutamakan keuntungan wang syarikat swasta semata-mata." }
+        ], 
+        answer: "C", 
+        expl: "Pembangunan lestari mengimbangi kemajuan sosioekonomi dengan pemeliharaan ekosistem alam sekitar untuk generasi akan datang." 
+      }
     ];
     /* =========================================================================
        3. PROFIL CALON & KEADAAN ENJIN PEPERIKSAAN
@@ -875,6 +2505,9 @@ function restoreExamState() {
       document.getElementById("confValIndex").textContent = state.user.indexNo;
       document.getElementById("confValGrade").textContent = state.user.grade === "T1" ? "TINGKATAN 1 (CALON TAHUN 6)" : "TINGKATAN 4 (CALON TINGKATAN 3)";
       showView("viewConfirm");
+    } else if (state.view === "viewResult") {
+      // Pulihkan paparan keputusan markah penuh tanpa mengocok masa
+      finalizeAndScoreExam(false);
     }
     return true;
   } catch (err) {
@@ -882,7 +2515,6 @@ function restoreExamState() {
     return false;
   }
 }
-
 // 3. Padam data storan apabila murid selesai atau log keluar
 function clearExamState() {
   localStorage.removeItem("PKSK_SESSION_STATE");
@@ -997,7 +2629,8 @@ function clearExamState() {
       document.getElementById("confValIndex").textContent = matchedCandidate.indexNo;
       document.getElementById("confValGrade").textContent = matchedCandidate.grade === "T1" ? "TINGKATAN 1 (CALON TAHUN 6)" : "TINGKATAN 4 (CALON TINGKATAN 3)";
 
-      showView("viewConfirm");
+     showView("viewConfirm");
+      saveExamState("viewConfirm"); // <-- TAMBAH BARIS INI
     }
 
     /* =========================================================================
@@ -1218,9 +2851,7 @@ function clearExamState() {
       finalizeAndScoreExam();
     }
 
-    function finalizeAndScoreExam() {
-	clearExamState(); // <-- TAMBAH BARIS INI DI ATAS SEKALI
-	
+ function finalizeAndScoreExam(shouldSave = true) {
       if (ExamEngine.timerInterval) {
         clearInterval(ExamEngine.timerInterval);
         ExamEngine.timerInterval = null;
@@ -1307,6 +2938,11 @@ function clearExamState() {
       });
 
       showView("viewResult");
+
+      // Simpan status bahwa pengguna berada di tampilan hasil laporan ujian
+      if (shouldSave) {
+        saveExamState("viewResult");
+      }
     }
 
     /* =========================================================================
@@ -1400,7 +3036,10 @@ function clearExamState() {
 
       document.getElementById("pkskAuthForm").addEventListener("submit", handleLoginSubmit);
 
-      document.getElementById("btnBackToLoginScreen").addEventListener("click", () => showView("viewLogin"));
+      document.getElementById("btnBackToLoginScreen").addEventListener("click", () => {
+  clearExamState(); // Padam simpanan sesi pengesahan
+  showView("viewLogin");
+});
       document.getElementById("btnLaunchExam").addEventListener("click", () => {
         document.getElementById("activeHeaderBadge").classList.remove("hidden");
         document.getElementById("topBarUserName").textContent = ExamEngine.user.name.split(" ")[1] || ExamEngine.user.name.split(" ")[0];
